@@ -106,7 +106,7 @@ const ProjectCard = ({ project }) => {
           <span className="project-category">{project.category}</span>
           <h3 className="project-title-large">{project.title}</h3>
           <p className="project-teaser">{project.description}</p>
-          
+
           <div className="project-action-row">
             <div className="project-explore-btn" aria-label={`Explore the ${project.title} case study`}>
               Explore Case <ArrowRight size={14} />
@@ -125,7 +125,7 @@ const WorkShowcase = () => {
   return (
     <section className="work-section">
       <div className="section-header center mb-16">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -133,8 +133,8 @@ const WorkShowcase = () => {
         >
           Selected Works
         </motion.span>
-        
-        <motion.h2 
+
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
