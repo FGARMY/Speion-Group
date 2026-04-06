@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://speion-group.vercel.app/sitemap.xml
