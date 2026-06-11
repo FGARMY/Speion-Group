@@ -77,8 +77,8 @@ export default function Navbar() {
         >
           {/* Logo Section */}
           <Link href="/" className="flex items-center group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
-            <img src="/images/logo-light.webp" alt="Speion" className={`h-8 md:h-10 w-auto object-contain ${scrolled || mobileMenuOpen ? 'hidden dark:block' : 'block'}`} />
-            <img src="/images/logo-dark.webp" alt="Speion" className={`h-8 md:h-10 w-auto object-contain ${scrolled || mobileMenuOpen ? 'block dark:hidden' : 'hidden'}`} />
+            <img src="/images/logo-light.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain hidden dark:block" />
+            <img src="/images/logo-dark.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain block dark:hidden" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -91,8 +91,8 @@ export default function Navbar() {
                   href={item.path}
                   className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${
                     isActive 
-                      ? (scrolled ? "text-rose-600 dark:text-rose-400" : "text-white") 
-                      : (scrolled ? "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400" : "text-white/90 hover:text-white")
+                      ? "text-rose-600 dark:text-rose-400" 
+                      : "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400"
                   }`}
                   aria-label={`Go to ${item.label}`}
                 >
@@ -108,11 +108,7 @@ export default function Navbar() {
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <Link 
               href="/contact" 
-              className={`font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 ${
-                scrolled || mobileMenuOpen
-                  ? "bg-primary text-white hover:bg-primary-dark" 
-                  : "bg-white text-primary hover:bg-slate-50"
-              }`}
+              className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-primary text-white hover:bg-primary-dark"
               aria-label="Start Project"
             >
               Start Project
@@ -123,9 +119,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-3">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <button 
-              className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
-                scrolled || mobileMenuOpen ? "text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800" : "text-white bg-white/10"
-              }`}
+              className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
