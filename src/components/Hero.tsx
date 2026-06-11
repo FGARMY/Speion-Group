@@ -30,8 +30,8 @@ export default function Hero() {
 
       <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 lg:pt-20 h-full min-h-[100dvh]">
           
-        {/* Left Content - Fluid Typography */}
-        <div className="w-full lg:w-1/2 relative z-20 flex flex-col gap-6 sm:gap-8 text-left items-start pt-4 sm:pt-6 lg:pt-0 lg:-mt-20">
+        {/* Centered Content - Fluid Typography */}
+        <div className="w-full relative z-20 flex flex-col gap-6 sm:gap-8 text-center items-center justify-center pt-4 sm:pt-6 lg:pt-0 lg:-mt-20">
           
           <div className="bg-white/10 backdrop-blur-xl border border-white/10 text-white text-[10px] sm:text-xs md:text-sm font-semibold px-4 sm:px-5 py-1.5 sm:py-2 rounded-full inline-flex items-center w-fit shadow-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-rose-500 mr-2 sm:mr-3 animate-pulse ring-4 ring-rose-500/20"></span>
@@ -45,7 +45,7 @@ export default function Hero() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">software</span> engineering.
             </h1>
             
-            <p className="text-slate-400 text-xs sm:text-base md:text-lg max-w-lg leading-relaxed font-light mx-0 lg:mx-0 tracking-wide">
+            <p className="text-slate-400 text-xs sm:text-base md:text-lg max-w-lg leading-relaxed font-light mx-auto tracking-wide">
               We design, build, and deploy robust digital architectures. Partner with us for complex web applications, ERP integrations, and high-performance native mobile apps.
             </p>
           </div>
@@ -88,21 +88,7 @@ export default function Hero() {
 
         </div>
 
-        {/* Right Content - Doctors Stacking on Mobile */}
-        <div className="w-full lg:w-1/2 h-full relative lg:absolute lg:right-0 lg:inset-y-0 flex lg:items-center justify-center lg:justify-end pointer-events-none z-10 mt-12 lg:mt-0">
-          <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-full flex items-center justify-center lg:justify-end lg:-mr-24 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="relative w-full h-full flex items-center justify-center lg:justify-end">
-              <Image
-                src="/images/speion-hero.png"
-                alt="Speion Tech Abstract"
-                width={1600}
-                height={1200}
-                className="w-auto h-full max-h-[85%] lg:max-h-[100%] object-contain object-center drop-shadow-[0_20px_100px_rgba(225,29,72,0.2)] z-20 scale-[1.1] sm:scale-[1.25] origin-center pointer-events-auto transition-all duration-[1200ms] animate-float flex-shrink-0"
-                priority
-              />
-            </div>
-          </div>
-        </div>
+
       </div>
 
       {/* Scroll Indicator */}
