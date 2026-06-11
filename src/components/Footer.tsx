@@ -27,7 +27,7 @@ const SocialIcons = {
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-black border-t border-slate-800 dark:border-slate-900 text-slate-300 pt-20 pb-10 px-4 sm:px-6 transition-colors duration-500">
+    <footer className="bg-slate-50 dark:bg-black border-t border-slate-200 dark:border-slate-900 text-slate-600 dark:text-slate-300 pt-20 pb-10 px-4 sm:px-6 transition-colors duration-500">
       <div className="container mx-auto max-w-7xl">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
@@ -35,9 +35,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6 group" aria-label="Speion Home">
-              <img src="/images/logo-light.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain" />
+              <img src="/images/logo-dark.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain block dark:hidden" />
+              <img src="/images/logo-light.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain hidden dark:block" />
             </Link>
-            <p className="text-slate-400 leading-relaxed font-light mb-8 text-sm">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-8 text-sm">
               We engineer scalable software, mobile apps, and enterprise solutions for ambitious startups and businesses globally.
             </p>
             <nav className="flex items-center gap-4" aria-label="Social Media Links">
@@ -47,7 +48,7 @@ export default function Footer() {
                   <a 
                     key={idx} 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-indigo-600 hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-rose-600 hover:text-white transition-colors"
                     aria-label={`Visit our ${names[idx]} page`}
                   >
                     <Icon className="w-[18px] h-[18px]" aria-hidden="true" />
@@ -59,7 +60,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <nav aria-label="Quick Links Footer">
-            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Quick Links</h4>
+            <h4 className="text-slate-900 dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Home', path: '/' },
@@ -69,7 +70,7 @@ export default function Footer() {
                 { name: 'Contact', path: '/contact' }
               ].map(link => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Go to ${link.name}`}>
+                  <Link href={link.path} className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-light" aria-label={`Go to ${link.name}`}>
                     {link.name}
                   </Link>
                 </li>
@@ -79,7 +80,7 @@ export default function Footer() {
 
           {/* Our Services */}
           <nav aria-label="Services Navigation Footer">
-            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
+            <h4 className="text-slate-900 dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Web Development', path: '/services/web-development' },
@@ -89,7 +90,7 @@ export default function Footer() {
                 { name: 'UI/UX Design', path: '/services/ui-ux-design' }
               ].map(link => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Learn more about ${link.name}`}>
+                  <Link href={link.path} className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-light" aria-label={`Learn more about ${link.name}`}>
                     {link.name}
                   </Link>
                 </li>
@@ -99,34 +100,34 @@ export default function Footer() {
 
           {/* Contact & Hours */}
           <section aria-labelledby="footer-contact-heading" className="lg:col-span-1">
-            <h4 id="footer-contact-heading" className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Contact & Hours</h4>
+            <h4 id="footer-contact-heading" className="text-slate-900 dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Contact & Hours</h4>
             <ul className="space-y-5">
               <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 flex items-center justify-center text-indigo-400 flex-shrink-0" aria-hidden="true">
+                <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-rose-500 dark:text-rose-400 flex-shrink-0" aria-hidden="true">
                   <MapPin size={18} />
                 </div>
-                <address className="text-slate-400 text-sm font-light leading-relaxed pt-2 not-italic">
+                <address className="text-slate-600 dark:text-slate-400 text-sm font-light leading-relaxed pt-2 not-italic">
                   <span className="sr-only">Address: </span>
                   Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015
                 </address>
               </li>
               <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 flex items-center justify-center text-blue-400 flex-shrink-0" aria-hidden="true">
+                <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-rose-500 dark:text-rose-400 flex-shrink-0" aria-hidden="true">
                   <Phone size={18} />
                 </div>
-                <span className="text-slate-400 text-sm font-light leading-relaxed pt-2.5">
+                <span className="text-slate-600 dark:text-slate-400 text-sm font-light leading-relaxed pt-2.5">
                   <span className="sr-only">Phone: </span>
                   +91 77588 66318
                 </span>
               </li>
-              <li className="flex items-start gap-6 border-t border-slate-800 dark:border-slate-900 pt-5 mt-5">
-                <div className="text-indigo-400">
+              <li className="flex items-start gap-6 border-t border-slate-200 dark:border-slate-900 pt-5 mt-5">
+                <div className="text-rose-500 dark:text-rose-400">
                   <Clock size={18} />
                 </div>
                 <div>
-                  <h5 className="text-xs font-bold text-white uppercase tracking-widest mb-2">Business Hours</h5>
-                  <p className="text-[13px] text-slate-400 font-light">Mon - Fri: 9:00 AM - 7:00 PM</p>
-                  <p className="text-[13px] text-slate-400 font-light">Saturday: 10:00 AM - 2:00 PM</p>
+                  <h5 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-2">Business Hours</h5>
+                  <p className="text-[13px] text-slate-600 dark:text-slate-400 font-light">Mon - Fri: 9:00 AM - 7:00 PM</p>
+                  <p className="text-[13px] text-slate-600 dark:text-slate-400 font-light">Saturday: 10:00 AM - 2:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -134,20 +135,20 @@ export default function Footer() {
 
           {/* Newsletter / Map Placeholder */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Newsletter</h4>
-            <p className="text-slate-400 text-xs font-light leading-relaxed mb-6">
+            <h4 className="text-slate-900 dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Newsletter</h4>
+            <p className="text-slate-600 dark:text-slate-400 text-xs font-light leading-relaxed mb-6">
               Subscribe to get the latest insights in software engineering and AI directly to your inbox.
             </p>
             <form className="relative group" onSubmit={(e) => e.preventDefault()}>
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="w-full bg-slate-800 dark:bg-slate-900 border-none rounded-full py-4 pl-6 pr-14 text-sm text-white placeholder-slate-500 focus:ring-2 focus:ring-indigo-600 transition-all outline-none"
+                className="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-full py-4 pl-6 pr-14 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:ring-2 focus:ring-rose-600 transition-all outline-none"
                 aria-label="Email for newsletter"
               />
               <button 
                 type="submit"
-                className="absolute right-1.5 top-1.5 bottom-1.5 w-11 h-11 bg-indigo-600 text-white rounded-full flex items-center justify-center hover:bg-indigo-500 transition-colors shadow-lg"
+                className="absolute right-1.5 top-1.5 bottom-1.5 w-11 h-11 bg-rose-600 text-white rounded-full flex items-center justify-center hover:bg-rose-500 transition-colors shadow-lg"
                 aria-label="Subscribe"
               >
                 <ChevronRight size={18} />
@@ -157,7 +158,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-800 dark:border-slate-900 text-center text-slate-500 text-sm font-light mt-16">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-900 text-center text-slate-500 dark:text-slate-500 text-sm font-light mt-16">
           <p>&copy; {new Date().getFullYear()} Speion. All rights reserved.</p>
         </div>
 

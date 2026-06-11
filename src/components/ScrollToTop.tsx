@@ -29,7 +29,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-[60] w-14 h-14 bg-white text-primary border border-slate-100 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center transition-all duration-500 hover:bg-primary hover:text-white hover:-translate-y-2 active:scale-95 group ${
+      className={`fixed bottom-8 right-8 z-[60] w-14 h-14 bg-white dark:bg-slate-900 text-primary border border-slate-100 dark:border-slate-800 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-all duration-500 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white hover:-translate-y-2 active:scale-95 group ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
       }`}
       aria-label="Scroll to top"
@@ -37,7 +37,7 @@ export default function ScrollToTop() {
       <ArrowUp size={24} className="group-hover:animate-bounce-short" />
       
       {/* Tooltip */}
-      <span className="absolute right-full mr-4 bg-slate-900 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none uppercase tracking-widest">
+      <span className="absolute right-full mr-4 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-[10px] font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none uppercase tracking-widest">
         Back to top
       </span>
     </button>
