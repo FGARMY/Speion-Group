@@ -18,7 +18,7 @@ export default function Home() {
         "@type": "Organization",
         "@id": "https://speion-group.vercel.app/#organization",
         "name": "Speion",
-        "alternateName": ["Speion Group", "Speion Software Development"],
+        "alternateName": ["Speion Software Development"],
         "url": "https://speion-group.vercel.app",
         "logo": {
           "@type": "ImageObject",

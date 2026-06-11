@@ -39,7 +39,7 @@ export default function Contact() {
 
             <div className="space-y-8">
               {[
-                { icon: <MapPin size={24} />, title: "HQ Address", text: "Speion Software Group, Tech Park,\nHinjewadi Phase 1, Pune, MH 411057" },
+                { icon: <MapPin size={24} />, title: "HQ Address", text: "Speion Software, Tech Park,\nHinjewadi Phase 1, Pune, MH 411057" },
                 { icon: <Phone size={24} />, title: "Phone Number", text: "+91 82370 77659 (Sales & Queries)\n+91 98765 43210 (Support)" },
                 { icon: <Mail size={24} />, title: "Email Support", text: "hello@speion.com\nprojects@speion.com" }
               ].map((item, idx) => (

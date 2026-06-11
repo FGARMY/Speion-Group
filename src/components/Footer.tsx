@@ -34,13 +34,8 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6 group" aria-label="Speion Home">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center text-white shadow-lg" aria-hidden="true">
-                <Code2 size={20} />
-              </div>
-              <span className="font-display font-bold text-xl text-white tracking-tight">
-                Speion <span className="font-light text-slate-400">Group</span>
-              </span>
+            <Link href="/" className="flex items-center mb-6 group" aria-label="Speion Home">
+              <img src="/images/logo-light.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain" />
             </Link>
             <p className="text-slate-400 leading-relaxed font-light mb-8 text-sm">
               We engineer scalable software, mobile apps, and enterprise solutions for ambitious startups and businesses globally.
@@ -163,7 +158,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-800 dark:border-slate-900 text-center text-slate-500 text-sm font-light mt-16">
-          <p>&copy; {new Date().getFullYear()} Speion Group. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Speion. All rights reserved.</p>
         </div>
 
       </div>

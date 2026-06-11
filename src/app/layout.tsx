@@ -18,10 +18,10 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Speion | #1 Software Development Company in Nashik & Pune",
   description: "Leading software development company in Nashik & Pune. We build high-performance websites, custom software, mobile apps, SaaS platforms, and AI automation systems.",
-  keywords: ["Software Development Company", "Web Development", "App Development Pune", "IT Company Nashik", "Speion Group", "AI Automation"],
+  keywords: ["Software Development Company", "Web Development", "App Development Pune", "IT Company Nashik", "Speion", "AI Automation"],
   openGraph: {
     title: "Speion | #1 Software Development Company in Nashik & Pune",
-    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion Group.",
+    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion.",
     type: "website",
     locale: "en_IN",
     siteName: "Speion",

@@ -76,13 +76,9 @@ export default function Navbar() {
           }`}
         >
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
-            <div className="bg-primary/10 text-primary w-10 h-10 rounded-xl flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white" aria-hidden="true">
-              <Code2 size={24} />
-            </div>
-            <span className={`text-lg md:text-xl font-display font-bold ${scrolled || mobileMenuOpen ? "text-slate-900 dark:text-white" : "text-white"}`}>
-              Speion <span className="font-semibold opacity-80">Group</span>
-            </span>
+          <Link href="/" className="flex items-center group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
+            <img src="/images/logo-light.webp" alt="Speion" className={`h-8 md:h-10 w-auto object-contain ${scrolled || mobileMenuOpen ? 'hidden dark:block' : 'block'}`} />
+            <img src="/images/logo-dark.webp" alt="Speion" className={`h-8 md:h-10 w-auto object-contain ${scrolled || mobileMenuOpen ? 'block dark:hidden' : 'hidden'}`} />
           </Link>
 
           {/* Desktop Navigation Links */}
