@@ -10,21 +10,21 @@
     --background: #fdfdfd;
     --foreground: #0f172a;
     
-    /* Speion Brand Colors */
-    --primary: #3B82F6;
-    --primary-light: #60a5fa;
-    --primary-dark: #2563eb;
-    --accent: #06d6a0;
+    /* Speion Brand Colors - Graphite & Crimson */
+    --primary: #e11d48; /* rose-600 */
+    --primary-light: #fb7185; /* rose-400 */
+    --primary-dark: #be123c; /* rose-700 */
+    --accent: #f43f5e; /* rose-500 */
   }
 
   .dark {
     --background: #020617;
     --foreground: #f8fafc;
     
-    --primary: #3B82F6;
-    --primary-light: #60a5fa;
-    --primary-dark: #2563eb;
-    --accent: #06d6a0;
+    --primary: #e11d48;
+    --primary-light: #fb7185;
+    --primary-dark: #be123c;
+    --accent: #f43f5e;
   }
 }
 
@@ -53,7 +53,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-600 via-red-500 to-rose-600;
   }
 }
 

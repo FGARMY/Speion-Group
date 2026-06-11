@@ -7,21 +7,21 @@ export default function Testimonials() {
       author: "Rajesh Kulkarni",
       role: "CTO, Manufacturing Firm",
       initials: "RK",
-      color: "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400"
+      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500"
     },
     {
       text: "We partnered with Speion to build our mobile app from scratch. Not only did they deliver a stunning UI/UX, but the React Native codebase was incredibly clean and performant. Highly recommend their engineering team.",
       author: "Priya Sharma",
       role: "Founder, FinTech Startup",
       initials: "PS",
-      color: "bg-teal-100 text-teal-600 dark:bg-teal-900/30 dark:text-teal-400"
+      color: "bg-slate-100 text-red-600 dark:bg-slate-800 dark:text-red-500"
     },
     {
       text: "Finding a reliable software development agency in Pune was tough until we found Speion. They act as an extension of our in-house team. The custom CRM they built for us has automated hundreds of hours of manual work.",
       author: "Amit Deshmukh",
       role: "VP Operations",
       initials: "AD",
-      color: "bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400"
+      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500"
     }
   ];
 
@@ -31,8 +31,8 @@ export default function Testimonials() {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
-            <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+          <div className="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
+            <span className="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400 block"></span>
             Testimonials
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">

@@ -3,28 +3,28 @@ import { ShieldCheck, Zap, Code2, Clock } from "lucide-react";
 export default function WhyUs() {
   const reasons = [
     {
-      title: "Elite Engineers",
-      desc: "Top 1% of software engineers and architects with deep expertise in modern scalable frameworks and cloud infrastructure.",
+      title: "Senior Technical Talent",
+      desc: "Our engineering pods consist exclusively of senior-level developers with proven experience in shipping enterprise-scale products.",
       icon: <ShieldCheck size={28} />,
-      color: "bg-blue-50 text-blue-600 border-blue-100"
+      color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },
     {
-      title: "Agile Methodology",
-      desc: "Rapid sprints, continuous integration, and seamless deployment pipelines for faster time-to-market without technical debt.",
+      title: "Strict CI/CD Pipelines",
+      desc: "Automated testing, containerization, and continuous integration guarantee that every deployment is stable, secure, and fast.",
       icon: <Zap size={28} />,
-      color: "bg-teal-50 text-teal-600 border-teal-100"
+      color: "bg-slate-100 text-red-600 border-slate-200 dark:bg-slate-800 dark:text-red-500 dark:border-slate-700"
     },
     {
-      title: "Clean Architecture",
-      desc: "We write highly maintainable, documented, and modular code that can easily scale as your business demands grow.",
+      title: "Maintainable Architecture",
+      desc: "We enforce strict code reviews and write modular, documented code so your in-house team can easily inherit the repository.",
       icon: <Code2 size={28} />,
-      color: "bg-purple-50 text-purple-600 border-purple-100"
+      color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },
     {
-      title: "On-Time Delivery",
-      desc: "Proven track record of hitting strict deadlines with 100% transparency and regular milestone demonstrations.",
+      title: "Transparent Sprints",
+      desc: "No black boxes. You get access to our Jira/Linear boards and regular milestone demos so you always know the project status.",
       icon: <Clock size={28} />,
-      color: "bg-amber-50 text-amber-600 border-amber-100"
+      color: "bg-slate-100 text-red-600 border-slate-200 dark:bg-slate-800 dark:text-red-500 dark:border-slate-700"
     }
   ];
 
@@ -34,15 +34,15 @@ export default function WhyUs() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
-            <span className="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 block"></span>
-            Why Choose Us
+          <div className="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
+            <span className="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400 block"></span>
+            Our Advantage
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-6 tracking-tight">
-            Your Business Growth, Our Code
+            Built for Scale. Engineered for ROI.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
-            Scalable architecture, clean code, and a business-first approach that enterprise clients trust.
+            We don't just write code. We architect systems that solve complex technical debt and drive revenue growth.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function WhyUs() {
               className="flex flex-col sm:flex-row gap-6 bg-white dark:bg-slate-900 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-[0_10px_40px_rgba(15,23,42,0.03)] hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${(idx + 1) * 0.15}s` }}
             >
-              <div className={`w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center border-2 transition-transform group-hover:scale-110 ${item.color.replace('bg-', 'bg-opacity-50 dark:bg-opacity-20 bg-')}`}>
+              <div className={`w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transition-transform group-hover:scale-110 ${item.color}`}>
                 {item.icon}
               </div>
               <div>

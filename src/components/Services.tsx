@@ -6,11 +6,11 @@ export default function Services() {
     {
       id: "01 / WEB",
       title: "Web Development",
-      desc: "High-performance, SEO-optimized web applications built with modern frameworks like React, Next.js, and Node.js.",
+      desc: "High-performance web applications built with React, Next.js, and Node.js. Optimized for speed and Core Web Vitals.",
       icon: <Monitor size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      accent: "text-slate-950",
       expert: "Frontend Engineering Team",
-      tag: "Digital Experiences",
+      tag: "Web Apps",
       className: "lg:col-span-2 lg:row-span-1",
       delay: "0.1s",
       link: "/services/web-development"
@@ -18,9 +18,9 @@ export default function Services() {
     {
       id: "02 / APP",
       title: "Mobile App Development",
-      desc: "Native and cross-platform mobile applications for iOS and Android that deliver seamless user experiences.",
+      desc: "High-performance mobile applications compiled to native code for iOS and Android.",
       icon: <Smartphone size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      accent: "text-slate-950",
       expert: "Mobile Engineering Team",
       tag: "iOS & Android",
       className: "lg:col-span-1 lg:row-span-2",
@@ -29,11 +29,11 @@ export default function Services() {
       extra: (
         <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-teal-500"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
             <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400">Tech Stack</span>
           </div>
           <p className="font-serif italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            "We leverage React Native and Flutter to ship your app to both app stores simultaneously."
+            "We compile to native C++ and Objective-C using React Native and Flutter for maximum FPS."
           </p>
         </div>
       )
@@ -41,11 +41,11 @@ export default function Services() {
     {
       id: "03 / SFT",
       title: "Custom Software Development",
-      desc: "Tailor-made software solutions designed to automate your unique business workflows and scale with your enterprise.",
+      desc: "Architected software solutions built to handle complex business logic and heavy data loads without performance degradation.",
       icon: <Code size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      accent: "text-slate-950",
       expert: "Architecture Team",
-      tag: "Bespoke Solutions",
+      tag: "Custom Code",
       className: "lg:col-span-1 lg:row-span-1",
       delay: "0.3s",
       link: "/services/custom-software-development"
@@ -92,7 +92,7 @@ export default function Services() {
     <section id="services" className="py-40 px-4 sm:px-6 bg-[#fafafa] dark:bg-[#020617] relative overflow-hidden grain-texture transition-colors duration-500">
       
       {/* Background - Discrete Registry Grid */}
-      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e40af 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
+      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#e11d48 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         
@@ -100,10 +100,10 @@ export default function Services() {
         <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-32 gap-16 opacity-0 animate-fade-in-up">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-[1px] bg-blue-900 dark:bg-blue-400"></div>
-              <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-blue-900/40 dark:text-blue-400/60">Capabilities & Services</span>
+              <div className="w-10 h-[1px] bg-slate-900 dark:bg-rose-400"></div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-slate-900/40 dark:text-rose-400/60">Capabilities & Services</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-display font-bold text-blue-950 dark:text-slate-100 leading-[0.95] tracking-tight mb-8">
+            <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[0.95] tracking-tight mb-8">
               Engineering <br /> Excellence
             </h2>
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center">
@@ -116,7 +116,7 @@ export default function Services() {
           <div className="lg:w-[400px] relative">
             <div className="speion-border bg-white dark:bg-slate-900/50 dark:backdrop-blur-xl p-8 speion-shadow rounded-sm relative dark:border-slate-800">
               <div className="flex items-center justify-between mb-8">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-teal-600">CTO's Memorandum</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-red-600">CTO's Memorandum</span>
                 <Code size={16} className="text-slate-200 dark:text-slate-700" />
               </div>
               <p className="font-serif italic text-slate-800 dark:text-slate-300 leading-relaxed text-base mb-6">
@@ -124,14 +124,14 @@ export default function Services() {
               </p>
               <div className="pt-6 border-t border-slate-100 dark:border-slate-800">
                 <div className="text-[10px] font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-1">Authenticated By</div>
-                <div className="text-sm font-bold text-blue-950 dark:text-blue-400">Speion Technical Leadership</div>
+                <div className="text-sm font-bold text-slate-950 dark:text-rose-400">Speion Technical Leadership</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Services Grid - "Architecture File" Aesthetic */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-blue-950/5 relative dark:border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
           {services.map((item, idx) => (
             <Link 
               href={item.link}
@@ -140,30 +140,30 @@ export default function Services() {
               style={{ animationDelay: item.delay }}
             >
               {/* Subtle accent line on top */}
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-rose-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-12">
-                  <span className="text-[10px] font-bold text-teal-600 uppercase tracking-widest bg-teal-50 dark:bg-teal-900/20 px-3 py-1 rounded-sm opacity-0 animate-fade-in-up" style={{ animationDelay: `calc(${item.delay} + 0.2s)` }}>
+                  <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest bg-red-50 dark:bg-red-900/20 px-3 py-1 rounded-sm opacity-0 animate-fade-in-up" style={{ animationDelay: `calc(${item.delay} + 0.2s)` }}>
                     {item.id}
                   </span>
-                  <div className="text-slate-300 dark:text-slate-700 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-500 w-10 h-10 opacity-0 animate-scale-in group-hover:scale-110" style={{ animationDelay: `calc(${item.delay} + 0.3s)` }}>
+                  <div className="text-slate-300 dark:text-slate-700 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-all duration-500 w-10 h-10 opacity-0 animate-scale-in group-hover:scale-110" style={{ animationDelay: `calc(${item.delay} + 0.3s)` }}>
                     {item.icon}
                   </div>
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-2xl font-display font-bold text-blue-950 dark:text-slate-100 mb-6 leading-[1.1] pr-8 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-500 tracking-tight">{item.title}</h3>
+                  <h3 className="text-2xl font-display font-bold text-slate-950 dark:text-slate-100 mb-6 leading-[1.1] pr-8 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-500 tracking-tight">{item.title}</h3>
                   <p className="text-slate-500 dark:text-slate-400 text-sm font-light leading-relaxed mb-8 max-w-sm group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">{item.desc}</p>
                   {item.extra && item.extra}
                 </div>
 
                 <div className="mt-12 flex items-center justify-between">
                   <div className="flex flex-col">
-                    <span className="text-[9px] uppercase font-bold text-slate-300 dark:text-slate-700 tracking-[0.2em] mb-2 group-hover:text-teal-600 transition-colors">Lead Division</span>
+                    <span className="text-[9px] uppercase font-bold text-slate-300 dark:text-slate-700 tracking-[0.2em] mb-2 group-hover:text-red-600 transition-colors">Lead Division</span>
                     <span className="text-xs font-serif italic text-slate-900 dark:text-slate-200">{item.expert}</span>
                   </div>
-                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-blue-950 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-blue-950 group-hover:border-blue-950 dark:group-hover:border-white transition-all duration-500 rounded-full">
+                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-slate-950 group-hover:border-slate-950 dark:group-hover:border-white transition-all duration-500 rounded-full">
                     <ChevronRight size={14} />
                   </div>
                 </div>

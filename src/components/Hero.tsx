@@ -10,17 +10,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
       
       {/* Animated Light Leaks */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse duration-[10000ms]"></div>
-      <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-teal-400/10 blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-rose-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse duration-[10000ms]"></div>
+      <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-red-600/10 blur-[100px] rounded-full pointer-events-none"></div>
 
       {/* Floating Tech Particles */}
-      <div className="absolute top-[15%] left-[5%] text-blue-400/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '0s' }}>
+      <div className="absolute top-[15%] left-[5%] text-rose-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '0s' }}>
         <Code size={48} />
       </div>
-      <div className="absolute top-[60%] left-[40%] text-teal-400/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '2s' }}>
+      <div className="absolute top-[60%] left-[40%] text-red-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '2s' }}>
         <Cpu size={32} />
       </div>
-      <div className="absolute top-[20%] right-[15%] text-blue-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '4s' }}>
+      <div className="absolute top-[20%] right-[15%] text-rose-400/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '4s' }}>
         <Database size={40} />
       </div>
       
@@ -34,24 +34,24 @@ export default function Hero() {
         <div className="w-full lg:w-1/2 relative z-20 flex flex-col gap-6 sm:gap-8 text-left items-start pt-4 sm:pt-6 lg:pt-0 lg:-mt-20">
           
           <div className="bg-white/10 backdrop-blur-xl border border-white/10 text-white text-[10px] sm:text-xs md:text-sm font-semibold px-4 sm:px-5 py-1.5 sm:py-2 rounded-full inline-flex items-center w-fit shadow-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-teal-400 mr-2 sm:mr-3 animate-pulse ring-4 ring-teal-400/20"></span>
-            #1 SOFTWARE DEVELOPMENT COMPANY IN PUNE
-            <Sparkles size={12} className="ml-2 text-teal-300 sm:w-3.5 sm:h-3.5" />
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-rose-500 mr-2 sm:mr-3 animate-pulse ring-4 ring-rose-500/20"></span>
+            #1 SOFTWARE ENGINEERING FIRM IN PUNE
+            <Sparkles size={12} className="ml-2 text-rose-400 sm:w-3.5 sm:h-3.5" />
           </div>
  
           <div className="flex flex-col gap-4 sm:gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h1 className="text-white font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] sm:leading-[1.05] tracking-tightest">
-              We engineer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">scalable</span> <br />
-              software <span className="italic font-light opacity-90 text-slate-300">solutions.</span>
+              Enterprise-grade <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">software</span> engineering.
             </h1>
             
             <p className="text-slate-400 text-xs sm:text-base md:text-lg max-w-lg leading-relaxed font-light mx-0 lg:mx-0 tracking-wide">
-              Leading software development company in Nashik & Pune. We build high-performance websites, custom software, mobile apps, SaaS platforms, and AI automation systems.
+              We design, build, and deploy robust digital architectures. Partner with us for complex web applications, ERP integrations, and high-performance native mobile apps.
             </p>
           </div>
   
           <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-4 sm:gap-5 mt-2 w-full sm:w-auto opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <Link href="/contact" className="px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-blue-600 border border-blue-500 text-white font-bold hover:bg-blue-500 transition-all shadow-2xl text-sm sm:text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
+            <Link href="/contact" className="px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-sm sm:text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
               Start Project
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5" />
             </Link>
@@ -64,10 +64,10 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
             <div className="flex -space-x-4 overflow-hidden p-0.5">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-blue-400 dark:ring-blue-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
+                <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
                   <Image 
                     src={`https://i.pravatar.cc/150?u=medical-user-${i}`} 
-                    alt={`Patient testimonial user avatar ${i}`} 
+                    alt={`Client avatar ${i}`} 
                     fill
                     sizes="48px"
                     className="object-cover"
@@ -97,7 +97,7 @@ export default function Hero() {
                 alt="Speion Tech Abstract"
                 width={1600}
                 height={1200}
-                className="w-auto h-full max-h-[85%] lg:max-h-[100%] object-contain object-center drop-shadow-[0_20px_100px_rgba(59,130,246,0.2)] z-20 scale-[1.1] sm:scale-[1.25] origin-center pointer-events-auto transition-all duration-[1200ms] animate-float flex-shrink-0"
+                className="w-auto h-full max-h-[85%] lg:max-h-[100%] object-contain object-center drop-shadow-[0_20px_100px_rgba(225,29,72,0.2)] z-20 scale-[1.1] sm:scale-[1.25] origin-center pointer-events-auto transition-all duration-[1200ms] animate-float flex-shrink-0"
                 priority
               />
             </div>
