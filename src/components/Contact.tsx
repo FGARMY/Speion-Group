@@ -27,24 +27,24 @@ export default function Contact() {
           
           {/* Left Side: Info */}
           <div className="opacity-0 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
               Contact Us
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-8 tracking-tight">
-              Get in Touch with Our <span className="text-primary italic">Specialists</span>
+              Get in Touch with Our <span className="text-blue-600 italic">Engineers</span>
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-12 max-w-lg">
-              Have questions or need to schedule an appointment? We're here to help. Reach out through the form or our contact details below.
+              Have a project in mind or need a technical consultation? We're here to help. Reach out through the form or our contact details below.
             </p>
 
             <div className="space-y-8">
               {[
-                { icon: <MapPin size={24} />, title: "Clinic Address", text: "Dr. Sulakshane Clinic, Plot 42,\nMedical Square, Pune, MH 411001" },
-                { icon: <Phone size={24} />, title: "Phone Number", text: "+91 98765 43210 (General Queries)\n+91 12345 67890 (Emergency)" },
-                { icon: <Mail size={24} />, title: "Email Support", text: "care@drsulakshane.com\nappointments@drsulakshane.com" }
+                { icon: <MapPin size={24} />, title: "HQ Address", text: "Speion Software Group, Tech Park,\nHinjewadi Phase 1, Pune, MH 411057" },
+                { icon: <Phone size={24} />, title: "Phone Number", text: "+91 82370 77659 (Sales & Queries)\n+91 98765 43210 (Support)" },
+                { icon: <Mail size={24} />, title: "Email Support", text: "hello@speion.com\nprojects@speion.com" }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                     {item.icon}
                   </div>
                   <div>
@@ -77,9 +77,9 @@ export default function Contact() {
                   <input 
                     id="email"
                     type="email" 
-                    placeholder="Care@example.com" 
+                    placeholder="hello@company.com" 
                     required
-                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
                   />
                 </div>
               </div>
@@ -89,14 +89,14 @@ export default function Contact() {
                 <div className="relative">
                   <select 
                     id="subject"
-                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
                     required
                   >
                     <option value="">Select a subject</option>
-                    <option value="appointment">Book an Appointment</option>
-                    <option value="surgery">Surgical Consultation</option>
-                    <option value="pediatric">Pediatric Inquiry</option>
-                    <option value="general">General Query</option>
+                    <option value="web">Web Development</option>
+                    <option value="mobile">Mobile App Development</option>
+                    <option value="enterprise">Enterprise Software</option>
+                    <option value="general">General Inquiry</option>
                   </select>
                 </div>
               </div>
@@ -106,9 +106,9 @@ export default function Contact() {
                 <textarea 
                   id="message"
                   rows={4} 
-                  placeholder="How can we help you?" 
+                  placeholder="Tell us about your project requirements..." 
                   required
-                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all resize-none text-slate-900 dark:text-slate-100"
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all resize-none text-slate-900 dark:text-slate-100"
                 ></textarea>
               </div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
                 className={`w-full py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 shadow-xl ${
                   formState === 'success' 
                     ? 'bg-emerald-500 text-white shadow-emerald-200' 
-                    : 'bg-primary text-white shadow-primary/20 hover:bg-primary-dark hover:-translate-y-1 active:scale-95'
+                    : 'bg-blue-600 text-white shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-1 active:scale-95'
                 }`}
               >
                 {formState === 'idle' && (

@@ -1,28 +1,28 @@
-import { ShieldCheck, Minimize2, Heart, Clock } from "lucide-react";
+import { ShieldCheck, Zap, Code2, Clock } from "lucide-react";
 
 export default function WhyUs() {
   const reasons = [
     {
-      title: "Qualified Specialists",
-      desc: "MBBS, DNB, and DCH qualified doctors with training from top medical institutions and international exposure.",
+      title: "Elite Engineers",
+      desc: "Top 1% of software engineers and architects with deep expertise in modern scalable frameworks and cloud infrastructure.",
       icon: <ShieldCheck size={28} />,
       color: "bg-blue-50 text-blue-600 border-blue-100"
     },
     {
-      title: "Minimally Invasive",
-      desc: "Advanced laparoscopic techniques for faster recovery, less pain, and better surgical outcomes.",
-      icon: <Minimize2 size={28} />,
-      color: "bg-green-50 text-green-600 border-green-100"
+      title: "Agile Methodology",
+      desc: "Rapid sprints, continuous integration, and seamless deployment pipelines for faster time-to-market without technical debt.",
+      icon: <Zap size={28} />,
+      color: "bg-teal-50 text-teal-600 border-teal-100"
     },
     {
-      title: "Compassionate Care",
-      desc: "Patient-friendly consultations with detailed explanations and a warm, family-oriented approach to treatment.",
-      icon: <Heart size={28} />,
+      title: "Clean Architecture",
+      desc: "We write highly maintainable, documented, and modular code that can easily scale as your business demands grow.",
+      icon: <Code2 size={28} />,
       color: "bg-purple-50 text-purple-600 border-purple-100"
     },
     {
-      title: "23+ Years Experience",
-      desc: "Over two decades of trusted medical practice with 15,000+ successfully treated patients and 99% satisfaction.",
+      title: "On-Time Delivery",
+      desc: "Proven track record of hitting strict deadlines with 100% transparency and regular milestone demonstrations.",
       icon: <Clock size={28} />,
       color: "bg-amber-50 text-amber-600 border-amber-100"
     }
@@ -39,10 +39,10 @@ export default function WhyUs() {
             Why Choose Us
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-6 tracking-tight">
-            Your Family's Health, Our Mission
+            Your Business Growth, Our Code
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
-            Decades of experience, cutting-edge techniques, and a patient-first approach that families trust.
+            Scalable architecture, clean code, and a business-first approach that enterprise clients trust.
           </p>
         </div>
 

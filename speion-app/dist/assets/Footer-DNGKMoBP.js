@@ -1,0 +1,61 @@
+import{j as e,A,m as p}from"./vendor-motion-DooxF2Yt.js";import{a as i,u as k,L as r}from"./vendor-router-0nPzgGbV.js";import{u as M,L as g}from"./index-DLrybaWU.js";const v=({className:s=""})=>{const{theme:o,toggleTheme:a}=M();return e.jsx("button",{className:`theme-toggle ${s}`,onClick:a,"aria-label":`Switch to ${o==="dark"?"light":"dark"} mode`,title:`Switch to ${o==="dark"?"light":"dark"} mode`,children:o==="dark"?e.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[e.jsx("circle",{cx:"12",cy:"12",r:"5"}),e.jsx("line",{x1:"12",y1:"1",x2:"12",y2:"3"}),e.jsx("line",{x1:"12",y1:"21",x2:"12",y2:"23"}),e.jsx("line",{x1:"4.22",y1:"4.22",x2:"5.64",y2:"5.64"}),e.jsx("line",{x1:"18.36",y1:"18.36",x2:"19.78",y2:"19.78"}),e.jsx("line",{x1:"1",y1:"12",x2:"3",y2:"12"}),e.jsx("line",{x1:"21",y1:"12",x2:"23",y2:"12"}),e.jsx("line",{x1:"4.22",y1:"19.78",x2:"5.64",y2:"18.36"}),e.jsx("line",{x1:"18.36",y1:"5.64",x2:"19.78",y2:"4.22"})]}):e.jsx("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:e.jsx("path",{d:"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"})})})};/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const y=(...s)=>s.filter((o,a,n)=>!!o&&o.trim()!==""&&n.indexOf(o)===a).join(" ").trim();/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const z=s=>s.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase();/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const P=s=>s.replace(/^([A-Z])|[\s-_]+(\w)/g,(o,a,n)=>n?n.toUpperCase():a.toLowerCase());/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const f=s=>{const o=P(s);return o.charAt(0).toUpperCase()+o.slice(1)};/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */var j={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const _=s=>{for(const o in s)if(o.startsWith("aria-")||o==="role"||o==="title")return!0;return!1},$=i.createContext({}),E=()=>i.useContext($),W=i.forwardRef(({color:s,size:o,strokeWidth:a,absoluteStrokeWidth:n,className:l="",children:c,iconNode:h,...m},x)=>{const{size:t=24,strokeWidth:u=2,absoluteStrokeWidth:N=!1,color:w="currentColor",className:b=""}=E()??{},C=n??N?Number(a??u)*24/Number(o??t):a??u;return i.createElement("svg",{ref:x,...j,width:o??t??j.width,height:o??t??j.height,stroke:s??w,strokeWidth:C,className:y("lucide",b,l),...!c&&!_(m)&&{"aria-hidden":"true"},...m},[...h.map(([L,S])=>i.createElement(L,S)),...Array.isArray(c)?c:[c]])});/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const d=(s,o)=>{const a=i.forwardRef(({className:n,...l},c)=>i.createElement(W,{ref:c,iconNode:o,className:y(`lucide-${z(f(s))}`,`lucide-${s}`,n),...l}));return a.displayName=f(s),a};/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const I=[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]],T=d("arrow-right",I);/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const B=[["path",{d:"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7",key:"132q7q"}],["rect",{x:"2",y:"4",width:"20",height:"16",rx:"2",key:"izxlao"}]],R=d("mail",B);/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const F=[["path",{d:"M4 5h16",key:"1tepv9"}],["path",{d:"M4 12h16",key:"1lakjw"}],["path",{d:"M4 19h16",key:"1djgab"}]],V=d("menu",F);/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const H=[["path",{d:"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",key:"9njp5v"}]],q=d("phone",H);/**
+ * @license lucide-react v1.7.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const D=[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]],G=d("x",D),J=()=>{const[s,o]=i.useState(!1),[a,n]=i.useState(!1),l=k(),c=()=>{l.pathname==="/"&&window.scrollTo({top:0,behavior:"smooth"}),n(!1)};i.useEffect(()=>{const t=()=>{o(window.scrollY>50)};return window.addEventListener("scroll",t,{passive:!0}),()=>window.removeEventListener("scroll",t)},[]),i.useEffect(()=>{n(!1)},[l.pathname]),i.useEffect(()=>{const t=()=>{window.innerWidth>1024&&n(!1)};return window.addEventListener("resize",t),()=>window.removeEventListener("resize",t)},[]),i.useEffect(()=>{a?document.body.style.overflow="hidden":document.body.style.overflow="unset"},[a]);const h=[{title:"About",path:"/about"},{title:"Services",path:"/services"},{title:"Projects",path:"/case-studies"}],m={closed:{opacity:0,y:-20,transition:{duration:.3,ease:[.16,1,.3,1],staggerChildren:.05,staggerDirection:-1}},open:{opacity:1,y:0,transition:{duration:.4,ease:[.16,1,.3,1],staggerChildren:.1,delayChildren:.2}}},x={closed:{opacity:0,x:-10},open:{opacity:1,x:0}};return e.jsxs(e.Fragment,{children:[e.jsx("nav",{className:`landing-nav ${s||a?"scrolled":""}`,children:e.jsxs("div",{className:"nav-inner",children:[e.jsxs(r,{to:"/",className:"nav-logo",onClick:c,"aria-label":"Speion - Go to Home",children:[e.jsx(g,{className:"nav-logo-mark"}),e.jsx("span",{className:"nav-logo-text",children:"Speion"})]}),e.jsxs("div",{className:"nav-links desktop-only",children:[h.map(t=>e.jsx(r,{to:t.path,className:`nav-link ${l.pathname===t.path?"active":""}`,children:t.title},t.path)),e.jsx(v,{className:"nav-theme-toggle"}),e.jsx(r,{to:"/contact",className:"nav-cta",children:"Contact Us"})]}),e.jsxs("div",{className:"nav-mobile-actions mobile-only",children:[e.jsx(v,{className:"nav-theme-toggle"}),e.jsx("button",{className:"nav-mobile-toggle",onClick:()=>n(!a),"aria-label":"Toggle menu",children:a?e.jsx(G,{size:24}):e.jsx(V,{size:24})})]})]})}),e.jsx(A,{children:a&&e.jsx(p.div,{className:"nav-mobile-overlay",initial:"closed",animate:"open",exit:"closed",variants:m,children:e.jsxs("div",{className:"mobile-menu-inner",children:[e.jsx("div",{className:"mobile-menu-links",children:h.map(t=>e.jsx(p.div,{variants:x,children:e.jsx(r,{to:t.path,className:`mobile-nav-link ${l.pathname===t.path?"active":""}`,children:t.title})},t.path))}),e.jsx(p.div,{className:"mobile-menu-footer",variants:x,children:e.jsxs(r,{to:"/contact",className:"nav-cta mobile-cta",children:["Start Your Project ",e.jsx(T,{size:18})]})})]})})})]})},O=()=>e.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[e.jsx("rect",{width:"20",height:"20",x:"2",y:"2",rx:"5",ry:"5"}),e.jsx("path",{d:"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"}),e.jsx("line",{x1:"17.5",x2:"17.51",y1:"6.5",y2:"6.5"})]}),U=()=>e.jsx("svg",{xmlns:"http://www.w3.org/2000/svg",width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:e.jsx("path",{d:"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"})}),Y=()=>e.jsxs("svg",{xmlns:"http://www.w3.org/2000/svg",width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[e.jsx("path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"}),e.jsx("rect",{width:"4",height:"12",x:"2",y:"9"}),e.jsx("circle",{cx:"4",cy:"4",r:"2"})]}),Q=()=>{const s=k(),o=()=>{s.pathname==="/"&&window.scrollTo({top:0,behavior:"smooth"})};return e.jsx("footer",{className:"landing-footer",children:e.jsxs("div",{className:"footer-inner",children:[e.jsxs("div",{className:"footer-top",children:[e.jsxs("div",{className:"footer-brand",children:[e.jsxs(r,{to:"/",className:"footer-logo",onClick:o,"aria-label":"Speion - Go to Home",children:[e.jsx(g,{className:"nav-logo-mark"}),e.jsx("span",{className:"footer-logo-text",children:"Speion"})]}),e.jsx("p",{className:"footer-tagline",children:"#1 Software Development Company in Nashik & Pune. Custom software, web development, mobile apps, AI automation & SaaS solutions for businesses across Maharashtra."})]}),e.jsxs("div",{className:"footer-nav",children:[e.jsxs("div",{className:"footer-nav-group",children:[e.jsx("span",{className:"footer-nav-title",children:"Company"}),e.jsx(r,{to:"/about",className:"footer-link",children:"About"}),e.jsx(r,{to:"/services",className:"footer-link",children:"Services"}),e.jsx(r,{to:"/case-studies",className:"footer-link",children:"Projects"})]}),e.jsxs("div",{className:"footer-nav-group",children:[e.jsx("span",{className:"footer-nav-title",children:"Resources"}),e.jsx(r,{to:"/contact",className:"footer-link",children:"Start a Project"})]}),e.jsxs("div",{className:"footer-nav-group",children:[e.jsx("span",{className:"footer-nav-title",children:"Socials"}),e.jsxs("a",{href:"https://instagram.com/speiongroup",target:"_blank",rel:"noopener noreferrer",className:"footer-link icon-link","aria-label":"Visit our Instagram profile",children:[e.jsx(O,{})," ",e.jsx("span",{children:"Instagram - speiongroup"})]}),e.jsxs("a",{href:"https://facebook.com/Speion",target:"_blank",rel:"noopener noreferrer",className:"footer-link icon-link","aria-label":"Visit our Facebook page",children:[e.jsx(U,{})," ",e.jsx("span",{children:"Facebook - Speion"})]}),e.jsxs("a",{href:"https://linkedin.com/company/speion",target:"_blank",rel:"noopener noreferrer",className:"footer-link icon-link","aria-label":"Visit our LinkedIn company page",children:[e.jsx(Y,{})," ",e.jsx("span",{children:"Linkedin - Speion"})]})]}),e.jsxs("div",{className:"footer-nav-group",children:[e.jsx("span",{className:"footer-nav-title",children:"Contact"}),e.jsxs("a",{href:"tel:7758866318",className:"footer-link icon-link",children:[e.jsx(q,{size:14})," ",e.jsx("span",{children:"7758866318"})]}),e.jsxs("a",{href:"mailto:speiongroup@gmail.com",className:"footer-link icon-link",children:[e.jsx(R,{size:14})," ",e.jsx("span",{children:"speiongroup@gmail.com"})]}),e.jsx("p",{className:"footer-location-text",style:{fontSize:"0.75rem",opacity:.6,marginTop:"0.5rem",lineHeight:1.4},children:"Serving Nashik, Pune & Maharashtra"})]})]})]}),e.jsx("div",{className:"footer-bottom",children:e.jsxs("div",{className:"footer-bottom-content",children:[e.jsx("span",{className:"footer-copy",children:"© 2026 Speion Group — Software Development Company in Nashik & Pune. All rights reserved."}),e.jsxs("div",{className:"footer-meta-links",children:[e.jsx(r,{to:"/privacy",className:"footer-meta-link",children:"Privacy Policy"}),e.jsx(r,{to:"/terms",className:"footer-meta-link",children:"Terms & Conditions"}),e.jsx(r,{to:"/refund",className:"footer-meta-link",children:"Refund Policy"})]})]})})]})})};export{T as A,Q as F,R as M,J as N,q as P,G as X,d as c};

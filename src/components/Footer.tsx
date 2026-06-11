@@ -1,5 +1,5 @@
 "use client";
-import { HeartPulse, MapPin, Phone, Mail, Clock, ChevronRight } from "lucide-react";
+import { Code2, MapPin, Phone, Mail, Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 const SocialIcons = {
@@ -34,16 +34,16 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="#home" className="flex items-center gap-2 mb-6 group" aria-label="Dr. Sulakshane Clinic Home">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white shadow-lg" aria-hidden="true">
-                <HeartPulse size={20} />
+            <Link href="/" className="flex items-center gap-2 mb-6 group" aria-label="Speion Home">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center text-white shadow-lg" aria-hidden="true">
+                <Code2 size={20} />
               </div>
               <span className="font-display font-bold text-xl text-white tracking-tight">
-                Dr. Sulakshane <span className="font-light text-slate-400">Clinic</span>
+                Speion <span className="font-light text-slate-400">Group</span>
               </span>
             </Link>
             <p className="text-slate-400 leading-relaxed font-light mb-8 text-sm">
-              Expert surgical and pediatric care for your entire family. Over 23 years of trusted medical practice with compassion at its core.
+              We engineer scalable software, mobile apps, and enterprise solutions for ambitious startups and businesses globally.
             </p>
             <nav className="flex items-center gap-4" aria-label="Social Media Links">
               {[SocialIcons.Facebook, SocialIcons.Instagram, SocialIcons.Youtube, SocialIcons.Linkedin].map((Icon, idx) => {
@@ -66,10 +66,16 @@ export default function Footer() {
           <nav aria-label="Quick Links Footer">
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Quick Links</h4>
             <ul className="space-y-4">
-              {['Home', 'Services', 'Doctors', 'About Us', 'FAQ'].map(link => (
-                <li key={link}>
-                  <Link href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Go to ${link}`}>
-                    {link}
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About Us', path: '/about' },
+                { name: 'Services', path: '/services' },
+                { name: 'Case Studies', path: '/case-studies' },
+                { name: 'Contact', path: '/contact' }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link href={link.path} className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Go to ${link.name}`}>
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -80,10 +86,16 @@ export default function Footer() {
           <nav aria-label="Services Navigation Footer">
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
             <ul className="space-y-4">
-              {['Laparoscopic Surgery', 'General Surgery', 'Breast Surgery', 'Pediatric Care', 'Vaccination'].map(link => (
-                <li key={link}>
-                  <Link href="#services" className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Learn more about ${link}`}>
-                    {link}
+              {[
+                { name: 'Web Development', path: '/services/web-development' },
+                { name: 'Mobile App Development', path: '/services/mobile-app-development' },
+                { name: 'Custom Software', path: '/services/custom-software-development' },
+                { name: 'ERP Solutions', path: '/services/erp-development' },
+                { name: 'UI/UX Design', path: '/services/ui-ux-design' }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link href={link.path} className="text-slate-400 hover:text-white transition-colors text-sm font-light" aria-label={`Learn more about ${link.name}`}>
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -100,16 +112,16 @@ export default function Footer() {
                 </div>
                 <address className="text-slate-400 text-sm font-light leading-relaxed pt-2 not-italic">
                   <span className="sr-only">Address: </span>
-                  Dr. Sulakshane Clinic, Plot 42,<br/>Near XYZ Square, Pune
+                  Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015
                 </address>
               </li>
               <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 flex items-center justify-center text-indigo-400 flex-shrink-0" aria-hidden="true">
+                <div className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 flex items-center justify-center text-blue-400 flex-shrink-0" aria-hidden="true">
                   <Phone size={18} />
                 </div>
                 <span className="text-slate-400 text-sm font-light leading-relaxed pt-2.5">
                   <span className="sr-only">Phone: </span>
-                  +91 98765 43210
+                  +91 77588 66318
                 </span>
               </li>
               <li className="flex items-start gap-6 border-t border-slate-800 dark:border-slate-900 pt-5 mt-5">
@@ -118,8 +130,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <h5 className="text-xs font-bold text-white uppercase tracking-widest mb-2">Business Hours</h5>
-                  <p className="text-[13px] text-slate-400 font-light">Mon - Sat: 10:00 AM - 8:00 PM</p>
-                  <p className="text-[13px] text-slate-400 font-light">Sunday: Closed</p>
+                  <p className="text-[13px] text-slate-400 font-light">Mon - Fri: 9:00 AM - 7:00 PM</p>
+                  <p className="text-[13px] text-slate-400 font-light">Saturday: 10:00 AM - 2:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -129,7 +141,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <h4 className="text-white font-bold mb-6 tracking-wide uppercase text-sm">Newsletter</h4>
             <p className="text-slate-400 text-xs font-light leading-relaxed mb-6">
-              Subscribe to get health tips and clinic updates directly to your inbox.
+              Subscribe to get the latest insights in software engineering and AI directly to your inbox.
             </p>
             <form className="relative group" onSubmit={(e) => e.preventDefault()}>
               <input 
@@ -151,7 +163,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-800 dark:border-slate-900 text-center text-slate-500 text-sm font-light mt-16">
-          <p>&copy; {new Date().getFullYear()} Dr. Sulakshane Clinic. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Speion Group. All rights reserved.</p>
         </div>
 
       </div>

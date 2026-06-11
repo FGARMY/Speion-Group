@@ -1,14 +1,20 @@
 "use client";
 
-import { Activity, Menu, X } from "lucide-react";
+import { Code2, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
-const NAV_ITEMS = ["Home", "About", "Services", "Doctors", "Resources", "Contact"];
+const NAV_ITEMS = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
+  { label: "Case Studies", path: "/case-studies" },
+  { label: "Contact", path: "/contact" }
+];
 
 /**
- * Navbar component for the clinic website.
+ * Navbar component for Speion website.
  * Features a sticky header with a backdrop blur effect on scroll and a mobile-responsive menu.
  */
 export default function Navbar() {
@@ -70,31 +76,31 @@ export default function Navbar() {
           }`}
         >
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Dr. Sulakshane Clinic Home" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
             <div className="bg-primary/10 text-primary w-10 h-10 rounded-xl flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white" aria-hidden="true">
-              <Activity size={24} />
+              <Code2 size={24} />
             </div>
-            <span className={`text-lg md:text-xl font-display font-bold ${scrolled || mobileMenuOpen ? "text-slate-900" : "text-white"}`}>
-              Dr. Sulakshane <span className="font-semibold opacity-80">Clinic</span>
+            <span className={`text-lg md:text-xl font-display font-bold ${scrolled || mobileMenuOpen ? "text-slate-900 dark:text-white" : "text-white"}`}>
+              Speion <span className="font-semibold opacity-80">Group</span>
             </span>
           </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
             {NAV_ITEMS.map((item) => {
-              const isActive = activeSection === item.toLowerCase().replace(" ", "-");
+              const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               return (
                 <Link 
-                  key={item} 
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  key={item.label} 
+                  href={item.path}
                   className={`text-sm font-medium transition-all relative group ${
                     isActive 
-                      ? (scrolled ? "text-primary" : "text-white") 
-                      : (scrolled ? "text-slate-600 hover:text-primary" : "text-white/80 hover:text-white")
+                      ? (scrolled ? "text-primary dark:text-primary-light" : "text-white") 
+                      : (scrolled ? "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white" : "text-white/80 hover:text-white")
                   }`}
-                  aria-label={`Go to ${item} section`}
+                  aria-label={`Go to ${item.label}`}
                 >
-                  {item}
+                  {item.label}
                   <span className={`absolute -bottom-1 left-0 h-0.5 bg-current transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} aria-hidden="true"></span>
                 </Link>
               );
@@ -105,15 +111,15 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <Link 
-              href="#appointments" 
+              href="/contact" 
               className={`font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 ${
                 scrolled || mobileMenuOpen
                   ? "bg-primary text-white hover:bg-primary-dark" 
                   : "bg-white text-primary hover:bg-slate-50"
               }`}
-              aria-label="Book an Appointment"
+              aria-label="Start Project"
             >
-              Book Appointment
+              Start Project
             </Link>
           </div>
 
@@ -143,7 +149,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Content */}
         <div 
-          className={`lg:hidden fixed top-[100px] left-4 right-4 z-50 bg-white rounded-3xl p-8 shadow-2xl transition-all duration-500 origin-top ${
+          className={`lg:hidden fixed top-[100px] left-4 right-4 z-50 bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl transition-all duration-500 origin-top ${
             mobileMenuOpen 
               ? "opacity-100 scale-100 translate-y-0" 
               : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
@@ -151,29 +157,29 @@ export default function Navbar() {
         >
           <div className="flex flex-col gap-6">
             {NAV_ITEMS.map((item, idx) => {
-              const isActive = activeSection === item.toLowerCase().replace(" ", "-");
+              const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               return (
                 <Link 
-                  key={item} 
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  key={item.label} 
+                  href={item.path}
                   className={`text-lg font-display font-semibold transition-all flex items-center justify-between ${
-                    isActive ? "text-primary translate-x-1" : "text-slate-600"
+                    isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-600 dark:text-slate-300"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ transitionDelay: `${idx * 50}ms` }}
                 >
-                  {item}
+                  {item.label}
                   {isActive && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
                 </Link>
               );
             })}
-            <hr className="border-slate-100" />
+            <hr className="border-slate-100 dark:border-slate-800" />
             <Link 
-              href="#appointments" 
+              href="/contact" 
               className="bg-primary text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all active:scale-[0.98]"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book Appointment
+              Start Project
             </Link>
           </div>
         </div>
