@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @theme {
   --font-sans: var(--font-inter);
   --font-display: var(--font-outfit);

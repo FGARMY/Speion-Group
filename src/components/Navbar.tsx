@@ -71,7 +71,7 @@ export default function Navbar() {
         <div 
           className={`flex items-center justify-between rounded-full px-6 md:px-8 py-3 transition-all duration-500 ease-in-out relative z-50 ${
             scrolled || mobileMenuOpen
-              ? "bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40" 
+              ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/40 dark:border-slate-800/50" 
               : "bg-transparent border-transparent"
           }`}
         >
@@ -89,10 +89,10 @@ export default function Navbar() {
                 <Link 
                   key={item.label} 
                   href={item.path}
-                  className={`text-sm font-medium transition-all relative group ${
+                  className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${
                     isActive 
-                      ? (scrolled ? "text-primary dark:text-primary-light" : "text-white") 
-                      : (scrolled ? "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white" : "text-white/80 hover:text-white")
+                      ? (scrolled ? "text-rose-600 dark:text-rose-400" : "text-white") 
+                      : (scrolled ? "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400" : "text-white/90 hover:text-white")
                   }`}
                   aria-label={`Go to ${item.label}`}
                 >
@@ -124,7 +124,7 @@ export default function Navbar() {
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <button 
               className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
-                scrolled || mobileMenuOpen ? "text-slate-900 bg-slate-100" : "text-white bg-white/10"
+                scrolled || mobileMenuOpen ? "text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800" : "text-white bg-white/10"
               }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -145,7 +145,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Content */}
         <div 
-          className={`lg:hidden fixed top-[100px] left-4 right-4 z-50 bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-2xl transition-all duration-500 origin-top ${
+          className={`lg:hidden absolute top-20 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl rounded-3xl p-6 shadow-2xl dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-300 z-50 ${
             mobileMenuOpen 
               ? "opacity-100 scale-100 translate-y-0" 
               : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
@@ -158,8 +158,8 @@ export default function Navbar() {
                 <Link 
                   key={item.label} 
                   href={item.path}
-                  className={`text-lg font-display font-semibold transition-all flex items-center justify-between ${
-                    isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-600 dark:text-slate-300"
+                  className={`text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${
+                    isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ transitionDelay: `${idx * 50}ms` }}
