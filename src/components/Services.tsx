@@ -103,11 +103,11 @@ export default function Services() {
               <div className="w-10 h-[1px] bg-slate-900 dark:bg-rose-400"></div>
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-slate-900/40 dark:text-rose-400/60">Capabilities & Services</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[0.95] tracking-tight mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[0.95] tracking-tight mb-8">
               Engineering <br /> Excellence
             </h2>
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center">
-              <p className="text-lg text-slate-500 dark:text-slate-400 font-light max-w-md leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-light max-w-md leading-relaxed">
                 A rigorous overview of our software architecture, development, and design capabilities.
               </p>
             </div>

@@ -4,7 +4,7 @@ export default function TrustBar() {
   return (
     <section className="relative -mt-16 z-30 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-slate-100 dark:border-slate-800 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-slate-100 dark:border-slate-800 p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
           
           <div className="flex items-center gap-4 group">
             <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-rose-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700">
