@@ -118,7 +118,7 @@ export default function Contact() {
                 className={`w-full py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 shadow-xl ${
                   formState === 'success' 
                     ? 'bg-emerald-500 text-white shadow-emerald-200' 
-                    : 'bg-primary text-white shadow-primary/20 hover:bg-primary-dark hover:-translate-y-1 active:scale-95'
+                    : 'bg-pink-600 text-white shadow-pink-600/20 hover:bg-pink-700 hover:-translate-y-1 active:scale-95'
                 }`}
               >
                 {formState === 'idle' && (
