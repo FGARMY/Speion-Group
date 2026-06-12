@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://speion.vercel.app/sitemap.xml
+Sitemap: https://speion-group.vercel.app/sitemap.xml
