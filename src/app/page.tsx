@@ -2,7 +2,6 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
-import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
@@ -78,7 +77,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ClientLogos />
-      <TrustBar />
       <Services />
       <WhyUs />
       <Testimonials />
