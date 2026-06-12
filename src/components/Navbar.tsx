@@ -108,7 +108,7 @@ export default function Navbar() {
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <Link 
               href="/contact" 
-              className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-primary text-white hover:bg-primary-dark"
+              className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-pink-600 text-white hover:bg-pink-700"
               aria-label="Start Project"
             >
               Start Project
@@ -166,7 +166,7 @@ export default function Navbar() {
             <hr className="border-slate-100 dark:border-slate-800" />
             <Link 
               href="/contact" 
-              className="bg-primary text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all active:scale-[0.98]"
+              className="bg-pink-600 text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-pink-600/20 hover:bg-pink-700 transition-all active:scale-[0.98]"
               onClick={() => setMobileMenuOpen(false)}
             >
               Start Project
