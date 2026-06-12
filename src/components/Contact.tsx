@@ -11,13 +11,13 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('sending');
-    
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const result = await submitContactForm(formData);
     
     if (result.success) {
       setFormState('success');
-      e.currentTarget.reset();
+      form.reset();
       setTimeout(() => setFormState('idle'), 3000);
     } else {
       console.error(result.error);
