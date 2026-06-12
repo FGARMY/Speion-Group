@@ -41,8 +41,8 @@ export default function Hero() {
 
           <div className="flex flex-col gap-4 sm:gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h1 className="text-slate-900 dark:text-white font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:leading-[1.05] tracking-tightest">
-              Enterprise-grade <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">software</span> Development.
+              Top Software & Web <br className="hidden sm:block" />
+              Development in <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">Pune & Nashik</span>
             </h1>
 
             <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg leading-relaxed font-light mx-auto tracking-wide px-2 sm:px-0">
@@ -82,7 +82,7 @@ export default function Hero() {
                 ))}
                 <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.9/5.0</span>
               </div>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by 50+ Global Clients</p>
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
             </div>
           </div>
 

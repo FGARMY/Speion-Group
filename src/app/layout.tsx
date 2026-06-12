@@ -17,20 +17,20 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Speion | Global Enterprise Software Engineering",
-  description: "Global enterprise software engineering partner. We build high-performance websites, custom software, scalable mobile apps, SaaS platforms, and AI automation systems.",
-  keywords: ["Global Software Engineering", "Enterprise Software Development", "SaaS Development", "Custom Software Solutions", "Speion", "AI Automation"],
+  title: "Top Software & Web Development Company in Pune & Nashik | Speion",
+  description: "Leading enterprise software and web development agency in Pune and Nashik. We build high-performance websites, custom software, scalable mobile apps, and AI systems.",
+  keywords: ["Software Development Company Pune", "Web Development Agency Nashik", "Global Software Engineering", "Enterprise Software Development", "Custom Software Solutions", "Speion", "Top IT Company in Pune", "Mobile App Developers Nashik"],
   openGraph: {
-    title: "Speion | Global Enterprise Software Engineering",
-    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion.",
+    title: "Speion | Top Software & Web Development Company in Pune & Nashik",
+    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion in Pune and Nashik.",
     type: "website",
     locale: "en_IN",
     siteName: "Speion",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Speion | Software Development Company",
-    description: "Enterprise-grade custom software, web, and mobile app development.",
+    title: "Speion | Software & Web Development Agency Pune & Nashik",
+    description: "Enterprise-grade custom software, web, and mobile app development in Pune and Nashik.",
   },
   verification: {
     google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",

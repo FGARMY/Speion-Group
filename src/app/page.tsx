@@ -52,15 +52,32 @@ export default function Home() {
       {
         "@type": "LocalBusiness",
         "@id": "https://speion-group.vercel.app/#pune-office",
-        "name": "Speion — Global Engineering Hub Pune",
+        "name": "Speion — Top Software Development Company Pune",
         "telephone": "+91 77588 66318",
         "email": "speiongorup@gmail.com",
+        "image": "https://speion-group.vercel.app/logo.png",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Parklane Life Season Plus, Dhanori",
           "addressLocality": "Pune",
           "addressRegion": "Maharashtra",
           "postalCode": "411015",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://speion-group.vercel.app/#nashik-office",
+        "name": "Speion — Top Web Development Agency Nashik",
+        "telephone": "+91 77588 66318",
+        "email": "speiongorup@gmail.com",
+        "image": "https://speion-group.vercel.app/logo.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nashik",
+          "addressRegion": "Maharashtra",
           "addressCountry": "IN"
         }
       }

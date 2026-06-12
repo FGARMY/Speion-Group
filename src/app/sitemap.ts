@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://speion.vercel.app';
+  const baseUrl = 'https://speion-group.vercel.app';
 
   const routes = [
     '',
@@ -17,8 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/mobile-app-development',
     '/services/ui-ux-design',
     '/services/web-development',
+    '/services/social-media-management',
     '/locations/software-development-nashik',
     '/locations/software-development-pune',
+    '/privacy-policy',
+    '/terms',
   ];
 
   return routes.map((route) => ({
