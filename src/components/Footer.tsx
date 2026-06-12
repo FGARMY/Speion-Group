@@ -42,13 +42,11 @@ export default function Footer() {
               We engineer scalable software, mobile apps, and enterprise solutions for ambitious startups and businesses globally.
             </p>
             <nav className="flex items-center gap-4" aria-label="Social Media Links">
-              {[SocialIcons.Facebook, SocialIcons.Instagram, SocialIcons.Youtube, SocialIcons.Linkedin].map((Icon, idx) => {
-                const names = ["Facebook", "Instagram", "Youtube", "Linkedin"];
+              {[SocialIcons.Instagram, SocialIcons.Linkedin].map((Icon, idx) => {
+                const names = ["Instagram", "Linkedin"];
                 const links = [
-                  "#",
                   "https://www.instagram.com/speiongroup/",
-                  "#",
-                  "#"
+                  "https://www.instagram.com/speiongroup/"
                 ];
                 return (
                   <a 
