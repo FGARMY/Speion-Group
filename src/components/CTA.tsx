@@ -24,7 +24,7 @@ export default function CTA() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="/contact" className="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-primary-dark transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
+              <a href="/contact" className="w-full sm:w-auto bg-pink-600 text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-pink-700 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
                 <CalendarPlus size={22} />
                 Book Consultation
               </a>
