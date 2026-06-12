@@ -23,7 +23,7 @@ export default function Services() {
       accent: "text-slate-950",
       expert: "Mobile Engineering Team",
       tag: "iOS & Android",
-      className: "lg:col-span-1 lg:row-span-2",
+      className: "lg:col-span-1 lg:row-span-1",
       delay: "0.2s",
       link: "/services/mobile-app-development",
       extra: (
@@ -70,7 +70,7 @@ export default function Services() {
       accent: "text-blue-950",
       expert: "Design Team",
       tag: "User Experience",
-      className: "lg:col-span-2 lg:row-span-1 flex-row items-center gap-12",
+      className: "lg:col-span-1 lg:row-span-1",
       delay: "0.5s",
       link: "/services/ui-ux-design"
     },
@@ -143,7 +143,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid - "Architecture File" Aesthetic */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
           {services.map((item, idx) => (
             <Link 
               href={item.link}
