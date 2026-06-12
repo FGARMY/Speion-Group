@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Building2, Hexagon, Globe } from "lucide-react";
 
 export default function Testimonials() {
   const reviews = [
@@ -7,21 +7,24 @@ export default function Testimonials() {
       author: "Rajesh Kulkarni",
       role: "CTO, Manufacturing Firm",
       initials: "RK",
-      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500"
+      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500",
+      logo: <Building2 size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
     },
     {
       text: "We partnered with Speion to build our mobile app from scratch. Not only did they deliver a stunning UI/UX, but the React Native codebase was incredibly clean and performant. Highly recommend their engineering team.",
       author: "Priya Sharma",
       role: "Founder, FinTech Startup",
       initials: "PS",
-      color: "bg-slate-100 text-red-600 dark:bg-slate-800 dark:text-red-500"
+      color: "bg-slate-100 text-red-600 dark:bg-slate-800 dark:text-red-500",
+      logo: <Hexagon size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
     },
     {
       text: "Finding a reliable software development agency in Pune was tough until we found Speion. They act as an extension of our in-house team. The custom CRM they built for us has automated hundreds of hours of manual work.",
       author: "Amit Deshmukh",
       role: "VP Operations",
       initials: "AD",
-      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500"
+      color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500",
+      logo: <Globe size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
     }
   ];
 
@@ -56,11 +59,13 @@ export default function Testimonials() {
                 &ldquo;
               </div>
 
-              <div className="flex gap-1 mb-8 relative z-10">
+              <div className="flex gap-1 mb-6 relative z-10">
                 {[1, 2, 3, 4, 5].map(star => (
                   <Star key={star} size={16} className="fill-amber-400 text-amber-400" />
                 ))}
               </div>
+
+              {rev.logo}
 
               <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-10 flex-grow relative z-10 italic">
                 &ldquo;{rev.text}&rdquo;
