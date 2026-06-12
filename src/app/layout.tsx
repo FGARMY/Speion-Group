@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     title: "Speion | Software Development Company",
     description: "Custom software, web & app development in Nashik and Pune.",
   },
+  verification: {
+    google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",
+  },
 };
 
 export default function RootLayout({
