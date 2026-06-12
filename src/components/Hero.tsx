@@ -63,11 +63,16 @@ export default function Hero() {
           {/* Optimized Social Proof Badge for all backgrounds */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
             <div className="flex -space-x-4 overflow-hidden p-0.5">
-              {[1, 2, 3, 4].map((i) => (
+              {[
+                "/images/client1.jpeg",
+                "/images/client2.jpeg",
+                "/images/client3.jpeg",
+                "/images/client4.jpeg"
+              ].map((src, i) => (
                 <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
                   <Image
-                    src={`https://i.pravatar.cc/150?u=medical-user-${i}`}
-                    alt={`Client avatar ${i}`}
+                    src={src}
+                    alt={`Client avatar ${i + 1}`}
                     fill
                     sizes="48px"
                     className="object-cover"
