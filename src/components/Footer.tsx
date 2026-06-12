@@ -74,9 +74,8 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Industries</h3>
             <ul className="space-y-4">
-              <li><Link href="/industries/healthcare" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm">Healthcare SaaS</Link></li>
-              <li><Link href="/industries/fintech" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm">FinTech & Banking</Link></li>
-              <li><Link href="/estimator" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-bold flex items-center gap-1">Project Estimator</Link></li>
+              <li><Link href="/industries/healthcare" className="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-colors text-sm">Healthcare SaaS</Link></li>
+              <li><Link href="/industries/fintech" className="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-colors text-sm">FinTech & Banking</Link></li>
             </ul>
           </div>
 

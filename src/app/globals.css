@@ -14,21 +14,21 @@
     --background: #fdfdfd;
     --foreground: #0f172a;
     
-    /* Speion Brand Colors - Deep Indigo */
-    --primary: #4f46e5; /* indigo-600 */
-    --primary-light: #818cf8; /* indigo-400 */
-    --primary-dark: #4338ca; /* indigo-700 */
-    --accent: #6366f1; /* indigo-500 */
+    /* Speion Brand Colors - Graphite & Crimson */
+    --primary: #e11d48; /* rose-600 */
+    --primary-light: #fb7185; /* rose-400 */
+    --primary-dark: #be123c; /* rose-700 */
+    --accent: #f43f5e; /* rose-500 */
   }
 
   .dark {
     --background: #0f172a; /* Deep Slate */
     --foreground: #f8fafc;
     
-    --primary: #4f46e5;
-    --primary-light: #818cf8;
-    --primary-dark: #4338ca;
-    --accent: #6366f1;
+    --primary: #f43f5e; /* Brighter rose-500 for dark mode to pop more */
+    --primary-light: #fb7185;
+    --primary-dark: #e11d48;
+    --accent: #fb7185;
   }
 }
 
@@ -73,7 +73,7 @@
   }
 
   .hover\:bg-primary-dark:hover {
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
     transform: translateY(-2px);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
