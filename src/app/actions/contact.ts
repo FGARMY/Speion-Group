@@ -84,6 +84,6 @@ export async function submitContactForm(formData: FormData) {
     return { success: true };
   } catch (error) {
     console.error("Error in submitContactForm:", error);
-    return { success: false, error: "An unexpected error occurred." };
+    return { success: false, error: error instanceof Error ? error.message : String(error) };
   }
 }
