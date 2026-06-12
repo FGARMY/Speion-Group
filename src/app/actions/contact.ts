@@ -35,7 +35,8 @@ export async function submitContactForm(formData: FormData) {
     if (apiKey) {
       const resend = new Resend(apiKey);
       
-      const { data, error } = await resend.emails.send({
+      // 2. Send email to Speion Admins
+      const { data, error: adminError } = await resend.emails.send({
         from: "Speion Website <onboarding@resend.dev>",
         to: "speiongroup@gmail.com",
         subject: `New Lead: ${subject} - from ${name}`,
@@ -51,8 +52,30 @@ export async function submitContactForm(formData: FormData) {
         `,
       });
 
-      if (error) {
-        console.error("Resend error:", error);
+      if (adminError) {
+        console.error("Resend error (admin email):", adminError);
+      }
+
+      // 3. Send Auto-responder to the Client
+      const { error: clientError } = await resend.emails.send({
+        from: "Speion Group <onboarding@resend.dev>", // Or a verified domain
+        to: email,
+        subject: "We've received your message - Speion Group",
+        text: `Hi ${name},\n\nThank you for reaching out to Speion Group!\n\nWe have received your message regarding "${subject}" and our team will get back to you shortly.\n\nBest regards,\nSpeion Group Team`,
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #334155;">
+            <h2 style="color: #0f172a;">Thank you for contacting us, ${name}!</h2>
+            <p>We have successfully received your inquiry regarding <strong>${subject}</strong>.</p>
+            <p>Our engineering team is reviewing your requirements and will be in touch with you very shortly.</p>
+            <br/>
+            <p>Best regards,</p>
+            <p><strong>The Speion Group Team</strong></p>
+          </div>
+        `,
+      });
+
+      if (clientError) {
+        console.error("Resend error (client email):", clientError);
       }
     } else {
       console.warn("RESEND_API_KEY not set. Email notification skipped.");
