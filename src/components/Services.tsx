@@ -23,7 +23,7 @@ export default function Services() {
       accent: "text-slate-950",
       expert: "Mobile Engineering Team",
       tag: "iOS & Android",
-      className: "lg:col-span-1 lg:row-span-2",
+      className: "lg:col-span-1 lg:row-span-1",
       delay: "0.2s",
       link: "/services/mobile-app-development",
       extra: (
@@ -63,31 +63,19 @@ export default function Services() {
       link: "/services/erp-development"
     },
     {
-      id: "05 / CRM",
-      title: "CRM Development",
-      desc: "Custom Customer Relationship Management software to track leads, manage sales pipelines, and boost conversions.",
-      icon: <Database size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
-      expert: "Data Engineering Team",
-      tag: "Sales Optimization",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.5s",
-      link: "/services/crm-development"
-    },
-    {
-      id: "06 / UIX",
+      id: "05 / UIX",
       title: "UI/UX Design",
       desc: "Stunning, user-centric interfaces and wireframes that ensure high conversion rates and intuitive navigation.",
       icon: <Layout size={40} strokeWidth={1} />,
       accent: "text-blue-950",
       expert: "Design Team",
       tag: "User Experience",
-      className: "lg:col-span-2 lg:row-span-1 flex-row items-center gap-12",
-      delay: "0.6s",
+      className: "lg:col-span-1 lg:row-span-1",
+      delay: "0.5s",
       link: "/services/ui-ux-design"
     },
     {
-      id: "07 / SMM",
+      id: "06 / SMM",
       title: "Social Media Management",
       desc: "Data-driven social media strategies to elevate your brand presence, engage audiences, and drive enterprise growth.",
       icon: <Megaphone size={40} strokeWidth={1} />,
@@ -95,8 +83,20 @@ export default function Services() {
       expert: "Digital Marketing Team",
       tag: "Brand Growth",
       className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.7s",
+      delay: "0.6s",
       link: "/services/social-media-management"
+    },
+    {
+      id: "07 / CRM",
+      title: "CRM Development",
+      desc: "Custom Customer Relationship Management software to track leads, manage sales pipelines, and boost conversions.",
+      icon: <Database size={40} strokeWidth={1} />,
+      accent: "text-blue-950",
+      expert: "Data Engineering Team",
+      tag: "Sales Optimization",
+      className: "lg:col-span-1 lg:row-span-1",
+      delay: "0.7s",
+      link: "/services/crm-development"
     }
   ];
 
@@ -143,7 +143,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid - "Architecture File" Aesthetic */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
           {services.map((item, idx) => (
             <Link 
               href={item.link}

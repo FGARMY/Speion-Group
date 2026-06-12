@@ -3,17 +3,27 @@
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
+import { submitContactForm } from "@/app/actions/contact";
+
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'sending' | 'success'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('sending');
-    // Mock sending
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    const result = await submitContactForm(formData);
+    
+    if (result.success) {
       setFormState('success');
+      e.currentTarget.reset();
       setTimeout(() => setFormState('idle'), 3000);
-    }, 1500);
+    } else {
+      console.error(result.error);
+      alert("Failed to send message: " + result.error);
+      setFormState('idle');
+    }
   };
 
   return (
@@ -66,6 +76,7 @@ export default function Contact() {
                   <label htmlFor="name" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
                   <input 
                     id="name"
+                    name="name"
                     type="text" 
                     placeholder="Your Name" 
                     required
@@ -76,9 +87,34 @@ export default function Contact() {
                   <label htmlFor="email" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
                   <input 
                     id="email"
+                    name="email"
                     type="email" 
                     placeholder="hello@company.com" 
                     required
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Phone Number</label>
+                  <input 
+                    id="phone"
+                    name="phone"
+                    type="tel" 
+                    placeholder="+91 00000 00000" 
+                    required
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="company" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Company Name</label>
+                  <input 
+                    id="company"
+                    name="company"
+                    type="text" 
+                    placeholder="Your Company (Optional)" 
                     className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
                   />
                 </div>
@@ -89,6 +125,7 @@ export default function Contact() {
                 <div className="relative">
                   <select 
                     id="subject"
+                    name="subject"
                     className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
                     required
                   >
@@ -105,6 +142,7 @@ export default function Contact() {
                 <label htmlFor="message" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Message</label>
                 <textarea 
                   id="message"
+                  name="message"
                   rows={4} 
                   placeholder="Tell us about your project requirements..." 
                   required
@@ -118,7 +156,7 @@ export default function Contact() {
                 className={`w-full py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 shadow-xl ${
                   formState === 'success' 
                     ? 'bg-emerald-500 text-white shadow-emerald-200' 
-                    : 'bg-primary text-white shadow-primary/20 hover:bg-primary-dark hover:-translate-y-1 active:scale-95'
+                    : 'bg-pink-600 text-white shadow-pink-600/20 hover:bg-pink-700 hover:-translate-y-1 active:scale-95'
                 }`}
               >
                 {formState === 'idle' && (

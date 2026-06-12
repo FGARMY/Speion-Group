@@ -42,12 +42,18 @@ export default function Footer() {
               We engineer scalable software, mobile apps, and enterprise solutions for ambitious startups and businesses globally.
             </p>
             <nav className="flex items-center gap-4" aria-label="Social Media Links">
-              {[SocialIcons.Facebook, SocialIcons.Instagram, SocialIcons.Youtube, SocialIcons.Linkedin].map((Icon, idx) => {
-                const names = ["Facebook", "Instagram", "Youtube", "Linkedin"];
+              {[SocialIcons.Instagram, SocialIcons.Linkedin].map((Icon, idx) => {
+                const names = ["Instagram", "Linkedin"];
+                const links = [
+                  "https://www.instagram.com/speiongroup/",
+                  "https://www.linkedin.com/company/speion/"
+                ];
                 return (
                   <a 
                     key={idx} 
-                    href="#" 
+                    href={links[idx]} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-rose-600 hover:text-white transition-colors"
                     aria-label={`Visit our ${names[idx]} page`}
                   >
@@ -74,9 +80,8 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wider text-sm">Industries</h3>
             <ul className="space-y-4">
-              <li><Link href="/industries/healthcare" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm">Healthcare SaaS</Link></li>
-              <li><Link href="/industries/fintech" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm">FinTech & Banking</Link></li>
-              <li><Link href="/estimator" className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-bold flex items-center gap-1">Project Estimator</Link></li>
+              <li><Link href="/industries/healthcare" className="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-colors text-sm">Healthcare SaaS</Link></li>
+              <li><Link href="/industries/fintech" className="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-colors text-sm">FinTech & Banking</Link></li>
             </ul>
           </div>
 

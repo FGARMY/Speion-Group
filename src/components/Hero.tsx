@@ -1,4 +1,4 @@
-import { ArrowRight, Star, Code, Database, Cpu, Sparkles } from "lucide-react";
+import { ArrowRight, Star, Code, Database, Cpu, Sparkles, StarHalf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -77,10 +77,11 @@ export default function Hero() {
             </div>
             <div className="text-left">
               <div className="flex items-center justify-start gap-1">
-                {[1, 2, 3, 4, 5].map((s) => (
+                {[1, 2, 3, 4].map((s) => (
                   <Star key={s} size={14} className="fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.9/5.0</span>
+                <StarHalf size={14} className="fill-amber-400 text-amber-400" />
+                <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.3/5.0</span>
               </div>
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
             </div>

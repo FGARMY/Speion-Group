@@ -25,10 +25,10 @@
     --background: #0f172a; /* Deep Slate */
     --foreground: #f8fafc;
     
-    --primary: #e11d48;
+    --primary: #f43f5e; /* Brighter rose-500 for dark mode to pop more */
     --primary-light: #fb7185;
-    --primary-dark: #be123c;
-    --accent: #f43f5e;
+    --primary-dark: #e11d48;
+    --accent: #fb7185;
   }
 }
 
@@ -70,6 +70,12 @@
 
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-600 via-red-500 to-rose-600;
+  }
+
+  .hover\:bg-primary-dark:hover {
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
 
