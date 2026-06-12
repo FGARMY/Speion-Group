@@ -35,10 +35,10 @@ export async function submitContactForm(formData: FormData) {
     if (apiKey) {
       const resend = new Resend(apiKey);
       
-      // 2. Send email to Speion Admins
+      // 2. Send email to Speion Admins (Testing Address)
       const { data, error: adminError } = await resend.emails.send({
         from: "Speion Website <onboarding@resend.dev>",
-        to: "speiongroup@gmail.com",
+        to: "flaminggarena@gmail.com",
         subject: `New Lead: ${subject} - from ${name}`,
         text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`,
         html: `
@@ -56,7 +56,8 @@ export async function submitContactForm(formData: FormData) {
         console.error("Resend error (admin email):", adminError);
       }
 
-      // 3. Send Auto-responder to the Client
+      // 3. Send Auto-responder to the Client (Disabled until domain is verified in Resend)
+      /*
       const { error: clientError } = await resend.emails.send({
         from: "Speion Group <onboarding@resend.dev>", // Or a verified domain
         to: email,
@@ -77,6 +78,7 @@ export async function submitContactForm(formData: FormData) {
       if (clientError) {
         console.error("Resend error (client email):", clientError);
       }
+      */
     } else {
       console.warn("RESEND_API_KEY not set. Email notification skipped.");
     }
