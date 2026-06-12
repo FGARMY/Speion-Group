@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
-  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Case Studies", path: "/case-studies" },
@@ -77,7 +76,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <img src="/images/new-logo-1.png" alt="Speion" className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
             <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">Speion</span>
           </Link>
