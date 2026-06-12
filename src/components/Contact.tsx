@@ -3,17 +3,27 @@
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
+import { submitContactForm } from "@/app/actions/contact";
+
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'sending' | 'success'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('sending');
-    // Mock sending
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    const result = await submitContactForm(formData);
+    
+    if (result.success) {
       setFormState('success');
+      e.currentTarget.reset();
       setTimeout(() => setFormState('idle'), 3000);
-    }, 1500);
+    } else {
+      console.error(result.error);
+      alert("Failed to send message: " + result.error);
+      setFormState('idle');
+    }
   };
 
   return (
@@ -66,6 +76,7 @@ export default function Contact() {
                   <label htmlFor="name" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
                   <input 
                     id="name"
+                    name="name"
                     type="text" 
                     placeholder="Your Name" 
                     required
@@ -76,6 +87,7 @@ export default function Contact() {
                   <label htmlFor="email" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
                   <input 
                     id="email"
+                    name="email"
                     type="email" 
                     placeholder="hello@company.com" 
                     required
@@ -89,6 +101,7 @@ export default function Contact() {
                 <div className="relative">
                   <select 
                     id="subject"
+                    name="subject"
                     className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
                     required
                   >
@@ -105,6 +118,7 @@ export default function Contact() {
                 <label htmlFor="message" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Message</label>
                 <textarea 
                   id="message"
+                  name="message"
                   rows={4} 
                   placeholder="Tell us about your project requirements..." 
                   required

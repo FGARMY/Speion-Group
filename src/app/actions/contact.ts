@@ -1,0 +1,66 @@
+"use server";
+
+import { createClient } from "@/utils/supabase/server";
+import { cookies } from "next/headers";
+import nodemailer from "nodemailer";
+
+export async function submitContactForm(formData: FormData) {
+  try {
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
+
+    if (!name || !email || !subject || !message) {
+      return { success: false, error: "All fields are required" };
+    }
+
+    // 1. Insert into Supabase
+    const cookieStore = await cookies();
+    const supabase = createClient(cookieStore);
+
+    const { error: dbError } = await supabase
+      .from("contact_submissions")
+      .insert([{ name, email, subject, message }]);
+
+    if (dbError) {
+      console.error("Supabase insert error:", dbError);
+      return { success: false, error: "Failed to save submission. Please ensure the table exists." };
+    }
+
+    // 2. Send email via Nodemailer (if password is set)
+    const password = process.env.GMAIL_APP_PASSWORD;
+    if (password) {
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "speiongroup@gmail.com",
+          pass: password,
+        },
+      });
+
+      const mailOptions = {
+        from: '"Speion Website" <speiongroup@gmail.com>',
+        to: "speiongroup@gmail.com",
+        subject: `New Lead: ${subject} - from ${name}`,
+        text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
+        html: `
+          <h3>New Contact Submission</h3>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
+        `,
+      };
+
+      await transporter.sendMail(mailOptions);
+    } else {
+      console.warn("GMAIL_APP_PASSWORD not set. Email notification skipped.");
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error in submitContactForm:", error);
+    return { success: false, error: "An unexpected error occurred." };
+  }
+}
