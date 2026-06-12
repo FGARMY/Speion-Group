@@ -7,7 +7,7 @@ export default function TrustBar() {
         <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-slate-100 dark:border-slate-800 p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
           
           <div className="flex items-center gap-4 group">
-            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-rose-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800/50 text-rose-600 dark:text-rose-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700/50">
               <Star size={24} className="group-hover:fill-white" />
             </div>
             <div>
@@ -17,7 +17,7 @@ export default function TrustBar() {
           </div>
 
           <div className="flex items-center gap-4 group">
-            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-rose-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800/50 text-rose-600 dark:text-rose-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700/50">
               <Users size={24} />
             </div>
             <div>
@@ -27,7 +27,7 @@ export default function TrustBar() {
           </div>
 
           <div className="flex items-center gap-4 group">
-            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-rose-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800/50 text-rose-600 dark:text-rose-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700/50">
               <Award size={24} />
             </div>
             <div>
@@ -37,7 +37,7 @@ export default function TrustBar() {
           </div>
 
           <div className="flex items-center gap-4 group">
-            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-rose-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700">
+            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800/50 text-rose-600 dark:text-rose-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-rose-600 dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-500 shadow-sm border border-slate-200 dark:border-slate-700/50">
               <Clock size={24} />
             </div>
             <div>

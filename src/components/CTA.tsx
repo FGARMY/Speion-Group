@@ -2,7 +2,7 @@ import { CalendarPlus, PhoneCall } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="appointment" className="py-24 px-4 sm:px-6 relative bg-white dark:bg-[#020617] transition-colors duration-500">
+    <section id="appointment" className="py-24 px-4 sm:px-6 relative bg-white dark:bg-transparent transition-colors duration-500">
       <div className="container mx-auto max-w-5xl">
         <div className="bg-gradient-to-br from-rose-50 via-rose-100 to-white dark:from-slate-900 dark:via-rose-950 dark:to-slate-950 border border-rose-200 dark:border-none rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-10 md:p-20 text-center shadow-[0_30px_100px_rgba(225,29,72,0.1)] dark:shadow-[0_30px_100px_rgba(225,29,72,0.25)] relative overflow-hidden group opacity-0 animate-fade-in-up transition-all duration-500">
           
@@ -24,7 +24,7 @@ export default function CTA() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="/contact" className="w-full sm:w-auto bg-rose-600 dark:bg-slate-100 text-white dark:text-rose-900 px-10 py-5 rounded-full font-bold shadow-xl hover:bg-rose-700 dark:hover:bg-white transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
+              <a href="/contact" className="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-primary-dark transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
                 <CalendarPlus size={22} />
                 Book Consultation
               </a>

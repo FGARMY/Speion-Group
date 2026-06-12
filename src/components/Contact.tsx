@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-[#020617] relative overflow-hidden transition-colors duration-500">
+    <section id="contact" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-transparent relative overflow-hidden transition-colors duration-500">
       {/* Background Decals */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-indigo-50/50 dark:bg-indigo-900/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-emerald-50/50 dark:bg-emerald-900/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
@@ -27,11 +27,11 @@ export default function Contact() {
           
           {/* Left Side: Info */}
           <div className="opacity-0 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400 px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
               Contact Us
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-8 tracking-tight">
-              Get in Touch with Our <span className="text-blue-600 italic">Engineers</span>
+              Get in Touch with Our <span className="text-primary italic">Engineers</span>
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-12 max-w-lg">
               Have a project in mind or need a technical consultation? We're here to help. Reach out through the form or our contact details below.
@@ -44,7 +44,7 @@ export default function Contact() {
                 { icon: <Mail size={24} />, title: "Email Support", text: "hello@speion.com\nprojects@speion.com" }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
                     {item.icon}
                   </div>
                   <div>
@@ -79,7 +79,7 @@ export default function Contact() {
                     type="email" 
                     placeholder="hello@company.com" 
                     required
-                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
                   />
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function Contact() {
                 <div className="relative">
                   <select 
                     id="subject"
-                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
                     required
                   >
                     <option value="">Select a subject</option>
@@ -108,7 +108,7 @@ export default function Contact() {
                   rows={4} 
                   placeholder="Tell us about your project requirements..." 
                   required
-                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white dark:focus:bg-slate-700 transition-all resize-none text-slate-900 dark:text-slate-100"
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all resize-none text-slate-900 dark:text-slate-100"
                 ></textarea>
               </div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
                 className={`w-full py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 shadow-xl ${
                   formState === 'success' 
                     ? 'bg-emerald-500 text-white shadow-emerald-200' 
-                    : 'bg-blue-600 text-white shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-1 active:scale-95'
+                    : 'bg-primary text-white shadow-primary/20 hover:bg-primary-dark hover:-translate-y-1 active:scale-95'
                 }`}
               >
                 {formState === 'idle' && (

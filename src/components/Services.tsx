@@ -163,7 +163,7 @@ export default function Services() {
                     <span className="text-[9px] uppercase font-bold text-slate-300 dark:text-slate-700 tracking-[0.2em] mb-2 group-hover:text-red-600 transition-colors">Lead Division</span>
                     <span className="text-xs font-serif italic text-slate-900 dark:text-slate-200">{item.expert}</span>
                   </div>
-                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-slate-950 group-hover:border-slate-950 dark:group-hover:border-white transition-all duration-500 rounded-full">
+                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-slate-800 group-hover:text-white dark:group-hover:text-rose-400 group-hover:border-slate-950 dark:group-hover:border-slate-700 transition-all duration-500 rounded-full">
                     <ChevronRight size={14} />
                   </div>
                 </div>
