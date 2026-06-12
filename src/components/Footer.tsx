@@ -46,7 +46,7 @@ export default function Footer() {
                 const names = ["Instagram", "Linkedin"];
                 const links = [
                   "https://www.instagram.com/speiongroup/",
-                  "https://www.instagram.com/speiongroup/"
+                  "https://www.linkedin.com/company/speion/"
                 ];
                 return (
                   <a 
