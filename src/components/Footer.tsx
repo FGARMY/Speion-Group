@@ -44,10 +44,18 @@ export default function Footer() {
             <nav className="flex items-center gap-4" aria-label="Social Media Links">
               {[SocialIcons.Facebook, SocialIcons.Instagram, SocialIcons.Youtube, SocialIcons.Linkedin].map((Icon, idx) => {
                 const names = ["Facebook", "Instagram", "Youtube", "Linkedin"];
+                const links = [
+                  "#",
+                  "https://www.instagram.com/speiongroup/",
+                  "#",
+                  "#"
+                ];
                 return (
                   <a 
                     key={idx} 
-                    href="#" 
+                    href={links[idx]} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-rose-600 hover:text-white transition-colors"
                     aria-label={`Visit our ${names[idx]} page`}
                   >
