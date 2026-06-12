@@ -29,13 +29,13 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 bg-white dark:bg-[#020617] relative transition-colors duration-500">
+    <section id="faq" className="py-24 px-4 sm:px-6 bg-white dark:bg-transparent relative transition-colors duration-500">
       <div className="container mx-auto max-w-4xl">
         
         {/* Header */}
         <div className="text-center mb-16 opacity-0 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
-            <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+          <div className="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
+            <span className="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400 block"></span>
             FAQ
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-6 tracking-tight">
@@ -55,7 +55,7 @@ export default function FAQ() {
                 key={idx} 
                 className={`border rounded-2xl overflow-hidden transition-all duration-500 ${
                   isOpen 
-                    ? 'bg-white dark:bg-slate-900 border-blue-200 dark:border-blue-500/30 shadow-[0_10px_30px_rgba(59,130,246,0.06)] scale-[1.01]' 
+                    ? 'bg-white dark:bg-slate-900 border-rose-200 dark:border-rose-500/30 shadow-[0_10px_30px_rgba(225,29,72,0.06)] scale-[1.01]' 
                     : 'bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700'
                 }`}
               >
@@ -64,12 +64,12 @@ export default function FAQ() {
                   className="w-full text-left px-6 md:px-8 py-5 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   aria-expanded={isOpen}
                 >
-                  <h3 className={`font-bold text-lg md:text-xl transition-colors duration-500 ${isOpen ? 'text-blue-600 dark:text-blue-400' : 'text-slate-800 dark:text-slate-200'}`}>
+                  <h3 className={`font-bold text-lg md:text-xl transition-colors duration-500 ${isOpen ? 'text-rose-600 dark:text-rose-400' : 'text-slate-800 dark:text-slate-200'}`}>
                     {faq.q}
                   </h3>
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
                     isOpen 
-                      ? 'bg-blue-600 text-white rotate-180' 
+                      ? 'bg-rose-600 text-white rotate-180' 
                       : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600'
                   }`}>
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}

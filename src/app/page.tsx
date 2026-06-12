@@ -1,7 +1,7 @@
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
+import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
@@ -26,15 +26,15 @@ export default function Home() {
           "width": 512,
           "height": 512
         },
-        "description": "Speion is the leading software development company in Nashik and Pune.",
+        "description": "Speion is a global enterprise software engineering and digital transformation partner.",
         "contactPoint": [
           {
             "@type": "ContactPoint",
             "telephone": "+91 77588 66318",
             "contactType": "sales",
-            "email": "speiongroup@gmail.com",
+            "email": "speiongorup@gmail.com",
             "availableLanguage": ["English", "Hindi", "Marathi"],
-            "areaServed": ["Nashik", "Pune", "Maharashtra", "India"]
+            "areaServed": "Worldwide"
           }
         ],
         "sameAs": [
@@ -52,15 +52,32 @@ export default function Home() {
       {
         "@type": "LocalBusiness",
         "@id": "https://speion-group.vercel.app/#pune-office",
-        "name": "Speion — Software Development Company Pune",
+        "name": "Speion — Top Software Development Company Pune",
         "telephone": "+91 77588 66318",
-        "email": "speiongroup@gmail.com",
+        "email": "speiongorup@gmail.com",
+        "image": "https://speion-group.vercel.app/logo.png",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Parklane Life Season Plus, Dhanori",
           "addressLocality": "Pune",
           "addressRegion": "Maharashtra",
           "postalCode": "411015",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://speion-group.vercel.app/#nashik-office",
+        "name": "Speion — Top Web Development Agency Nashik",
+        "telephone": "+91 77588 66318",
+        "email": "speiongorup@gmail.com",
+        "image": "https://speion-group.vercel.app/logo.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nashik",
+          "addressRegion": "Maharashtra",
           "addressCountry": "IN"
         }
       }
@@ -76,7 +93,7 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
-      <TrustBar />
+      <ClientLogos />
       <Services />
       <WhyUs />
       <Testimonials />

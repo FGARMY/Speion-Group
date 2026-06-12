@@ -4,6 +4,7 @@ import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,20 +17,20 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Speion | #1 Software Development Company in Nashik & Pune",
-  description: "Leading software development company in Nashik & Pune. We build high-performance websites, custom software, mobile apps, SaaS platforms, and AI automation systems.",
-  keywords: ["Software Development Company", "Web Development", "App Development Pune", "IT Company Nashik", "Speion", "AI Automation"],
+  title: "Top Software & Web Development Company in Pune & Nashik | Speion",
+  description: "Leading enterprise software and web development agency in Pune and Nashik. We build high-performance websites, custom software, scalable mobile apps, and AI systems.",
+  keywords: ["Software Development Company Pune", "Web Development Agency Nashik", "Global Software Engineering", "Enterprise Software Development", "Custom Software Solutions", "Speion", "Top IT Company in Pune", "Mobile App Developers Nashik"],
   openGraph: {
-    title: "Speion | #1 Software Development Company in Nashik & Pune",
-    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion.",
+    title: "Speion | Top Software & Web Development Company in Pune & Nashik",
+    description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion in Pune and Nashik.",
     type: "website",
     locale: "en_IN",
     siteName: "Speion",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Speion | Software Development Company",
-    description: "Custom software, web & app development in Nashik and Pune.",
+    title: "Speion | Software & Web Development Agency Pune & Nashik",
+    description: "Enterprise-grade custom software, web, and mobile app development in Pune and Nashik.",
   },
   verification: {
     google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",
@@ -66,6 +67,7 @@ export default function RootLayout({
             {children}
           </div>
           <ScrollToTop />
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>

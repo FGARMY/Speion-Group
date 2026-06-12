@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Megaphone } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
@@ -85,6 +85,18 @@ export default function Services() {
       className: "lg:col-span-2 lg:row-span-1 flex-row items-center gap-12",
       delay: "0.6s",
       link: "/services/ui-ux-design"
+    },
+    {
+      id: "07 / SMM",
+      title: "Social Media Management",
+      desc: "Data-driven social media strategies to elevate your brand presence, engage audiences, and drive enterprise growth.",
+      icon: <Megaphone size={40} strokeWidth={1} />,
+      accent: "text-blue-950",
+      expert: "Digital Marketing Team",
+      tag: "Brand Growth",
+      className: "lg:col-span-1 lg:row-span-1",
+      delay: "0.7s",
+      link: "/services/social-media-management"
     }
   ];
 
@@ -97,17 +109,17 @@ export default function Services() {
       <div className="container mx-auto max-w-7xl relative z-10">
         
         {/* Header - Architecture Style */}
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-32 gap-16 opacity-0 animate-fade-in-up">
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-16 lg:mb-32 gap-10 lg:gap-16 opacity-0 animate-fade-in-up">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <div className="w-10 h-[1px] bg-slate-900 dark:bg-rose-400"></div>
-              <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-slate-900/40 dark:text-rose-400/60">Capabilities & Services</span>
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.4em] text-slate-900/40 dark:text-rose-400/60">Capabilities & Services</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[0.95] tracking-tight mb-8">
-              Engineering <br /> Excellence
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[1.1] sm:leading-[0.95] tracking-tight mb-6 sm:mb-8">
+              Engineering <br className="hidden sm:block" /> Excellence
             </h2>
-            <div className="flex flex-col sm:flex-row gap-8 sm:items-center">
-              <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 font-light max-w-md leading-relaxed">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-center">
+              <p className="text-sm sm:text-lg text-slate-500 dark:text-slate-400 font-light max-w-md leading-relaxed">
                 A rigorous overview of our software architecture, development, and design capabilities.
               </p>
             </div>
@@ -163,7 +175,7 @@ export default function Services() {
                     <span className="text-[9px] uppercase font-bold text-slate-300 dark:text-slate-700 tracking-[0.2em] mb-2 group-hover:text-red-600 transition-colors">Lead Division</span>
                     <span className="text-xs font-serif italic text-slate-900 dark:text-slate-200">{item.expert}</span>
                   </div>
-                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-slate-950 group-hover:border-slate-950 dark:group-hover:border-white transition-all duration-500 rounded-full">
+                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-slate-800 group-hover:text-white dark:group-hover:text-rose-400 group-hover:border-slate-950 dark:group-hover:border-slate-700 transition-all duration-500 rounded-full">
                     <ChevronRight size={14} />
                   </div>
                 </div>

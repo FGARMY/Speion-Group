@@ -35,14 +35,14 @@ export default function Hero() {
 
           <div className="bg-white/50 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white text-[10px] sm:text-xs md:text-sm font-semibold px-4 py-2 sm:px-5 sm:py-2 rounded-full inline-flex items-center w-fit shadow-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <span className="w-2 h-2 rounded-full bg-rose-500 mr-2 sm:mr-3 animate-pulse ring-4 ring-rose-500/20"></span>
-            #1 SOFTWARE DEVELOPMENT FIRM IN PUNE & NASHIK
+            GLOBAL ENTERPRISE SOFTWARE ENGINEERING
             <Sparkles size={12} className="ml-2 text-rose-400 sm:w-3.5 sm:h-3.5" />
           </div>
 
           <div className="flex flex-col gap-4 sm:gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h1 className="text-slate-900 dark:text-white font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:leading-[1.05] tracking-tightest">
-              Enterprise-grade <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">software</span> Development.
+              Top Software & Web <br className="hidden sm:block" />
+              Development in <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">Pune & Nashik</span>
             </h1>
 
             <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg leading-relaxed font-light mx-auto tracking-wide px-2 sm:px-0">
@@ -82,7 +82,7 @@ export default function Hero() {
                 ))}
                 <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.9/5.0</span>
               </div>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by 50+ Global Clients</p>
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
             </div>
           </div>
 

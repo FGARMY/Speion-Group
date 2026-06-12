@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
-  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Case Studies", path: "/case-studies" },
+  { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" }
 ];
 
@@ -76,7 +76,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <img src="/images/new-logo-1.png" alt="Speion" className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
             <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">Speion</span>
           </Link>
@@ -107,11 +107,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <Link 
-              href="/contact" 
+              href="/estimator" 
               className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-primary text-white hover:bg-primary-dark"
-              aria-label="Start Project"
+              aria-label="Get Estimate"
             >
-              Start Project
+              Get Estimate
             </Link>
           </div>
 
@@ -165,11 +165,11 @@ export default function Navbar() {
             })}
             <hr className="border-slate-100 dark:border-slate-800" />
             <Link 
-              href="/contact" 
+              href="/estimator" 
               className="bg-primary text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all active:scale-[0.98]"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Start Project
+              Get Estimate
             </Link>
           </div>
         </div>

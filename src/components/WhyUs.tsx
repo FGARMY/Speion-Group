@@ -4,19 +4,19 @@ export default function WhyUs() {
   const reasons = [
     {
       title: "Senior Technical Talent",
-      desc: "Our engineering pods consist exclusively of senior-level developers with proven experience in shipping enterprise-scale products.",
+      desc: "Our engineering pods consist exclusively of senior-level developers who have architected and scaled systems to 1M+ active users.",
       icon: <ShieldCheck size={28} />,
       color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },
     {
       title: "Strict CI/CD Pipelines",
-      desc: "Automated testing, containerization, and continuous integration guarantee that every deployment is stable, secure, and fast.",
+      desc: "We enforce 99.99% Uptime SLAs through automated testing, containerization, and continuous integration pipelines for every deployment.",
       icon: <Zap size={28} />,
       color: "bg-slate-100 text-red-600 border-slate-200 dark:bg-slate-800 dark:text-red-500 dark:border-slate-700"
     },
     {
       title: "Maintainable Architecture",
-      desc: "We enforce strict code reviews and write modular, documented code so your in-house team can easily inherit the repository.",
+      desc: "We write modular, documented code that accelerates future feature development by up to 40% while eliminating critical technical debt.",
       icon: <Code2 size={28} />,
       color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },
@@ -33,15 +33,15 @@ export default function WhyUs() {
       <div className="container mx-auto max-w-7xl">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-4 py-2 rounded-full font-semibold text-sm mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 opacity-0 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 px-4 py-2 rounded-full font-semibold text-sm mb-4 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400 block"></span>
             Our Advantage
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-6 tracking-tight">
-            Built for Scale. Engineered for ROI.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-slate-100 mb-4 sm:mb-6 tracking-tight leading-tight">
+            Built for Scale. <br className="block sm:hidden" /> Engineered for ROI.
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed px-2 sm:px-0">
             We don't just write code. We architect systems that solve complex technical debt and drive revenue growth.
           </p>
         </div>

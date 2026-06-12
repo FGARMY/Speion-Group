@@ -26,7 +26,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 relative">
+    <section id="testimonials" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-transparent transition-colors duration-500 relative">
       <div className="container mx-auto max-w-7xl">
 
         {/* Header */}
@@ -48,7 +48,7 @@ export default function Testimonials() {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-white dark:border-slate-800 shadow-[0_10px_40px_rgba(15,23,42,0.05)] dark:shadow-[0_10px_40px_rgba(15,23,42,0.2)] relative flex flex-col group hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1"
+              className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(15,23,42,0.05)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative flex flex-col group hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-1"
             >
 
               {/* Quote mark decoration */}
