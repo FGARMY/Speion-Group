@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export async function submitContactForm(formData: FormData) {
   try {
@@ -30,19 +30,13 @@ export async function submitContactForm(formData: FormData) {
       return { success: false, error: "Failed to save submission. Please ensure the table exists." };
     }
 
-    // 2. Send email via Nodemailer (if password is set)
-    const password = process.env.GMAIL_APP_PASSWORD;
-    if (password) {
-      const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: "speiongroup@gmail.com",
-          pass: password,
-        },
-      });
-
-      const mailOptions = {
-        from: '"Speion Website" <speiongroup@gmail.com>',
+    // 2. Send email via Resend
+    const apiKey = process.env.RESEND_API_KEY;
+    if (apiKey) {
+      const resend = new Resend(apiKey);
+      
+      const { data, error } = await resend.emails.send({
+        from: "Speion Website <onboarding@resend.dev>",
         to: "speiongroup@gmail.com",
         subject: `New Lead: ${subject} - from ${name}`,
         text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`,
@@ -55,11 +49,13 @@ export async function submitContactForm(formData: FormData) {
           <p><strong>Subject:</strong> ${subject}</p>
           <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
         `,
-      };
+      });
 
-      await transporter.sendMail(mailOptions);
+      if (error) {
+        console.error("Resend error:", error);
+      }
     } else {
-      console.warn("GMAIL_APP_PASSWORD not set. Email notification skipped.");
+      console.warn("RESEND_API_KEY not set. Email notification skipped.");
     }
 
     return { success: true };
