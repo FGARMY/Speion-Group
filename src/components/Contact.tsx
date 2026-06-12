@@ -39,9 +39,9 @@ export default function Contact() {
 
             <div className="space-y-8">
               {[
-                { icon: <MapPin size={24} />, title: "HQ Address", text: "Speion Software, Tech Park,\nHinjewadi Phase 1, Pune, MH 411057" },
-                { icon: <Phone size={24} />, title: "Phone Number", text: "+91 82370 77659 (Sales & Queries)\n+91 98765 43210 (Support)" },
-                { icon: <Mail size={24} />, title: "Email Support", text: "hello@speion.com\nprojects@speion.com" }
+                { icon: <MapPin size={24} />, title: "HQ Address", text: <a href="https://maps.app.goo.gl/ACfvVXNsbz4CnaEz7" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015</a> },
+                { icon: <Phone size={24} />, title: "Phone Number", text: <a href="tel:+917758866318" className="hover:text-primary transition-colors">+91 77588 66318</a> },
+                { icon: <Mail size={24} />, title: "Email Support", text: <a href="mailto:speiongorup@gmail.com" className="hover:text-primary transition-colors">speiongorup@gmail.com</a> }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-6 group">
                   <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
@@ -49,9 +49,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-1">{item.title}</h4>
-                    <p className="text-slate-500 dark:text-slate-400 font-light leading-relaxed whitespace-pre-line">
+                    <div className="text-slate-500 dark:text-slate-400 font-light leading-relaxed">
                       {item.text}
-                    </p>
+                    </div>
                   </div>
                 </div>
               ))}

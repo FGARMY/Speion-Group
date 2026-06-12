@@ -109,7 +109,9 @@ export default function Footer() {
                 </div>
                 <address className="text-slate-600 dark:text-slate-400 text-sm font-light leading-relaxed pt-2 not-italic">
                   <span className="sr-only">Address: </span>
-                  Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015
+                  <a href="https://maps.app.goo.gl/ACfvVXNsbz4CnaEz7" target="_blank" rel="noopener noreferrer" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">
+                    Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015
+                  </a>
                 </address>
               </li>
               <li className="flex items-start gap-4">
@@ -118,7 +120,16 @@ export default function Footer() {
                 </div>
                 <span className="text-slate-600 dark:text-slate-400 text-sm font-light leading-relaxed pt-2.5">
                   <span className="sr-only">Phone: </span>
-                  +91 77588 66318
+                  <a href="tel:+917758866318" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">+91 77588 66318</a>
+                </span>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-rose-500 dark:text-rose-400 flex-shrink-0" aria-hidden="true">
+                  <Mail size={18} />
+                </div>
+                <span className="text-slate-600 dark:text-slate-400 text-sm font-light leading-relaxed pt-2.5">
+                  <span className="sr-only">Email: </span>
+                  <a href="mailto:speiongorup@gmail.com" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">speiongorup@gmail.com</a>
                 </span>
               </li>
               <li className="flex items-start gap-6 border-t border-slate-200 dark:border-slate-900 pt-5 mt-5">

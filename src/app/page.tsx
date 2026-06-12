@@ -32,7 +32,7 @@ export default function Home() {
             "@type": "ContactPoint",
             "telephone": "+91 77588 66318",
             "contactType": "sales",
-            "email": "speiongroup@gmail.com",
+            "email": "speiongorup@gmail.com",
             "availableLanguage": ["English", "Hindi", "Marathi"],
             "areaServed": "Worldwide"
           }
@@ -54,7 +54,7 @@ export default function Home() {
         "@id": "https://speion-group.vercel.app/#pune-office",
         "name": "Speion — Global Engineering Hub Pune",
         "telephone": "+91 77588 66318",
-        "email": "speiongroup@gmail.com",
+        "email": "speiongorup@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Parklane Life Season Plus, Dhanori",
