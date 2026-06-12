@@ -5,7 +5,6 @@ create table public.contact_submissions (
   email text not null,
   phone text not null,
   company text,
-  budget text,
   subject text not null,
   message text not null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
