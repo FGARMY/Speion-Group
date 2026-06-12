@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ClientLogos from "@/components/ClientLogos";
 import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
@@ -26,7 +27,7 @@ export default function Home() {
           "width": 512,
           "height": 512
         },
-        "description": "Speion is the leading software development company in Nashik and Pune.",
+        "description": "Speion is a global enterprise software engineering and digital transformation partner.",
         "contactPoint": [
           {
             "@type": "ContactPoint",
@@ -34,7 +35,7 @@ export default function Home() {
             "contactType": "sales",
             "email": "speiongroup@gmail.com",
             "availableLanguage": ["English", "Hindi", "Marathi"],
-            "areaServed": ["Nashik", "Pune", "Maharashtra", "India"]
+            "areaServed": "Worldwide"
           }
         ],
         "sameAs": [
@@ -52,7 +53,7 @@ export default function Home() {
       {
         "@type": "LocalBusiness",
         "@id": "https://speion-group.vercel.app/#pune-office",
-        "name": "Speion — Software Development Company Pune",
+        "name": "Speion — Global Engineering Hub Pune",
         "telephone": "+91 77588 66318",
         "email": "speiongroup@gmail.com",
         "address": {
@@ -76,6 +77,7 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
+      <ClientLogos />
       <TrustBar />
       <Services />
       <WhyUs />

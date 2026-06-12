@@ -35,7 +35,7 @@ export default function Hero() {
 
           <div className="bg-white/50 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white text-[10px] sm:text-xs md:text-sm font-semibold px-4 py-2 sm:px-5 sm:py-2 rounded-full inline-flex items-center w-fit shadow-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <span className="w-2 h-2 rounded-full bg-rose-500 mr-2 sm:mr-3 animate-pulse ring-4 ring-rose-500/20"></span>
-            #1 SOFTWARE DEVELOPMENT FIRM IN PUNE & NASHIK
+            GLOBAL ENTERPRISE SOFTWARE ENGINEERING
             <Sparkles size={12} className="ml-2 text-rose-400 sm:w-3.5 sm:h-3.5" />
           </div>
 

@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="bg-slate-50 dark:bg-black border-t border-slate-200 dark:border-slate-900 text-slate-600 dark:text-slate-300 pt-20 pb-10 px-4 sm:px-6 transition-colors duration-500">
       <div className="container mx-auto max-w-7xl">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -67,6 +67,7 @@ export default function Footer() {
                 { name: 'About Us', path: '/about' },
                 { name: 'Services', path: '/services' },
                 { name: 'Case Studies', path: '/case-studies' },
+                { name: 'Insights', path: '/insights' },
                 { name: 'Contact', path: '/contact' }
               ].map(link => (
                 <li key={link.name}>
@@ -156,10 +157,31 @@ export default function Footer() {
             </form>
           </div>
 
+          {/* Legal */}
+          <nav aria-label="Legal Navigation Footer" className="lg:col-span-1">
+            <h4 className="text-slate-900 dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal</h4>
+            <ul className="space-y-4">
+              {[
+                { name: 'Privacy Policy', path: '/privacy-policy' },
+                { name: 'Terms of Service', path: '/terms' }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link href={link.path} className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-light" aria-label={`Read our ${link.name}`}>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
         </div>
 
-        <div className="pt-8 border-t border-slate-200 dark:border-slate-900 text-center text-slate-500 dark:text-slate-500 text-sm font-light mt-16">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-900 flex flex-col md:flex-row items-center justify-between text-slate-500 dark:text-slate-500 text-sm font-light mt-16">
           <p>&copy; {new Date().getFullYear()} Speion. All rights reserved.</p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <Link href="/privacy-policy" className="hover:text-rose-600 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-rose-600 transition-colors">Terms of Service</Link>
+          </div>
         </div>
 
       </div>

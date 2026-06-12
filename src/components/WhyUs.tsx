@@ -4,19 +4,19 @@ export default function WhyUs() {
   const reasons = [
     {
       title: "Senior Technical Talent",
-      desc: "Our engineering pods consist exclusively of senior-level developers with proven experience in shipping enterprise-scale products.",
+      desc: "Our engineering pods consist exclusively of senior-level developers who have architected and scaled systems to 1M+ active users.",
       icon: <ShieldCheck size={28} />,
       color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },
     {
       title: "Strict CI/CD Pipelines",
-      desc: "Automated testing, containerization, and continuous integration guarantee that every deployment is stable, secure, and fast.",
+      desc: "We enforce 99.99% Uptime SLAs through automated testing, containerization, and continuous integration pipelines for every deployment.",
       icon: <Zap size={28} />,
       color: "bg-slate-100 text-red-600 border-slate-200 dark:bg-slate-800 dark:text-red-500 dark:border-slate-700"
     },
     {
       title: "Maintainable Architecture",
-      desc: "We enforce strict code reviews and write modular, documented code so your in-house team can easily inherit the repository.",
+      desc: "We write modular, documented code that accelerates future feature development by up to 40% while eliminating critical technical debt.",
       icon: <Code2 size={28} />,
       color: "bg-slate-100 text-rose-600 border-slate-200 dark:bg-slate-800 dark:text-rose-500 dark:border-slate-700"
     },

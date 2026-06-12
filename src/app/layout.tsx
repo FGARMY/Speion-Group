@@ -4,6 +4,8 @@ import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import CustomCursor from "@/components/CustomCursor";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,11 +18,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Speion | #1 Software Development Company in Nashik & Pune",
-  description: "Leading software development company in Nashik & Pune. We build high-performance websites, custom software, mobile apps, SaaS platforms, and AI automation systems.",
-  keywords: ["Software Development Company", "Web Development", "App Development Pune", "IT Company Nashik", "Speion", "AI Automation"],
+  title: "Speion | Global Enterprise Software Engineering",
+  description: "Global enterprise software engineering partner. We build high-performance websites, custom software, scalable mobile apps, SaaS platforms, and AI automation systems.",
+  keywords: ["Global Software Engineering", "Enterprise Software Development", "SaaS Development", "Custom Software Solutions", "Speion", "AI Automation"],
   openGraph: {
-    title: "Speion | #1 Software Development Company in Nashik & Pune",
+    title: "Speion | Global Enterprise Software Engineering",
     description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion.",
     type: "website",
     locale: "en_IN",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Speion | Software Development Company",
-    description: "Custom software, web & app development in Nashik and Pune.",
+    description: "Enterprise-grade custom software, web, and mobile app development.",
   },
   verification: {
     google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",
@@ -55,6 +57,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CustomCursor />
           <a
             href="#main-content"
             className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl"
@@ -66,6 +69,7 @@ export default function RootLayout({
             {children}
           </div>
           <ScrollToTop />
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>

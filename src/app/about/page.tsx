@@ -23,7 +23,7 @@ export default function AboutPage() {
             Engineering the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Future</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
-            We are an elite team of software architects, developers, and designers based in Nashik and Pune. We partner with ambitious companies to build scalable digital products.
+            We are an elite team of software architects, developers, and designers. We partner with ambitious companies worldwide to build scalable, mission-critical digital products.
           </p>
         </div>
       </section>
