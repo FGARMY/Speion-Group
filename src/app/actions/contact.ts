@@ -8,11 +8,14 @@ export async function submitContactForm(formData: FormData) {
   try {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const company = formData.get("company") as string;
+    const budget = formData.get("budget") as string;
     const subject = formData.get("subject") as string;
     const message = formData.get("message") as string;
 
-    if (!name || !email || !subject || !message) {
-      return { success: false, error: "All fields are required" };
+    if (!name || !email || !phone || !subject || !message) {
+      return { success: false, error: "Name, email, phone, subject, and message are required" };
     }
 
     // 1. Insert into Supabase
@@ -21,7 +24,7 @@ export async function submitContactForm(formData: FormData) {
 
     const { error: dbError } = await supabase
       .from("contact_submissions")
-      .insert([{ name, email, subject, message }]);
+      .insert([{ name, email, phone, company, budget, subject, message }]);
 
     if (dbError) {
       console.error("Supabase insert error:", dbError);
@@ -43,11 +46,14 @@ export async function submitContactForm(formData: FormData) {
         from: '"Speion Website" <speiongroup@gmail.com>',
         to: "speiongroup@gmail.com",
         subject: `New Lead: ${subject} - from ${name}`,
-        text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
+        text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company || 'N/A'}\nBudget: ${budget || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`,
         html: `
           <h3>New Contact Submission</h3>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Company:</strong> ${company || 'N/A'}</p>
+          <p><strong>Budget:</strong> ${budget || 'N/A'}</p>
           <p><strong>Subject:</strong> ${subject}</p>
           <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
         `,

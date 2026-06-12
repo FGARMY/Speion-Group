@@ -96,8 +96,53 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Subject</label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Phone Number</label>
+                  <input 
+                    id="phone"
+                    name="phone"
+                    type="tel" 
+                    placeholder="+91 00000 00000" 
+                    required
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="company" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Company Name</label>
+                  <input 
+                    id="company"
+                    name="company"
+                    type="text" 
+                    placeholder="Your Company (Optional)" 
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all text-slate-900 dark:text-slate-100"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="budget" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Project Budget</label>
+                  <div className="relative">
+                    <select 
+                      id="budget"
+                      name="budget"
+                      className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl py-4 px-6 text-sm outline-none focus:ring-2 focus:ring-primary focus:bg-white dark:focus:bg-slate-700 transition-all appearance-none text-slate-900 dark:text-slate-100"
+                    >
+                      <option value="">Select a budget (Optional)</option>
+                      <option value="<10k">Less than ₹10 Lakhs</option>
+                      <option value="10k-50k">₹10 Lakhs - ₹50 Lakhs</option>
+                      <option value="50k-100k">₹50 Lakhs - ₹1 Crore</option>
+                      <option value=">100k">₹1 Crore+</option>
+                    </select>
+                    <svg className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Subject</label>
                 <div className="relative">
                   <select 
                     id="subject"
@@ -112,6 +157,7 @@ export default function Contact() {
                     <option value="general">General Inquiry</option>
                   </select>
                 </div>
+              </div>
               </div>
 
               <div className="space-y-2">
