@@ -76,9 +76,10 @@ export default function Navbar() {
           }`}
         >
           {/* Logo Section */}
-          <Link href="/" className="flex items-center group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => setMobileMenuOpen(false)}>
             <img src="/images/logo-light.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain hidden dark:block" />
             <img src="/images/logo-dark.webp" alt="Speion" className="h-8 md:h-10 w-auto object-contain block dark:hidden" />
+            <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">Speion</span>
           </Link>
 
           {/* Desktop Navigation Links */}

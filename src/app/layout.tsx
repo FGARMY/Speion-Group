@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   verification: {
     google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",
   },
+
 };
 
 export default function RootLayout({
@@ -54,8 +55,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <a 
-            href="#main-content" 
+          <a
+            href="#main-content"
             className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-6 focus:py-3 focus:rounded-xl focus:font-bold focus:shadow-2xl"
           >
             Skip to Content
