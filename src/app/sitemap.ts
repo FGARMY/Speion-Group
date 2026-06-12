@@ -1,14 +1,18 @@
 import { MetadataRoute } from 'next';
+import { getAllPosts } from '@/lib/mdx';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://speion-group.vercel.app';
+  
+  const posts = getAllPosts('blog');
+  const postRoutes = posts.map(post => `/insights/${post.slug}`);
 
   const routes = [
     '',
     '/about',
     '/contact',
     '/faq',
-    '/blog',
+    '/insights',
     '/case-studies',
     '/comparisons',
     '/services/crm-development',
@@ -22,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/locations/software-development-pune',
     '/privacy-policy',
     '/terms',
+    ...postRoutes
   ];
 
   return routes.map((route) => ({

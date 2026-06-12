@@ -52,7 +52,7 @@ export default async function BlogPost({ params }: Props) {
     <article className="min-h-screen bg-slate-50 dark:bg-slate-950 pt-32 pb-24 px-4 sm:px-6 relative selection:bg-rose-500/30">
       <div className="container mx-auto max-w-3xl relative z-10">
         
-        <Link href="/blog" className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-rose-600 transition-colors mb-12 group">
+        <Link href="/insights" className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-rose-600 transition-colors mb-12 group">
           <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
           Back to Insights
         </Link>
