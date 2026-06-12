@@ -88,7 +88,8 @@ export default function Footer() {
                 { name: 'Mobile App Development', path: '/services/mobile-app-development' },
                 { name: 'Custom Software', path: '/services/custom-software-development' },
                 { name: 'ERP Solutions', path: '/services/erp-development' },
-                { name: 'UI/UX Design', path: '/services/ui-ux-design' }
+                { name: 'UI/UX Design', path: '/services/ui-ux-design' },
+                { name: 'Social Media Mgmt', path: '/services/social-media-management' }
               ].map(link => (
                 <li key={link.name}>
                   <Link href={link.path} className="text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-white transition-colors text-sm font-light" aria-label={`Learn more about ${link.name}`}>

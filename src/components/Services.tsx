@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Megaphone } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
@@ -85,6 +85,18 @@ export default function Services() {
       className: "lg:col-span-2 lg:row-span-1 flex-row items-center gap-12",
       delay: "0.6s",
       link: "/services/ui-ux-design"
+    },
+    {
+      id: "07 / SMM",
+      title: "Social Media Management",
+      desc: "Data-driven social media strategies to elevate your brand presence, engage audiences, and drive enterprise growth.",
+      icon: <Megaphone size={40} strokeWidth={1} />,
+      accent: "text-blue-950",
+      expert: "Digital Marketing Team",
+      tag: "Brand Growth",
+      className: "lg:col-span-1 lg:row-span-1",
+      delay: "0.7s",
+      link: "/services/social-media-management"
     }
   ];
 
