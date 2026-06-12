@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { MapPin, Building2, Code2, Rocket } from "lucide-react";
 
 export const metadata = {
@@ -11,6 +12,12 @@ export const metadata = {
 export default function PuneLocationPage() {
   return (
     <main className="min-h-screen relative bg-slate-50 dark:bg-slate-950">
+      <LocalBusinessSchema
+        addressLocality="Pune"
+        postalCode="411001"
+        url="https://speion.vercel.app/locations/software-development-pune"
+        description={metadata.description}
+      />
       <Navbar />
       
       {/* Hero Section */}
