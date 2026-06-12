@@ -63,11 +63,16 @@ export default function Hero() {
           {/* Optimized Social Proof Badge for all backgrounds */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
             <div className="flex -space-x-4 overflow-hidden p-0.5">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
+              {[
+                "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",
+                "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+                "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
+                "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+              ].map((src, idx) => (
+                <div key={idx} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
                   <Image
-                    src={`https://i.pravatar.cc/150?u=medical-user-${i}`}
-                    alt={`Client avatar ${i}`}
+                    src={src}
+                    alt={`Client avatar ${idx + 1}`}
                     fill
                     sizes="48px"
                     className="object-cover"
@@ -80,9 +85,11 @@ export default function Hero() {
                 {[1, 2, 3, 4, 5].map((s) => (
                   <Star key={s} size={14} className="fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.9/5.0</span>
               </div>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
+              <p className="text-slate-700 dark:text-slate-300 text-sm font-medium leading-tight mt-1.5 max-w-[220px]">
+                "An exceptional engineering partner." <br/>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">— CTOs & Tech Leaders</span>
+              </p>
             </div>
           </div>
 
