@@ -1,44 +1,30 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://drsulakshane.com';
+  const baseUrl = 'https://speion.vercel.app';
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/#about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#doctors`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#resources`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
+  const routes = [
+    '',
+    '/about',
+    '/contact',
+    '/faq',
+    '/blog',
+    '/case-studies',
+    '/comparisons',
+    '/services/crm-development',
+    '/services/custom-software-development',
+    '/services/erp-development',
+    '/services/mobile-app-development',
+    '/services/ui-ux-design',
+    '/services/web-development',
+    '/locations/software-development-nashik',
+    '/locations/software-development-pune',
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === '' ? 'monthly' : 'weekly',
+    priority: route === '' ? 1 : route.startsWith('/services') || route.startsWith('/locations') ? 0.9 : 0.8,
+  }));
 }
