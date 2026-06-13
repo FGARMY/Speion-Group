@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { useState } from "react";
 
 import { submitContactForm } from "@/app/actions/contact";
@@ -11,13 +12,13 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('sending');
-    
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const result = await submitContactForm(formData);
     
     if (result.success) {
       setFormState('success');
-      e.currentTarget.reset();
+      form.reset();
       setTimeout(() => setFormState('idle'), 3000);
     } else {
       console.error(result.error);
@@ -44,14 +45,14 @@ export default function Contact() {
               Get in Touch with Our <span className="text-primary italic">Engineers</span>
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-12 max-w-lg">
-              Have a project in mind or need a technical consultation? We're here to help. Reach out through the form or our contact details below.
+              Have a project in mind or need a technical consultation? We&apos;re here to help. Reach out through the form or our contact details below.
             </p>
 
             <div className="space-y-8">
               {[
                 { icon: <MapPin size={24} />, title: "HQ Address", text: <a href="https://maps.app.goo.gl/ACfvVXNsbz4CnaEz7" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015</a> },
                 { icon: <Phone size={24} />, title: "Phone Number", text: <a href="tel:+917758866318" className="hover:text-primary transition-colors">+91 77588 66318</a> },
-                { icon: <Mail size={24} />, title: "Email Support", text: <a href="mailto:speiongorup@gmail.com" className="hover:text-primary transition-colors">speiongorup@gmail.com</a> }
+                { icon: <Mail size={24} />, title: "Email Support", text: <ObfuscatedEmail className="hover:text-primary transition-colors" /> }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-6 group">
                   <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
@@ -71,6 +72,18 @@ export default function Contact() {
           {/* Right Side: Form */}
           <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[3rem] shadow-[0_30px_100px_rgba(15,23,42,0.05)] border border-slate-100 dark:border-slate-800 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot field to trap spambots */}
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="fax">Fax Number</label>
+                <input 
+                  id="fax"
+                  name="fax"
+                  type="text" 
+                  tabIndex={-1} 
+                  autoComplete="off" 
+                />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
