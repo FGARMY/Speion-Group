@@ -1,6 +1,7 @@
 "use client";
 import { Code2, MapPin, Phone, Mail, Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 const SocialIcons = {
   Facebook: (props: any) => (
@@ -112,7 +113,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-900 flex items-center justify-center text-rose-500 dark:text-rose-400 flex-shrink-0" aria-hidden="true"><Mail size={14} /></div>
-                <span className="text-slate-600 dark:text-slate-400 text-xs font-light pt-1.5"><a href="mailto:speiongorup@gmail.com" className="hover:text-rose-600 dark:hover:text-rose-400">speiongorup@gmail.com</a></span>
+                <span className="text-slate-600 dark:text-slate-400 text-xs font-light pt-1.5"><ObfuscatedEmail className="hover:text-rose-600 dark:hover:text-rose-400" /></span>
               </li>
             </ul>
           </div>

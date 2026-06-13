@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from "lucide-react";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { useState } from "react";
 
 import { submitContactForm } from "@/app/actions/contact";
@@ -51,7 +52,7 @@ export default function Contact() {
               {[
                 { icon: <MapPin size={24} />, title: "HQ Address", text: <a href="https://maps.app.goo.gl/ACfvVXNsbz4CnaEz7" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Parklane Life Season Plus, Dhanori,<br/>Pune, Maharashtra 411015</a> },
                 { icon: <Phone size={24} />, title: "Phone Number", text: <a href="tel:+917758866318" className="hover:text-primary transition-colors">+91 77588 66318</a> },
-                { icon: <Mail size={24} />, title: "Email Support", text: <a href="mailto:speiongorup@gmail.com" className="hover:text-primary transition-colors">speiongorup@gmail.com</a> }
+                { icon: <Mail size={24} />, title: "Email Support", text: <ObfuscatedEmail className="hover:text-primary transition-colors" /> }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-6 group">
                   <div className="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary dark:group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
