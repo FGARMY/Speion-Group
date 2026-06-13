@@ -12,6 +12,13 @@ export async function submitContactForm(formData: FormData) {
     const company = formData.get("company") as string;
     const subject = formData.get("subject") as string;
     const message = formData.get("message") as string;
+    const honeypot = formData.get("fax") as string;
+
+    // If honeypot is filled, it's a bot submission. Return success silently.
+    if (honeypot) {
+      console.warn("Spam submission detected and discarded via honeypot.");
+      return { success: true };
+    }
 
     if (!name || !email || !phone || !subject || !message) {
       return { success: false, error: "Name, email, phone, subject, and message are required" };

@@ -44,7 +44,7 @@ export default function Contact() {
               Get in Touch with Our <span className="text-primary italic">Engineers</span>
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed mb-12 max-w-lg">
-              Have a project in mind or need a technical consultation? We're here to help. Reach out through the form or our contact details below.
+              Have a project in mind or need a technical consultation? We&apos;re here to help. Reach out through the form or our contact details below.
             </p>
 
             <div className="space-y-8">
@@ -71,6 +71,18 @@ export default function Contact() {
           {/* Right Side: Form */}
           <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[3rem] shadow-[0_30px_100px_rgba(15,23,42,0.05)] border border-slate-100 dark:border-slate-800 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot field to trap spambots */}
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="fax">Fax Number</label>
+                <input 
+                  id="fax"
+                  name="fax"
+                  type="text" 
+                  tabIndex={-1} 
+                  autoComplete="off" 
+                />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-bold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
