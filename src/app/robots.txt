@@ -1,5 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://speion-group.vercel.app/sitemap.xml
+Sitemap: https://speion.vercel.app/sitemap.xml
