@@ -53,7 +53,7 @@ const contactSchema = z.object({
     .optional()
     .default(""),
   subject: z.enum(["web", "mobile", "enterprise", "general"], {
-    errorMap: () => ({ message: "Please select a valid subject" }),
+    message: "Please select a valid subject",
   }),
   message: z
     .string()
@@ -79,7 +79,7 @@ export async function submitContactForm(formData: FormData) {
     // 1. Rate Limiting Check
     if (ratelimit) {
       // Vercel populates x-forwarded-for with the user's real IP
-      const ip = headers().get("x-forwarded-for") ?? "127.0.0.1";
+      const ip = (await headers()).get("x-forwarded-for") ?? "127.0.0.1";
       const { success } = await ratelimit.limit(`ratelimit_contact_${ip}`);
       
       if (!success) {
@@ -112,7 +112,7 @@ export async function submitContactForm(formData: FormData) {
 
     if (!result.success) {
       // Collect the first error message from Zod for the user
-      const firstError = result.error.errors[0]?.message ?? "Invalid input";
+      const firstError = result.error.issues[0]?.message ?? "Invalid input";
       return { success: false, error: firstError };
     }
 
