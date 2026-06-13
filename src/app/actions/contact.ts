@@ -2,9 +2,31 @@
 import "server-only";
 
 import { createClient } from "@/utils/supabase/server";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { Resend } from "resend";
 import { z } from "zod";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
+
+// ─── Rate Limiter Setup ─────────────────────────────────────────────
+// We initialize this conditionally so the app doesn't crash locally 
+// or before you've added the Upstash keys to Vercel.
+let ratelimit: Ratelimit | null = null;
+
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  const redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+  });
+  
+  // Allow 3 requests per 1 hour per IP address
+  ratelimit = new Ratelimit({
+    redis: redis,
+    limiter: Ratelimit.slidingWindow(3, "1 h"),
+    analytics: true,
+  });
+}
+
 
 // ─── Zod Validation Schema ───────────────────────────────────────────
 // Defines the exact shape and constraints for every field.
@@ -54,6 +76,20 @@ function escapeHtml(unsafe: string): string {
 
 export async function submitContactForm(formData: FormData) {
   try {
+    // 1. Rate Limiting Check
+    if (ratelimit) {
+      // Vercel populates x-forwarded-for with the user's real IP
+      const ip = headers().get("x-forwarded-for") ?? "127.0.0.1";
+      const { success } = await ratelimit.limit(`ratelimit_contact_${ip}`);
+      
+      if (!success) {
+        return {
+          success: false,
+          message: "You have submitted too many requests. Please try again in an hour.",
+        };
+      }
+    }
+
     const honeypot = formData.get("fax") as string;
 
     // If honeypot is filled, it's a bot submission. Return success silently.
