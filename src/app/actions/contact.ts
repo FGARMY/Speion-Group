@@ -3,15 +3,56 @@
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
 import { Resend } from "resend";
+import { z } from "zod";
+
+// ─── Zod Validation Schema ───────────────────────────────────────────
+// Defines the exact shape and constraints for every field.
+// If any field fails, Zod returns a clear error message.
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, "Name must be at least 2 characters")
+    .max(100, "Name must be under 100 characters"),
+  email: z
+    .string()
+    .trim()
+    .email("Please enter a valid email address")
+    .max(254, "Email must be under 254 characters"),
+  phone: z
+    .string()
+    .trim()
+    .regex(/^[+]?[\d\s()-]{7,20}$/, "Please enter a valid phone number"),
+  company: z
+    .string()
+    .trim()
+    .max(100, "Company name must be under 100 characters")
+    .optional()
+    .default(""),
+  subject: z.enum(["web", "mobile", "enterprise", "general"], {
+    errorMap: () => ({ message: "Please select a valid subject" }),
+  }),
+  message: z
+    .string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(5000, "Message must be under 5000 characters"),
+});
+
+// ─── XSS Sanitization ───────────────────────────────────────────────
+// Escapes the 5 dangerous HTML characters so user input can never
+// be interpreted as HTML/JS when interpolated into email templates.
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
 export async function submitContactForm(formData: FormData) {
   try {
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const phone = formData.get("phone") as string;
-    const company = formData.get("company") as string;
-    const subject = formData.get("subject") as string;
-    const message = formData.get("message") as string;
     const honeypot = formData.get("fax") as string;
 
     // If honeypot is filled, it's a bot submission. Return success silently.
@@ -20,11 +61,36 @@ export async function submitContactForm(formData: FormData) {
       return { success: true };
     }
 
-    if (!name || !email || !phone || !subject || !message) {
-      return { success: false, error: "Name, email, phone, subject, and message are required" };
+    // ── Step 1: Validate with Zod ──────────────────────────────────
+    const rawData = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      company: formData.get("company") || "",
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+
+    const result = contactSchema.safeParse(rawData);
+
+    if (!result.success) {
+      // Collect the first error message from Zod for the user
+      const firstError = result.error.errors[0]?.message ?? "Invalid input";
+      return { success: false, error: firstError };
     }
 
-    // 1. Insert into Supabase
+    // result.data is now typed, trimmed, and guaranteed valid
+    const { name, email, phone, company, subject, message } = result.data;
+
+    // ── Step 2: Sanitize for HTML output ────────────────────────────
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safeCompany = escapeHtml(company || "N/A");
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message);
+
+    // ── Step 3: Insert into Supabase (validated, raw values) ────────
     const cookieStore = await cookies();
     const supabase = createClient(cookieStore);
 
@@ -37,25 +103,24 @@ export async function submitContactForm(formData: FormData) {
       return { success: false, error: "Failed to save submission. Please ensure the table exists." };
     }
 
-    // 2. Send email via Resend
+    // ── Step 4: Send email via Resend (sanitized values in HTML) ────
     const apiKey = process.env.RESEND_API_KEY;
     if (apiKey) {
       const resend = new Resend(apiKey);
       
-      // 2. Send email to Speion Admins (Testing Address)
       const { data, error: adminError } = await resend.emails.send({
         from: "Speion Website <onboarding@resend.dev>",
         to: "flaminggarena@gmail.com",
-        subject: `New Lead: ${subject} - from ${name}`,
+        subject: `New Lead: ${safeSubject} - from ${safeName}`,
         text: `You have received a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company || 'N/A'}\nSubject: ${subject}\n\nMessage:\n${message}`,
         html: `
           <h3>New Contact Submission</h3>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Company:</strong> ${company || 'N/A'}</p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
+          <p><strong>Phone:</strong> ${safePhone}</p>
+          <p><strong>Company:</strong> ${safeCompany}</p>
+          <p><strong>Subject:</strong> ${safeSubject}</p>
+          <p><strong>Message:</strong><br/>${safeMessage.replace(/\n/g, '<br/>')}</p>
         `,
       });
 
