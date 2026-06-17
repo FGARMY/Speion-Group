@@ -6,6 +6,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -69,6 +70,7 @@ export default function RootLayout({
           <ScrollToTop />
           <CookieBanner />
           <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
