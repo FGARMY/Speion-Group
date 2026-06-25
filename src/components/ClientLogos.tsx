@@ -10,10 +10,10 @@ export default function ClientLogos() {
           Trusted by Innovative Teams Worldwide
         </p>
       </div>
-      
+
       {/* Marquee Container */}
       <div className="relative w-full flex overflow-x-hidden group">
-        
+
         {/* Gradient fades for edges */}
         <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white dark:from-[#020617] to-transparent z-10"></div>
         <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white dark:from-[#020617] to-transparent z-10"></div>

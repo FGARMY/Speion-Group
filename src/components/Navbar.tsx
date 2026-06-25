@@ -8,9 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Locations", path: "/locations" },
   { label: "Case Studies", path: "/case-studies" },
-  { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" }
 ];
 
@@ -22,7 +20,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -63,18 +61,16 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <div 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
-        scrolled ? "py-3" : "py-8"
-      }`}
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? "py-3" : "py-8"
+        }`}
     >
       <nav className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div 
-          className={`flex items-center justify-between rounded-full px-6 md:px-8 py-3 transition-all duration-500 ease-in-out relative z-50 ${
-            scrolled || mobileMenuOpen
-              ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/40 dark:border-slate-800/50" 
-              : "bg-transparent border-transparent"
-          }`}
+        <div
+          className={`flex items-center justify-between rounded-full px-6 md:px-8 py-3 transition-all duration-500 ease-in-out relative z-50 ${scrolled || mobileMenuOpen
+            ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/40 dark:border-slate-800/50"
+            : "bg-transparent border-transparent"
+            }`}
         >
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
@@ -87,14 +83,13 @@ export default function Navbar() {
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               return (
-                <Link 
-                  key={item.label} 
+                <Link
+                  key={item.label}
                   href={item.path}
-                  className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${
-                    isActive 
-                      ? "text-rose-600 dark:text-rose-400" 
-                      : "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400"
-                  }`}
+                  className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${isActive
+                    ? "text-rose-600 dark:text-rose-400"
+                    : "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400"
+                    }`}
                   aria-label={`Go to ${item.label}`}
                 >
                   {item.label}
@@ -106,19 +101,19 @@ export default function Navbar() {
           {/* Call to Action - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-pink-600 text-white hover:bg-pink-700"
               aria-label="Start Project"
             >
-              Start Project
+              Book Free Consultation Now
             </Link>
           </div>
 
           {/* Mobile Menu Toggle & Theme */}
           <div className="lg:hidden flex items-center gap-3">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
-            <button 
+            <button
               className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -130,31 +125,28 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div 
-          className={`lg:hidden fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm transition-all duration-500 ${
-            mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        <div
+          className={`lg:hidden fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm transition-all duration-500 ${mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           onClick={() => setMobileMenuOpen(false)}
         />
 
         {/* Mobile Menu Content */}
-        <div 
-          className={`lg:hidden absolute top-20 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl rounded-3xl p-6 shadow-2xl dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-300 z-50 ${
-            mobileMenuOpen 
-              ? "opacity-100 scale-100 translate-y-0" 
-              : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
-          }`}
+        <div
+          className={`lg:hidden absolute top-20 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl rounded-3xl p-6 shadow-2xl dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-300 z-50 ${mobileMenuOpen
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
+            }`}
         >
           <div className="flex flex-col gap-6">
             {NAV_ITEMS.map((item, idx) => {
               const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               return (
-                <Link 
-                  key={item.label} 
+                <Link
+                  key={item.label}
                   href={item.path}
-                  className={`text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${
-                    isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
-                  }`}
+                  className={`text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
+                    }`}
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ transitionDelay: `${idx * 50}ms` }}
                 >
@@ -164,8 +156,8 @@ export default function Navbar() {
               );
             })}
             <hr className="border-slate-100 dark:border-slate-800" />
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-pink-600 text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-pink-600/20 hover:bg-pink-700 transition-all active:scale-[0.98]"
               onClick={() => setMobileMenuOpen(false)}
             >

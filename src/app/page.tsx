@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
-import WhyUs from "@/components/WhyUs";
+
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -113,7 +113,7 @@ export default function Home() {
       <Hero />
       <ClientLogos />
       <Services />
-      <WhyUs />
+
       <section className="py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">

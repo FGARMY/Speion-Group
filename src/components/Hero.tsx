@@ -52,7 +52,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5 mt-4 w-full px-4 sm:px-0 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
             <Link href="/contact" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
-              Start Project
+              Book Free Consultation Now
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5" />
             </Link>
             <Link href="/services" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-base text-center hover:shadow-lg">
@@ -60,32 +60,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Optimized Social Proof Badge for all backgrounds */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-            <div className="flex -space-x-4 overflow-hidden p-0.5">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
-                  <Image
-                    src={`https://i.pravatar.cc/150?u=medical-user-${i}`}
-                    alt={`Client avatar ${i}`}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="text-left">
-              <div className="flex items-center justify-start gap-1">
-                {[1, 2, 3, 4].map((s) => (
-                  <Star key={s} size={14} className="fill-amber-400 text-amber-400" />
-                ))}
-                <StarHalf size={14} className="fill-amber-400 text-amber-400" />
-                <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.3/5.0</span>
-              </div>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
-            </div>
-          </div>
+
 
         </div>
 
