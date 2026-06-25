@@ -1,6 +1,7 @@
 import { ArrowRight, Star, Code, Database, Cpu, Sparkles, StarHalf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ClientLogos from "./ClientLogos";
 
 export default function Hero() {
   return (
@@ -60,10 +61,11 @@ export default function Hero() {
             </Link>
           </div>
 
-
+          <div className="mt-8 sm:mt-12 w-full">
+            <ClientLogos />
+          </div>
 
         </div>
-
 
       </div>
 
