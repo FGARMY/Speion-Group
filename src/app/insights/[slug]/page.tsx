@@ -3,6 +3,7 @@ import { getPostBySlug, getAllPosts } from '@/lib/mdx';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { pageMetadata } from '@/lib/seo';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
@@ -20,9 +21,10 @@ export async function generateMetadata(
     return { title: 'Post Not Found' };
   }
 
-  return {
+  return pageMetadata({
     title: `${post.meta.title} | Speion Engineering Blog`,
     description: post.meta.excerpt,
+    pathname: `/insights/${slug}`,
     openGraph: {
       title: post.meta.title,
       description: post.meta.excerpt,
@@ -30,7 +32,7 @@ export async function generateMetadata(
       publishedTime: post.meta.date,
       authors: [post.meta.author],
     },
-  };
+  });
 }
 
 export async function generateStaticParams() {

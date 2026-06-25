@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Social Media Management | Speion",
   description: "Data-driven social media strategies to elevate your enterprise brand presence and drive growth.",
-};
+  pathname: "/services/social-media-management",
+});
 
 export default function SocialMediaManagementPage() {
   return (

@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { metadataBase as siteMetadataBase } from "@/lib/seo";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -17,26 +18,51 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+export const metadataBase = siteMetadataBase;
+
 export const metadata: Metadata = {
   title: "Top Software & Web Development Company in Pune & Nashik | Speion",
   description: "Leading enterprise software and web development agency in Pune and Nashik. We build high-performance websites, custom software, scalable mobile apps, and AI systems.",
   keywords: ["Software Development Company Pune", "Web Development Agency Nashik", "Global Software Engineering", "Enterprise Software Development", "Custom Software Solutions", "Speion", "Top IT Company in Pune", "Mobile App Developers Nashik"],
+  alternates: {
+    canonical: new URL("/", siteMetadataBase).toString(),
+  },
   openGraph: {
     title: "Speion | Top Software & Web Development Company in Pune & Nashik",
     description: "Custom software, web & app development, AI automation, and SaaS solutions by Speion in Pune and Nashik.",
     type: "website",
     locale: "en_IN",
     siteName: "Speion",
+    url: "https://speion.com",
+    images: [
+      {
+        url: "https://speion.com/images/speion-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Speion software development and digital transformation services",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Speion | Software & Web Development Agency Pune & Nashik",
     description: "Enterprise-grade custom software, web, and mobile app development in Pune and Nashik.",
+    images: ["https://speion.com/images/speion-hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "GsOgzhOvSR_-jxMcRvRqCEFr5AyZmC4EmGqQyX7bfUQ",
   },
-
 };
 
 export default function RootLayout({

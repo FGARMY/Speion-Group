@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import Services from "@/components/Services";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Our Services | Speion Software Development Company",
   description: "Explore our comprehensive software development services, including web development, mobile apps, custom software, ERPs, CRMs, and UI/UX design.",
-};
+  pathname: "/services",
+});
 
 export default function ServicesPage() {
   return (

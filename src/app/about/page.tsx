@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "About Us | Speion Software Development Company",
   description: "Learn about Speion's journey, our elite engineering team, and our mission to accelerate business growth through custom software solutions.",
-};
+  pathname: "/about",
+});
 
 export default function AboutPage() {
   return (

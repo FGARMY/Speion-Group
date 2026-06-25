@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Smartphone, MonitorSmartphone, Code2 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Mobile App Development Services in Pune | Speion",
   description: "Native iOS and Android mobile applications built by Speion. We leverage React Native and Flutter for high-performance cross-platform development.",
-};
+  pathname: "/services/mobile-app-development",
+});
 
 export default function MobileAppPage() {
   return (

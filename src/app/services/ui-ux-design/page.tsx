@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Layout, PenTool, Palette } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "UI/UX Design Services | Speion Software Development",
   description: "User-centric UI/UX design that drives conversions. We design intuitive, modern, and beautiful interfaces for web and mobile applications.",
-};
+  pathname: "/services/ui-ux-design",
+});
 
 export default function UIUXPage() {
   return (

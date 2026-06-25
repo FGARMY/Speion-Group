@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, LineChart, Users, Megaphone } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "CRM Development & Integration | Speion",
   description: "Custom Customer Relationship Management software. Boost sales conversions, track leads, and improve customer retention.",
-};
+  pathname: "/services/crm-development",
+});
 
 export default function CRMPage() {
   return (

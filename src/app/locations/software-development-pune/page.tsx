@@ -3,11 +3,13 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { MapPin, Building2, Code2, Rocket } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Software Development Company in Pune | Top IT Agency | Speion",
   description: "Speion is a premium software development company in Pune. We build highly scalable SaaS platforms, enterprise software, and mobile apps.",
-};
+  pathname: "/locations/software-development-pune",
+});
 
 export default function PuneLocationPage() {
   return (
@@ -15,8 +17,8 @@ export default function PuneLocationPage() {
       <LocalBusinessSchema
         addressLocality="Pune"
         postalCode="411001"
-        url="https://speion.vercel.app/locations/software-development-pune"
-        description={metadata.description}
+        url="https://speion.com/locations/software-development-pune"
+        description={metadata.description ?? "Speion is a premium software development company in Pune."}
       />
       <Navbar />
       

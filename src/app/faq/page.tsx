@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { ChevronDown } from 'lucide-react';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Frequently Asked Questions | Speion Engineering',
   description: 'Answers to common questions regarding enterprise software development, architecture audits, custom CRMs, and FinTech integrations.',
-};
+  pathname: '/faq',
+});
 
 const faqs = [
   {

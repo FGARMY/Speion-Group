@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "FinTech Software Development | Speion",
   description: "Enterprise FinTech software engineering in Pune & Nashik. We build highly secure payment gateways, neo-banking apps, and blockchain solutions.",
-};
+  pathname: "/industries/fintech",
+});
 
 export default function FintechIndustryPage() {
   const features = [

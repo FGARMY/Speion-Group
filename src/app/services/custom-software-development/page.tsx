@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Code, Terminal, Network } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Custom Software Development | Enterprise Solutions | Speion",
   description: "Bespoke software development for enterprises in Nashik and Pune. We automate business workflows, modernize legacy systems, and build scalable cloud architectures.",
-};
+  pathname: "/services/custom-software-development",
+});
 
 export default function CustomSoftwarePage() {
   return (
