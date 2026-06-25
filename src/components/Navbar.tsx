@@ -8,6 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "Locations", path: "/locations" },
   { label: "Case Studies", path: "/case-studies" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" }
@@ -77,7 +78,7 @@ export default function Navbar() {
         >
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <img src="/images/new-logo-1.png" alt="Speion" className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
+            <img src="/images/Primary-white.png" alt="Speion" className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
             <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">Speion</span>
           </Link>
 
@@ -97,7 +98,6 @@ export default function Navbar() {
                   aria-label={`Go to ${item.label}`}
                 >
                   {item.label}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-current transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} aria-hidden="true"></span>
                 </Link>
               );
             })}
