@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://speion.com",
     images: [
       {
-        url: "https://speion.com/images/speion-hero.png",
+        url: "https://speion.com/images/Primary-white.png",
         width: 1200,
         height: 630,
         alt: "Speion software development and digital transformation services",
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Speion | Software & Web Development Agency Pune & Nashik",
     description: "Enterprise-grade custom software, web, and mobile app development in Pune and Nashik.",
-    images: ["https://speion.com/images/speion-hero.png"],
+    images: ["https://speion.com/images/Primary-white.png"],
   },
   icons: {
-    icon: '/images/Primary-logo.png',
-    shortcut: '/images/Primary-logo.png',
-    apple: '/images/Primary-logo.png',
+    icon: '/images/Primary-white.png',
+    shortcut: '/images/Primary-white.png',
+    apple: '/images/Primary-white.png',
   },
   robots: {
     index: true,
