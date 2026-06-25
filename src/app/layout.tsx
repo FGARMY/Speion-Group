@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     description: "Enterprise-grade custom software, web, and mobile app development in Pune and Nashik.",
     images: ["https://speion.com/images/speion-hero.png"],
   },
+  icons: {
+    icon: '/images/Primary-logo.png',
+    shortcut: '/images/Primary-logo.png',
+    apple: '/images/Primary-logo.png',
+  },
   robots: {
     index: true,
     follow: true,
