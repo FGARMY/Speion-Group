@@ -98,7 +98,6 @@ export default function Navbar() {
                   aria-label={`Go to ${item.label}`}
                 >
                   {item.label}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-current transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} aria-hidden="true"></span>
                 </Link>
               );
             })}

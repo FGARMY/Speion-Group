@@ -94,7 +94,6 @@ export default function RootLayout({
           >
             Skip to Content
           </a>
-          <ScrollProgress />
           <div id="main-content">
             {children}
           </div>
