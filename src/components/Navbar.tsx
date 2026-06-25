@@ -8,6 +8,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "Locations", path: "/locations" },
   { label: "Case Studies", path: "/case-studies" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" }
