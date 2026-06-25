@@ -16,13 +16,13 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://speion-group.vercel.app/#organization",
+        "@id": "https://speion.com/#organization",
         "name": "Speion",
         "alternateName": ["Speion Software Development"],
-        "url": "https://speion-group.vercel.app",
+        "url": "https://speion.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://speion-group.vercel.app/logo.png",
+          "url": "https://speion.com/images/logo.png",
           "width": 512,
           "height": 512
         },
@@ -44,18 +44,18 @@ export default function Home() {
         ],
         "founder": {
           "@type": "Person",
-          "@id": "https://speion-group.vercel.app/#founder",
+          "@id": "https://speion.com/#founder",
           "name": "Speion Founder",
           "jobTitle": "Founder & CEO"
         }
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://speion-group.vercel.app/#pune-office",
+        "@id": "https://speion.com/#pune-office",
         "name": "Speion — Top Software Development Company Pune",
         "telephone": "+91 77588 66318",
         "email": "speiongorup@gmail.com",
-        "image": "https://speion-group.vercel.app/logo.png",
+        "image": "https://speion.com/images/logo.png",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -68,11 +68,11 @@ export default function Home() {
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://speion-group.vercel.app/#nashik-office",
+        "@id": "https://speion.com/#nashik-office",
         "name": "Speion — Top Web Development Agency Nashik",
         "telephone": "+91 77588 66318",
         "email": "speiongorup@gmail.com",
-        "image": "https://speion-group.vercel.app/logo.png",
+        "image": "https://speion.com/images/logo.png",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",

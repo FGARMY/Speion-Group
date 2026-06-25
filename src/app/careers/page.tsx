@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { MapPin, Briefcase, ChevronRight } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Careers | Join the Engineering Team at Speion",
   description: "Join our elite engineering team in Pune and Nashik. We are hiring Senior Go Developers, Next.js Architects, and Product Designers.",
-};
+  pathname: "/careers",
+});
 
 export default function CareersPage() {
   const jobs = [

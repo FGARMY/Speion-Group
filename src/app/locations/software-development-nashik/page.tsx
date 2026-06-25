@@ -3,11 +3,13 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { MapPin, Building2, TrendingUp, Users } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Software Development Company in Nashik | Top IT Agency | Speion",
   description: "Speion is the leading software development company in Nashik. We build custom software, web applications, and mobile apps for local businesses and startups.",
-};
+  pathname: "/locations/software-development-nashik",
+});
 
 export default function NashikLocationPage() {
   return (
@@ -15,8 +17,8 @@ export default function NashikLocationPage() {
       <LocalBusinessSchema
         addressLocality="Nashik"
         postalCode="422001"
-        url="https://speion.vercel.app/locations/software-development-nashik"
-        description={metadata.description}
+        url="https://speion.com/locations/software-development-nashik"
+        description={metadata.description ?? "Speion is a premium software development company in Nashik."}
       />
       <Navbar />
       

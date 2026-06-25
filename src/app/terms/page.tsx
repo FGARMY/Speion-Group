@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Terms of Service | Speion",
   description: "Terms and conditions for using Speion's website and software development services.",
-};
+  pathname: '/terms',
+});
 
 export default function TermsPage() {
   return (

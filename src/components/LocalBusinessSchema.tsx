@@ -21,7 +21,7 @@ export default function LocalBusinessSchema({
   addressRegion = "Maharashtra",
   postalCode = "000000",
   addressCountry = "IN",
-  image = "https://speion.vercel.app/favicon.ico",
+  image = "https://speion.com/images/logo.png",
 }: LocalBusinessSchemaProps) {
   const jsonLd = {
     "@context": "https://schema.org",

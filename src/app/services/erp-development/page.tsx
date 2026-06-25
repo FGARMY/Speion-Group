@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Server, Settings, Database } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "ERP Solutions & Development | Speion Enterprise Software",
   description: "Custom ERP development in Pune. Integrate your supply chain, HR, finance, and operations into a single scalable platform.",
-};
+  pathname: "/services/erp-development",
+});
 
 export default function ERPPage() {
   return (

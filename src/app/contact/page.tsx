@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Contact Us | Speion Software Development",
   description: "Get in touch with our elite software engineering team in Pune. Schedule a free technical consultation or request a project proposal.",
-};
+  pathname: "/contact",
+});
 
 export default function ContactPage() {
   return (

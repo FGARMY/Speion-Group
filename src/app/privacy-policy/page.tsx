@@ -1,10 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy | Speion",
   description: "Our Privacy Policy detailing how we handle, process, and protect your data.",
-};
+  pathname: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

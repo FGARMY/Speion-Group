@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Healthcare Software Development | Speion",
   description: "Enterprise healthcare software development in Pune & Nashik. We build HIPAA-compliant telemedicine apps, EHR systems, and healthtech SaaS platforms.",
-};
+  pathname: "/industries/healthcare",
+});
 
 export default function HealthcareIndustryPage() {
   const features = [

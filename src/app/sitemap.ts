@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/mdx';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://speion-group.vercel.app';
+  const baseUrl = 'https://speion.com';
   
   const posts = getAllPosts('blog');
   const postRoutes = posts.map(post => `/insights/${post.slug}`);

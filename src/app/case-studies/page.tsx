@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Case Studies | Speion Software Development",
   description: "Explore our portfolio of scalable web apps, mobile applications, and enterprise software solutions built by Speion.",
-};
+  pathname: "/case-studies",
+});
 
 export default function CaseStudiesPage() {
   const projects = [

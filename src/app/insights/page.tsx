@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/mdx';
 import { ChevronRight } from 'lucide-react';
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Engineering Blog | Speion Tech',
   description: 'Technical insights, software architecture deep dives, and enterprise engineering best practices.',
-};
+  pathname: '/insights',
+});
 
 export default function BlogIndex() {
   const posts = getAllPosts('blog');

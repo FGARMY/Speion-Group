@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Globe, Server, Smartphone, Zap } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Web Development Services in Pune & Nashik | Speion",
   description: "Speion builds highly scalable, SEO-optimized web applications and enterprise websites using React, Next.js, and Node.js. Partner with Pune's top software agency.",
-};
+  pathname: "/services/web-development",
+});
 
 export default function WebDevelopmentPage() {
   return (
