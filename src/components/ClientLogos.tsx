@@ -9,8 +9,8 @@ export default function ClientLogos() {
       <div className="relative w-full flex overflow-x-hidden group">
 
         {/* Gradient fades for edges */}
-        <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white dark:from-[#020617] to-transparent z-10"></div>
-        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white dark:from-[#020617] to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 w-12 sm:w-24 h-full bg-gradient-to-r from-white dark:from-[#020617] to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 w-12 sm:w-24 h-full bg-gradient-to-l from-white dark:from-[#020617] to-transparent z-10"></div>
 
         {/* Animated Track */}
         <div className="flex animate-marquee items-center gap-16 md:gap-32 whitespace-nowrap px-8">

@@ -29,22 +29,22 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen relative overflow-hidden bg-white dark:bg-slate-950 flex items-center py-24">
       {/* Content Canvas */}
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16 h-full max-w-full mx-auto flex items-center justify-between -mt-16 lg:-mt-32">
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16 h-full max-w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8 pt-12 lg:pt-0 lg:-mt-32">
         
         {/* Left Side Text */}
-        <div className="hidden md:block ml-4 lg:ml-12 xl:ml-24 relative z-0">
+        <div className="w-full lg:w-auto ml-0 lg:ml-12 xl:ml-24 relative z-0 flex flex-col items-center lg:items-start text-center lg:text-left">
           <h2 className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-bold text-slate-300 dark:text-slate-800 uppercase tracking-tighter leading-none select-none">
             Contact US
           </h2>
-          <div className="mt-2 sm:mt-4 pl-2 lg:pl-4 flex items-center gap-4">
-            <div className="w-12 sm:w-20 lg:w-24 h-[3px] bg-slate-400 dark:bg-slate-500 rounded-full"></div>
+          <div className="mt-2 sm:mt-4 pl-0 lg:pl-4 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full">
+            <div className="hidden sm:block w-12 sm:w-20 lg:w-24 h-[3px] bg-slate-400 dark:bg-slate-500 rounded-full"></div>
             <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-500 dark:text-slate-400 tracking-tight">
               Have a Project ?
             </h3>
           </div>
 
           {/* Contact Details */}
-          <div className="mt-24 lg:mt-32 pl-2 lg:pl-4 flex flex-col sm:flex-row gap-8 lg:gap-16 w-full max-w-3xl">
+          <div className="mt-12 lg:mt-32 pl-0 lg:pl-4 flex flex-col sm:flex-row gap-8 lg:gap-16 w-full max-w-3xl justify-center lg:justify-start">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">Phone</h4>
               <p className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
@@ -59,12 +59,12 @@ export default function Contact() {
             </div>
           </div>
           
-          <div className="absolute top-[100%] left-[-1rem] lg:left-[-4rem] xl:left-[-7rem] w-[100vw] mt-20 sm:mt-24 lg:mt-32 opacity-60 pointer-events-none -z-10">
+          <div className="absolute top-[100%] left-[50%] lg:left-[-4rem] xl:left-[-7rem] -translate-x-1/2 lg:translate-x-0 w-[100vw] mt-12 sm:mt-24 lg:mt-32 opacity-60 pointer-events-none -z-10 hidden lg:block">
             <ClientLogos />
           </div>
         </div>
 
-        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-[2rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-slate-800 w-full max-w-[420px] ml-auto">
+        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-[2rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-slate-800 w-full max-w-[420px] mx-auto lg:ml-auto lg:mr-0 relative z-10">
           
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Get in Touch</h2>
 

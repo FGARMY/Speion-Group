@@ -29,7 +29,7 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="about" className="hidden sm:block py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-900/50 relative transition-colors duration-500">
+    <section id="about" className="py-20 sm:py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-900/50 relative transition-colors duration-500">
       <div className="container mx-auto max-w-7xl">
         
         {/* Header */}

@@ -51,12 +51,12 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5 mt-4 w-full px-4 sm:px-0 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <Link href="/contact" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5 mt-4 w-full px-2 sm:px-0 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <Link href="/contact" className="w-full sm:w-auto px-4 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-sm sm:text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
               Book Free Consultation Now
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5" />
             </Link>
-            <Link href="/services" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-base text-center hover:shadow-lg">
+            <Link href="/services" className="w-full sm:w-auto px-4 sm:px-10 py-4 sm:py-5 rounded-full border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-sm sm:text-base text-center hover:shadow-lg">
               Explore Services
             </Link>
           </div>

@@ -67,7 +67,7 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div
-          className={`flex items-center justify-between rounded-full px-6 md:px-8 py-3 transition-all duration-500 ease-in-out relative z-50 ${scrolled || mobileMenuOpen
+          className={`flex items-center justify-between rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 transition-all duration-500 ease-in-out relative z-50 ${scrolled || mobileMenuOpen
             ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/40 dark:border-slate-800/50"
             : "bg-transparent border-transparent"
             }`}

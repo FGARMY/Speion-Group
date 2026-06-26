@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="w-full">
         
         {/* Seamless Container */}
-        <div className="px-8 sm:px-16 pt-16 sm:pt-24 pb-0 relative overflow-hidden flex flex-col justify-between">
+        <div className="px-6 sm:px-12 lg:px-16 pt-16 sm:pt-24 pb-0 relative overflow-hidden flex flex-col justify-between">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 relative z-10">
             
@@ -27,15 +27,15 @@ export default function Footer() {
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-4 mt-auto">
-                <button className="bg-black dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl px-4 py-2.5 flex items-center gap-3 transition-colors shadow-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-8 lg:mt-auto">
+                <button className="w-full sm:w-auto bg-black dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl px-4 py-2.5 flex items-center justify-center sm:justify-start gap-3 transition-colors shadow-sm">
                   <Apple size={24} fill="currentColor" />
                   <div className="flex flex-col items-start text-left">
                     <span className="text-[10px] leading-tight text-slate-300">Download on the</span>
                     <span className="text-sm font-semibold leading-tight">App Store</span>
                   </div>
                 </button>
-                <button className="bg-black dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl px-4 py-2.5 flex items-center gap-3 transition-colors shadow-sm">
+                <button className="w-full sm:w-auto bg-black dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl px-4 py-2.5 flex items-center justify-center sm:justify-start gap-3 transition-colors shadow-sm">
                   <Play size={20} fill="currentColor" />
                   <div className="flex flex-col items-start text-left">
                     <span className="text-[10px] leading-tight text-slate-300">GET IT ON</span>
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
 
             {/* Right Side: Links */}
-            <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-4">
+            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-12 lg:gap-4">
               
               <div className="flex flex-col gap-6">
                 <h4 className="text-slate-900 dark:text-white font-bold text-sm tracking-wide">What we do</h4>
