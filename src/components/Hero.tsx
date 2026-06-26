@@ -7,27 +7,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col justify-center overflow-hidden transition-colors duration-500">
 
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
-      {/* Animated Light Leaks */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-rose-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse duration-[10000ms]"></div>
-      <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-red-600/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-      {/* Floating Tech Particles */}
-      <div className="absolute top-[15%] left-[5%] text-rose-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '0s' }}>
-        <Code size={48} />
-      </div>
-      <div className="absolute top-[60%] left-[40%] text-red-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '2s' }}>
-        <Cpu size={32} />
-      </div>
-      <div className="absolute top-[20%] right-[15%] text-rose-400/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '4s' }}>
-        <Database size={40} />
-      </div>
-
-      {/* Decorative Crosses */}
-      <div className="absolute top-[25%] left-[12%] text-slate-900/10 dark:text-white/5 font-light text-6xl pointer-events-none select-none opacity-50">+</div>
-      <div className="absolute bottom-[35%] left-[30%] text-slate-900/5 dark:text-white/5 font-light text-4xl pointer-events-none select-none opacity-30">+</div>
 
       <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 lg:pt-20 h-full min-h-[100dvh]">
 

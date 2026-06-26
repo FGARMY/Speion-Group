@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Massive Bottom Text */}
           <div className="relative w-full flex justify-center mt-auto pointer-events-none select-none">
-            <span className="text-[25vw] sm:text-[22vw] lg:text-[15rem] font-display font-black tracking-tighter leading-[0.7] text-slate-900 dark:text-white transform translate-y-[18%]">
+            <span className="text-[25vw] sm:text-[22vw] lg:text-[15rem] font-display font-black tracking-normal leading-[0.7] text-slate-900 dark:text-white transform translate-y-[18%]">
               Speion
             </span>
           </div>

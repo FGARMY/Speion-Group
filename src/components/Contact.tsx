@@ -37,7 +37,6 @@ export default function Contact() {
             Contact US
           </h2>
           <div className="mt-2 sm:mt-4 pl-0 lg:pl-4 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start w-full">
-            <div className="hidden sm:block w-12 sm:w-20 lg:w-24 h-[3px] bg-slate-400 dark:bg-slate-500 rounded-full"></div>
             <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-500 dark:text-slate-400 tracking-tight">
               Have a Project ?
             </h3>

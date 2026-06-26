@@ -6,10 +6,7 @@ export default function CTA() {
       <div className="container mx-auto max-w-5xl">
         <div className="bg-gradient-to-br from-rose-50 via-rose-100 to-white dark:from-slate-900 dark:via-rose-950 dark:to-slate-950 border border-rose-200 dark:border-none rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-10 md:p-20 text-center shadow-[0_30px_100px_rgba(225,29,72,0.1)] dark:shadow-[0_30px_100px_rgba(225,29,72,0.25)] relative overflow-hidden group opacity-0 animate-fade-in-up transition-all duration-500">
           
-          {/* Decorative faint background shapes */}
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/grid.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
-          <div className="absolute -top-40 -left-40 w-96 h-96 bg-white/20 dark:bg-white/5 rounded-full blur-[120px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
-          <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-rose-500/20 dark:bg-rose-500/5 rounded-full blur-[120px] pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
+
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-rose-600/10 dark:bg-white/20 backdrop-blur-md text-rose-700 dark:text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6 sm:mb-8 border border-rose-600/20 dark:border-none">

@@ -50,7 +50,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 relative overflow-hidden">
       
       {/* Background Decor */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-rose-400/5 dark:bg-rose-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
 
       <div className="container mx-auto max-w-7xl relative z-10">
 

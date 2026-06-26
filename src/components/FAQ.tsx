@@ -32,12 +32,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 sm:py-32 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 relative overflow-hidden z-10 transition-colors duration-500">
       
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-rose-400/10 dark:bg-rose-500/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 opacity-70"></div>
-        <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-indigo-400/10 dark:bg-indigo-500/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 opacity-70"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10 dark:opacity-5 mix-blend-overlay"></div>
-      </div>
+
 
       <div className="container mx-auto max-w-7xl relative z-10">
         
