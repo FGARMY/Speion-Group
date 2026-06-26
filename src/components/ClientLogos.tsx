@@ -5,12 +5,6 @@ export default function ClientLogos() {
 
   return (
     <div className="w-full overflow-hidden opacity-0 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-      <div className="container mx-auto px-4 max-w-7xl mb-8">
-        <p className="text-center text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-          Trusted by Innovative Teams Worldwide
-        </p>
-      </div>
-
       {/* Marquee Container */}
       <div className="relative w-full flex overflow-x-hidden group">
 

@@ -14,7 +14,7 @@ export default function ContactPage() {
     <main className="min-h-screen relative bg-slate-50 dark:bg-slate-950">
       <Navbar />
       
-      <div className="pt-32">
+      <div className="pt-8 sm:pt-12">
         <Contact />
       </div>
 

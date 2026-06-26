@@ -5,11 +5,11 @@ import { Apple, Play } from "lucide-react"; // using Play as a stand-in for Goog
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 dark:bg-slate-950 pt-20 transition-colors duration-500">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <footer className="bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+      <div className="w-full">
         
-        {/* Rounded Container */}
-        <div className="bg-white dark:bg-slate-900 rounded-t-[2.5rem] sm:rounded-t-[4rem] px-8 sm:px-16 pt-16 sm:pt-24 pb-0 relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.03)] dark:shadow-[0_-10px_40px_rgba(0,0,0,0.2)] border border-b-0 border-slate-100 dark:border-slate-800 flex flex-col justify-between">
+        {/* Seamless Container */}
+        <div className="px-8 sm:px-16 pt-16 sm:pt-24 pb-0 relative overflow-hidden flex flex-col justify-between">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 relative z-10">
             
