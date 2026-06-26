@@ -3,6 +3,7 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { submitContactForm } from "@/app/actions/contact";
+import ClientLogos from "@/components/ClientLogos";
 
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'sending' | 'success'>('idle');
@@ -31,7 +32,7 @@ export default function Contact() {
       <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16 h-full max-w-full mx-auto flex items-center justify-between -mt-16 lg:-mt-32">
         
         {/* Left Side Text */}
-        <div className="hidden md:block ml-4 lg:ml-12 xl:ml-24">
+        <div className="hidden md:block ml-4 lg:ml-12 xl:ml-24 relative z-0">
           <h2 className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-bold text-slate-300 dark:text-slate-800 uppercase tracking-tighter leading-none select-none">
             Contact US
           </h2>
@@ -40,6 +41,26 @@ export default function Contact() {
             <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-500 dark:text-slate-400 tracking-tight">
               Have a Project ?
             </h3>
+          </div>
+
+          {/* Contact Details */}
+          <div className="mt-24 lg:mt-32 pl-2 lg:pl-4 flex flex-col sm:flex-row gap-8 lg:gap-16 w-full max-w-3xl">
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">Phone</h4>
+              <p className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+                (+91) 77588 66318
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">Email</h4>
+              <p className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+                speiongorup@gmail.com
+              </p>
+            </div>
+          </div>
+          
+          <div className="absolute top-[100%] left-[-1rem] lg:left-[-4rem] xl:left-[-7rem] w-[100vw] mt-20 sm:mt-24 lg:mt-32 opacity-60 pointer-events-none -z-10">
+            <ClientLogos />
           </div>
         </div>
 
