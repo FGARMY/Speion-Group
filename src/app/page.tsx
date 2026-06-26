@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 
 import Services from "@/components/Services";
+import CaseStudies from "@/components/CaseStudies";
+import Process from "@/components/Process";
 
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -113,7 +115,8 @@ export default function Home() {
       <Hero />
 
       <Services />
-
+      <CaseStudies />
+      <Process />
 
       <Testimonials />
       <FAQ />
