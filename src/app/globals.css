@@ -77,6 +77,15 @@
     transform: translateY(-2px);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
+  /* Dark mode polish: Premium glowing buttons */
+  .dark .glow-effect {
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.25), 0 0 30px rgba(244, 63, 94, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .dark .glow-effect:hover {
+    box-shadow: 0 0 25px rgba(244, 63, 94, 0.5), 0 0 50px rgba(244, 63, 94, 0.2);
+  }
 }
 
 @keyframes scale-in {

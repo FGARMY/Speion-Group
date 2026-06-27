@@ -22,7 +22,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/services/custom-software-development',
     '/services/erp-development',
     '/services/mobile-app-development',
-    '/services/ui-ux-design',
     '/services/web-development',
     '/services/ai-automations',
     '/locations/software-development-nashik',

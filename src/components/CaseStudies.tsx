@@ -105,42 +105,46 @@ export default function CaseStudies() {
           </Link>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Horizontal Carousel */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 sm:gap-8 pb-12 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-12 lg:px-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {caseStudies.map((study, idx) => (
-            <div key={idx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col gap-8 shadow-sm hover:shadow-xl hover:border-slate-300 dark:hover:border-slate-700 transition-all group">
+            <div key={idx} className="w-[85vw] sm:w-[60vw] lg:w-[35vw] flex-shrink-0 snap-center sm:snap-start bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 flex flex-col gap-8 shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 group relative overflow-hidden">
               
-              <div className="flex flex-col flex-1">
-                <span className="text-slate-500 dark:text-slate-400 text-xs font-bold tracking-wider uppercase mb-3">
+              {/* Subtle background glow on hover */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 dark:bg-rose-500/10 rounded-full blur-2xl -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+
+              <div className="flex flex-col flex-1 relative z-10">
+                <span className="text-rose-600 dark:text-rose-500 text-xs font-bold tracking-wider uppercase mb-4 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
                   {study.category}
                 </span>
-                <h4 className="text-slate-900 dark:text-white text-xl sm:text-2xl font-bold mb-3 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                <h4 className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-display font-bold mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                   {study.title}
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed mb-8 flex-1">
                   {study.description}
                 </p>
                 
-                <div className="grid grid-cols-2 gap-4 mt-auto mb-8">
+                <div className="grid grid-cols-2 gap-6 mt-auto mb-10 border-t border-slate-100 dark:border-slate-800 pt-8">
                   {study.metrics.map((metric, i) => (
                     <div key={i} className="flex flex-col">
-                      <span className="text-slate-900 dark:text-white text-xl sm:text-2xl font-bold mb-1">
+                      <span className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-bold mb-1 tracking-tight">
                         {metric.value}
                       </span>
-                      <span className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium">
+                      <span className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-widest">
                         {metric.label}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <Link href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-semibold hover:text-rose-700 dark:hover:text-rose-400 transition-colors group/link mt-auto">
-                  View Case Study
+                <Link href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-bold uppercase text-xs tracking-widest hover:text-rose-700 dark:hover:text-rose-400 transition-colors group/link mt-auto">
+                  Explore Case Study
                   <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
-              <div className="h-48 sm:h-56 mt-4 opacity-90 group-hover:opacity-100 transition-opacity">
+              <div className="h-56 sm:h-64 mt-4 opacity-90 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-[1.02] relative z-10">
                 {study.visual}
               </div>
 
