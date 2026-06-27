@@ -138,24 +138,6 @@ export default function Services() {
             </Link>
           ))}
         </div>
-        
-        {/* Accreditation / Metrics Footer */}
-        <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800 flex justify-center">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-slate-700 dark:text-slate-300">
-            <div className="flex items-center gap-3">
-              <Zap size={20} className="text-rose-500" />
-              <span className="text-sm font-bold uppercase tracking-wider">99.9% Uptime</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FolderOpen size={20} className="text-rose-500" />
-              <span className="text-sm font-bold uppercase tracking-wider">20+ Completed Projects</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Blocks size={20} className="text-rose-500" />
-              <span className="text-sm font-bold uppercase tracking-wider">10+ Technologies</span>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
