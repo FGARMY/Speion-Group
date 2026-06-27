@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Megaphone } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Megaphone, Bot } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
@@ -75,16 +75,16 @@ export default function Services() {
       link: "/services/ui-ux-design"
     },
     {
-      id: "06 / SMM",
-      title: "Social Media Management",
-      desc: "Data-driven social media strategies to elevate your brand presence, engage audiences, and drive enterprise growth.",
-      icon: <Megaphone size={40} strokeWidth={1} />,
+      id: "06 / AI",
+      title: "AI Automations",
+      desc: "Streamline your workflows and operations with custom AI-powered automation solutions to drive efficiency and scale.",
+      icon: <Bot size={40} strokeWidth={1} />,
       accent: "text-blue-950",
-      expert: "Digital Marketing Team",
-      tag: "Brand Growth",
+      expert: "AI & Automation Team",
+      tag: "Efficiency",
       className: "lg:col-span-1 lg:row-span-1",
       delay: "0.6s",
-      link: "/services/social-media-management"
+      link: "/services/ai-automations"
     },
     {
       id: "07 / CRM",
