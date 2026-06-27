@@ -7,8 +7,14 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col justify-center overflow-hidden transition-colors duration-500">
 
-
-
+      {/* Background Graphics - Minimalist Cyber Grid */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
+        {/* Wide Engineering Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_80%_100%_at_50%_0%,#000_20%,transparent_100%)]"></div>
+        
+        {/* Ambient Top Glow highlighting the grid */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-rose-500/10 dark:bg-rose-500/20 rounded-[100%] blur-[80px]"></div>
+      </div>
       <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 lg:pt-20 h-full min-h-[100dvh]">
 
         {/* Centered Content - Fluid Typography */}
