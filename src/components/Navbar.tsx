@@ -114,12 +114,12 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-3">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <button
-              className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800"
+              className="w-12 h-12 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
+                  className={`py-3 text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ transitionDelay: `${idx * 50}ms` }}
