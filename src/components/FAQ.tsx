@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Minus, MessageCircleQuestion, HelpCircle } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 export default function FAQ() {
-  const [openIdx, setOpenIdx] = useState<number>(0);
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
   
   const faqs = [
     {
@@ -30,109 +30,59 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 sm:py-32 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 relative overflow-hidden z-10 transition-colors duration-500">
-      
-
-
-      <div className="container mx-auto max-w-7xl relative z-10">
+    <section id="faq" className="py-20 sm:py-28 px-6 bg-slate-50/50 dark:bg-slate-900/20 transition-colors duration-500">
+      <div className="container mx-auto max-w-3xl">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* Left Column: Heading & Sticky Info */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32 flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 bg-rose-100/50 dark:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20 text-rose-600 dark:text-rose-400 px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest mb-8 shadow-sm">
-              <MessageCircleQuestion size={16} className="text-rose-500" />
-              FAQ
-            </div>
+        <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-12 text-center tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIdx === idx;
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
-              Got <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-indigo-500">Questions?</span><br />
-              We Have Answers.
-            </h2>
-            
-            <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-8">
-              Find detailed answers to common questions about our development process, tech stack, and engagement models.
-            </p>
-
-            <div className="bg-white/60 dark:bg-slate-900/40 backdrop-blur-xl border border-slate-200 dark:border-slate-800 rounded-3xl p-8 w-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.1)]">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-full bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center flex-shrink-0">
-                  <HelpCircle size={28} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Still need help?</h4>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
-                    Can't find the answer you're looking for? Please chat to our friendly team.
+            return (
+              <div 
+                key={idx} 
+                className={`overflow-hidden transition-all duration-500 rounded-2xl border ${
+                  isOpen 
+                    ? 'bg-white dark:bg-slate-900 border-rose-200 dark:border-rose-500/30 shadow-md shadow-rose-100/50 dark:shadow-rose-900/20' 
+                    : 'bg-white/60 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm'
+                }`}
+              >
+                <button 
+                  onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  className="w-full px-6 py-5 sm:px-8 sm:py-6 flex items-start sm:items-center justify-between text-left focus:outline-none group"
+                  aria-expanded={isOpen}
+                >
+                  <h3 className={`font-semibold text-base sm:text-lg pr-6 transition-colors duration-300 ${isOpen ? 'text-rose-600 dark:text-rose-400' : 'text-slate-800 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                    {faq.q}
+                  </h3>
+                  <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    isOpen 
+                      ? 'bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 rotate-180' 
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 group-hover:text-slate-600 dark:group-hover:text-slate-300'
+                  }`}>
+                    {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                  </div>
+                </button>
+                
+                <div 
+                  className={`px-6 sm:px-8 overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen 
+                      ? 'max-h-96 pb-6 sm:pb-8 opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed pr-0 sm:pr-8">
+                    {faq.a}
                   </p>
-                  <a href="#contact" className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-400 font-bold hover:text-rose-700 dark:hover:text-rose-300 transition-colors">
-                    Contact our team &rarr;
-                  </a>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Right Column: Accordion */}
-          <div className="lg:col-span-7 flex flex-col gap-5">
-            {faqs.map((faq, idx) => {
-              const isOpen = openIdx === idx;
-              const formattedNum = (idx + 1).toString().padStart(2, '0');
-              
-              return (
-                <div 
-                  key={idx} 
-                  className={`group relative overflow-hidden rounded-[2rem] transition-all duration-500 ${
-                    isOpen 
-                      ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-rose-200 dark:border-rose-500/30 shadow-[0_15px_40px_rgba(225,29,72,0.08)] scale-[1.01]' 
-                      : 'bg-white/40 dark:bg-slate-900/20 backdrop-blur-sm border-slate-200 dark:border-slate-800 hover:bg-white/60 dark:hover:bg-slate-900/40'
-                  } border`}
-                >
-                  {/* Subtle active gradient glow */}
-                  {isOpen && (
-                    <div className="absolute inset-0 bg-gradient-to-br from-rose-500/5 to-indigo-500/5 dark:from-rose-500/10 dark:to-indigo-500/10 pointer-events-none"></div>
-                  )}
-
-                  <button 
-                    onClick={() => setOpenIdx(isOpen ? -1 : idx)}
-                    className="w-full text-left px-6 sm:px-8 py-6 flex items-start gap-4 sm:gap-6 focus:outline-none relative z-10"
-                    aria-expanded={isOpen}
-                  >
-                    <span className={`text-sm sm:text-base font-bold font-display mt-1 transition-colors duration-500 ${isOpen ? 'text-rose-500' : 'text-slate-400 dark:text-slate-500'}`}>
-                      {formattedNum}
-                    </span>
-                    
-                    <h3 className={`font-bold text-lg sm:text-xl md:text-2xl flex-1 pr-4 transition-colors duration-500 ${isOpen ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
-                      {faq.q}
-                    </h3>
-                    
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 border ${
-                      isOpen 
-                        ? 'bg-rose-500 border-rose-500 text-white rotate-180 shadow-md shadow-rose-500/20' 
-                        : 'bg-slate-100 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 group-hover:border-rose-300 dark:group-hover:border-rose-500/50'
-                    }`}>
-                      {isOpen ? <Minus size={18} /> : <Plus size={18} />}
-                    </div>
-                  </button>
-                  
-                  <div 
-                    className={`px-6 sm:px-8 overflow-hidden transition-all duration-500 ease-in-out relative z-10 ${
-                      isOpen 
-                        ? 'max-h-96 pb-8 opacity-100 translate-y-0' 
-                        : 'max-h-0 opacity-0 -translate-y-4'
-                    }`}
-                  >
-                    <div className="pl-0 sm:pl-[2.75rem]">
-                      <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed text-base sm:text-lg">
-                        {faq.a}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

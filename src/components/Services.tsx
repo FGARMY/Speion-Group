@@ -1,199 +1,197 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Megaphone } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
 export default function Services() {
   const services = [
     {
       id: "01 / WEB",
       title: "Web Development",
-      desc: "High-performance web applications built with React, Next.js, and Node.js. Optimized for speed and Core Web Vitals.",
-      icon: <Monitor size={40} strokeWidth={1} />,
-      accent: "text-slate-950",
+      desc: "Engineered for 95+ Lighthouse Scores and <2s load times. We build highly scalable React and Next.js applications.",
+      icon: <Monitor size={24} strokeWidth={1.5} />,
+      image: "/services/web.png",
       expert: "Frontend Engineering Team",
-      tag: "Web Apps",
-      className: "lg:col-span-2 lg:row-span-1",
-      delay: "0.1s",
-      link: "/services/web-development"
+      link: "/services/web-development",
+      price: "Starts ₹25k+"
     },
     {
       id: "02 / APP",
       title: "Mobile App Development",
-      desc: "High-performance mobile applications compiled to native code for iOS and Android.",
-      icon: <Smartphone size={40} strokeWidth={1} />,
-      accent: "text-slate-950",
+      desc: "Native iOS and Android architectures compiling to maximum FPS for buttery-smooth user experiences.",
+      icon: <Smartphone size={24} strokeWidth={1.5} />,
+      image: "/services/app.png",
       expert: "Mobile Engineering Team",
-      tag: "iOS & Android",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.2s",
       link: "/services/mobile-app-development",
-      extra: (
-        <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400">Tech Stack</span>
-          </div>
-          <p className="font-serif italic text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            "We compile to native C++ and Objective-C using React Native and Flutter for maximum FPS."
-          </p>
-        </div>
-      )
+      price: "Starts ₹40k+"
     },
     {
       id: "03 / SFT",
       title: "Custom Software Development",
-      desc: "Architected software solutions built to handle complex business logic and heavy data loads without performance degradation.",
-      icon: <Code size={40} strokeWidth={1} />,
-      accent: "text-slate-950",
+      desc: "Enterprise-grade logic engineered to handle heavy data loads and complex workflows with 99.9% uptime.",
+      icon: <Code size={24} strokeWidth={1.5} />,
+      image: "/services/software.png",
       expert: "Architecture Team",
-      tag: "Custom Code",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.3s",
-      link: "/services/custom-software-development"
+      link: "/services/custom-software-development",
+      price: "Starts ₹75k+"
     },
     {
       id: "04 / ERP",
       title: "ERP Solutions",
-      desc: "Comprehensive Enterprise Resource Planning systems to integrate your operations, supply chain, and HR.",
-      icon: <Server size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      desc: "Unify your entire supply chain, HR, and operations into one seamless dashboard with real-time analytics.",
+      icon: <Server size={24} strokeWidth={1.5} />,
+      image: "/services/erp.png",
       expert: "Enterprise Solutions Team",
-      tag: "Business Automation",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.4s",
-      link: "/services/erp-development"
+      link: "/services/erp-development",
+      price: "Custom Quote"
     },
     {
       id: "05 / UIX",
       title: "UI/UX Design",
-      desc: "Stunning, user-centric interfaces and wireframes that ensure high conversion rates and intuitive navigation.",
-      icon: <Layout size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      desc: "Data-driven interfaces and user flows designed to maximize conversion rates and user retention.",
+      icon: <Layout size={24} strokeWidth={1.5} />,
+      image: "/services/uiux.png",
       expert: "Design Team",
-      tag: "User Experience",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.5s",
-      link: "/services/ui-ux-design"
+      link: "/services/ui-ux-design",
+      price: "Starts ₹15k+"
     },
     {
-      id: "06 / SMM",
-      title: "Social Media Management",
-      desc: "Data-driven social media strategies to elevate your brand presence, engage audiences, and drive enterprise growth.",
-      icon: <Megaphone size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
-      expert: "Digital Marketing Team",
-      tag: "Brand Growth",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.6s",
-      link: "/services/social-media-management"
+      id: "06 / AI",
+      title: "AI Automations",
+      desc: "Autonomous LLM agents and workflow automations that eliminate manual tasks and reduce operational overhead.",
+      icon: <Bot size={24} strokeWidth={1.5} />,
+      image: "/services/ai.png",
+      expert: "AI & Automation Team",
+      link: "/services/ai-automations",
+      price: "Starts ₹40k+"
     },
     {
       id: "07 / CRM",
       title: "CRM Development",
-      desc: "Custom Customer Relationship Management software to track leads, manage sales pipelines, and boost conversions.",
-      icon: <Database size={40} strokeWidth={1} />,
-      accent: "text-blue-950",
+      desc: "Custom lead tracking and pipeline management software designed precisely for your sales funnel.",
+      icon: <Database size={24} strokeWidth={1.5} />,
+      image: "/services/crm.png",
       expert: "Data Engineering Team",
-      tag: "Sales Optimization",
-      className: "lg:col-span-1 lg:row-span-1",
-      delay: "0.7s",
-      link: "/services/crm-development"
+      link: "/services/crm-development",
+      price: "Custom Quote"
     }
   ];
 
   return (
-    <section id="services" className="pt-16 pb-12 px-4 sm:px-6 bg-[#fafafa] dark:bg-[#020617] relative overflow-hidden transition-colors duration-500">
-      
-
-
-      <div className="container mx-auto max-w-7xl relative z-10">
+    <section id="services" className="pt-24 pb-20 px-4 sm:px-6 bg-[#FAFAFA] dark:bg-[#020617] relative">
+      <div className="container mx-auto max-w-7xl">
         
-        {/* Header - Architecture Style */}
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-16 lg:mb-32 gap-10 lg:gap-16 opacity-0 animate-fade-in-up">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6 sm:mb-8">
-              <div className="w-10 h-[1px] bg-slate-900 dark:bg-rose-400"></div>
-              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.4em] text-slate-900/40 dark:text-rose-400/60">Capabilities & Services</span>
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row items-end justify-between gap-12 mb-16 lg:mb-20">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[2px] bg-rose-600"></div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-rose-600 dark:text-rose-500">
+                Capabilities & Services
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-slate-950 dark:text-slate-100 leading-[1.1] sm:leading-[0.95] tracking-tight mb-6 sm:mb-8">
-              Engineering <br className="hidden sm:block" /> Excellence
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6">
+              Engineering Excellence
             </h2>
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-center">
-              <p className="text-sm sm:text-lg text-slate-500 dark:text-slate-400 font-light max-w-md leading-relaxed">
-                A rigorous overview of our software architecture, development, and design capabilities.
-              </p>
-            </div>
+            <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+              A rigorous overview of our software architecture, development, and design capabilities.
+            </p>
           </div>
           
-          <div className="lg:w-[400px] relative">
-            <div className="speion-border bg-white dark:bg-slate-900/50 dark:backdrop-blur-xl p-8 speion-shadow rounded-sm relative dark:border-slate-800">
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-red-600">CTO's Memorandum</span>
-                <Code size={16} className="text-slate-200 dark:text-slate-700" />
-              </div>
-              <p className="font-serif italic text-slate-800 dark:text-slate-300 leading-relaxed text-base mb-6">
-                "Software architecture is underpinned by meticulous observation and scalable design. Every codebase tells a narrative of innovation that we are committed to perfecting."
-              </p>
-              <div className="pt-6 border-t border-slate-100 dark:border-slate-800">
-                <div className="text-[10px] font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-1">Authenticated By</div>
-                <div className="text-sm font-bold text-slate-950 dark:text-rose-400">Speion Technical Leadership</div>
-              </div>
-            </div>
+          <div className="md:max-w-sm bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 p-6 sm:p-8 rounded-[2rem] shadow-xl shadow-rose-900/5 dark:shadow-none relative group overflow-hidden shrink-0">
+             <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/10 rounded-full blur-[60px] -z-10 group-hover:bg-rose-500/20 transition-colors duration-500"></div>
+             <div className="flex items-center justify-between mb-6">
+               <span className="text-[10px] font-bold uppercase tracking-widest text-rose-600 dark:text-rose-500">CTO's Memorandum</span>
+               <Code size={16} className="text-slate-300 dark:text-slate-700" />
+             </div>
+             <p className="font-serif italic text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+               "Software architecture is underpinned by meticulous observation and scalable design. Every codebase tells a narrative of innovation that we are committed to perfecting."
+             </p>
+             <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+               <div className="text-xs font-bold text-slate-900 dark:text-white">Speion Technical Leadership</div>
+             </div>
           </div>
         </div>
 
-        {/* Services Grid - "Architecture File" Aesthetic */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-100 dark:bg-slate-800 speion-border overflow-hidden rounded-sm shadow-2xl shadow-slate-950/5 relative dark:border-slate-800">
+        {/* Balanced Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((item, idx) => (
             <Link 
               href={item.link}
               key={idx} 
-              className={`group relative overflow-hidden bg-white dark:bg-slate-900 p-10 transition-all duration-700 opacity-0 animate-fade-in-up flex flex-col hover:z-10 ${item.className}`}
-              style={{ animationDelay: item.delay }}
+              className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Subtle accent line on top */}
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-rose-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-12">
-                  <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest bg-red-50 dark:bg-red-900/20 px-3 py-1 rounded-sm opacity-0 animate-fade-in-up" style={{ animationDelay: `calc(${item.delay} + 0.2s)` }}>
+              {/* Image Preview Header */}
+              <div className="h-56 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  fill 
+                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+                
+                {/* ID Badge */}
+                <div className="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200/50 dark:border-slate-700/50 shadow-sm z-10">
+                  <span className="text-[10px] font-bold text-slate-800 dark:text-slate-200 uppercase tracking-widest">
                     {item.id}
                   </span>
-                  <div className="text-slate-300 dark:text-slate-700 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-all duration-500 w-10 h-10 opacity-0 animate-scale-in group-hover:scale-110" style={{ animationDelay: `calc(${item.delay} + 0.3s)` }}>
+                </div>
+
+                {/* Pricing Badge */}
+                <div className="absolute top-4 right-4 bg-slate-900/90 dark:bg-slate-800/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-700/50 shadow-sm z-10 flex items-center gap-1">
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
+                    {item.price}
+                  </span>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-8 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-rose-600 dark:text-rose-500 p-2 bg-rose-50 dark:bg-rose-900/20 rounded-xl">
                     {item.icon}
                   </div>
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300">
+                    {item.title}
+                  </h3>
                 </div>
-
-                <div className="flex-1">
-                  <h3 className="text-2xl font-display font-bold text-slate-950 dark:text-slate-100 mb-6 leading-[1.1] pr-8 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-500 tracking-tight">{item.title}</h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm font-light leading-relaxed mb-8 max-w-sm group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">{item.desc}</p>
-                  {item.extra && item.extra}
-                </div>
-
-                <div className="mt-12 flex items-center justify-between">
+                
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
+                  {item.desc}
+                </p>
+                
+                <div className="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-800">
                   <div className="flex flex-col">
-                    <span className="text-[9px] uppercase font-bold text-slate-300 dark:text-slate-700 tracking-[0.2em] mb-2 group-hover:text-red-600 transition-colors">Lead Division</span>
-                    <span className="text-xs font-serif italic text-slate-900 dark:text-slate-200">{item.expert}</span>
+                    <span className="text-[9px] uppercase font-bold text-slate-400 tracking-widest mb-1">
+                      Lead Division
+                    </span>
+                    <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                      {item.expert}
+                    </span>
                   </div>
-                  <div className="w-10 h-10 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-300 dark:text-slate-700 group-hover:bg-slate-950 dark:group-hover:bg-slate-800 group-hover:text-white dark:group-hover:text-rose-400 group-hover:border-slate-950 dark:group-hover:border-slate-700 transition-all duration-500 rounded-full">
-                    <ChevronRight size={14} />
+                  <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 group-hover:bg-rose-600 group-hover:border-rose-600 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1">
+                    <ArrowRight size={16} />
                   </div>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-
-        {/* Accreditation Footer */}
-        <div className="mt-12 flex flex-col items-center justify-center gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <div className="h-[1px] w-24 bg-slate-200 dark:bg-slate-800"></div>
-          <div className="flex flex-wrap justify-center gap-12 text-slate-300 dark:text-slate-700">
+        
+        {/* Accreditation / Metrics Footer */}
+        <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800 flex justify-center">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-slate-700 dark:text-slate-300">
             <div className="flex items-center gap-3">
-              <ShieldCheck size={18} className="text-teal-500/40" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] dark:text-slate-600">Enterprise Grade Security</span>
+              <Zap size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">99.9% Uptime</span>
             </div>
             <div className="flex items-center gap-3">
-              <Activity size={18} className="text-slate-200 dark:text-slate-800" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] dark:text-slate-600">High-Performance Scalability</span>
+              <FolderOpen size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">20+ Completed Projects</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Blocks size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">10+ Technologies</span>
             </div>
           </div>
         </div>
