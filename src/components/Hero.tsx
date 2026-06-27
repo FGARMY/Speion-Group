@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "motion/react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import ClientLogos from "./ClientLogos";
@@ -18,7 +19,18 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
+const rotatingWords = ["Web Apps", "Mobile Apps", "SaaS Products", "ERP Systems"];
+
 export default function Hero() {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative w-full min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col justify-center overflow-hidden transition-colors duration-500">
 
@@ -52,8 +64,22 @@ export default function Hero() {
               Development in <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">Pune & Nashik</span>
             </h1>
 
-            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-lg leading-relaxed font-light mx-auto tracking-wide px-2 sm:px-0">
-              Trusted technology partner for scalable web applications, native mobile apps, and ERP integrations.
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed font-light mx-auto tracking-wide px-2 sm:px-0">
+              Trusted technology partner for scalable{" "}
+              <span className="relative inline-flex overflow-hidden align-bottom" style={{ height: "1.6em", verticalAlign: "baseline" }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={rotatingWords[wordIndex]}
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    exit={{ y: "-100%", opacity: 0 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="inline-block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400"
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </p>
           </motion.div>
 
