@@ -69,7 +69,7 @@ export default function Hero() {
 
       
       {/* Client Logos - Edge to Edge at Bottom of Hero */}
-      <div className="absolute bottom-8 lg:bottom-12 left-0 w-full pb-4 pt-12 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent z-10">
+      <div className="absolute bottom-16 lg:bottom-24 left-0 w-full pb-4 pt-12 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent z-10">
         <ClientLogos />
       </div>
 
