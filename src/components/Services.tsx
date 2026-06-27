@@ -104,80 +104,39 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Asymmetric Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 auto-rows-fr">
-          {services.map((item, idx) => {
-            // Determine column span for bento layout
-            let spanClass = "";
-            if (idx === 0) spanClass = "md:col-span-2 lg:col-span-2";      // Web (Wide)
-            else if (idx === 1) spanClass = "md:col-span-1 lg:col-span-1"; // App (Square)
-            else if (idx === 2) spanClass = "md:col-span-1 lg:col-span-1"; // Software (Square)
-            else if (idx === 3) spanClass = "md:col-span-2 lg:col-span-2"; // ERP (Wide)
-            else if (idx === 4) spanClass = "md:col-span-2 lg:col-span-2"; // AI (Wide)
-            else if (idx === 5) spanClass = "md:col-span-1 lg:col-span-1"; // CRM (Square)
-            
-            return (
+        {/* Minimalist Icon Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((item, idx) => (
             <Link 
               href={item.link}
               key={idx} 
-              className={`group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 ${spanClass}`}
+              className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] p-8 sm:p-10 hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden z-10"
             >
-              {/* Image Preview Header */}
-              <div className="h-40 sm:h-48 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
-                <Image 
-                  src={item.image} 
-                  alt={item.title} 
-                  fill 
-                  className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
-                />
-                
-                {/* ID Badge */}
-                <div className="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200/50 dark:border-slate-700/50 shadow-sm z-10">
-                  <span className="text-[10px] font-bold text-slate-800 dark:text-slate-200 uppercase tracking-widest">
-                    {item.id}
-                  </span>
+              {/* Subtle background glow on hover */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 dark:bg-rose-500/10 rounded-full blur-2xl -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+              
+              <div className="flex items-start justify-between mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center text-rose-600 dark:text-rose-500 border border-rose-100 dark:border-rose-800/50 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shrink-0">
+                  {item.icon}
                 </div>
-
-                {/* Pricing Badge */}
-                <div className="absolute top-4 right-4 bg-slate-900/90 dark:bg-slate-800/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-700/50 shadow-sm z-10 flex items-center gap-1">
-                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
-                    {item.price}
-                  </span>
+                <div className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest border border-slate-100 dark:border-slate-800 px-3 py-1 rounded-full shrink-0">
+                  {item.id}
                 </div>
               </div>
 
-              {/* Card Content */}
-              <div className="p-5 sm:p-6 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="text-rose-600 dark:text-rose-500 p-2 bg-rose-50 dark:bg-rose-900/20 rounded-xl">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                </div>
-                
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-4 flex-1">
-                  {item.desc}
-                </p>
-                
-                <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
-                  <div className="flex flex-col">
-                    <span className="text-[9px] uppercase font-bold text-slate-400 tracking-widest mb-1">
-                      Lead Division
-                    </span>
-                    <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">
-                      {item.expert}
-                    </span>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 group-hover:bg-rose-600 group-hover:border-rose-600 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1">
-                    <ArrowRight size={16} />
-                  </div>
-                </div>
+              <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300">
+                {item.title}
+              </h3>
+              
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-12 flex-1">
+                {item.desc}
+              </p>
+              
+              <div className="flex items-center text-rose-600 dark:text-rose-500 font-bold text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                Explore Service <ArrowRight size={16} className="ml-2" />
               </div>
             </Link>
-            );
-          })}
+          ))}
         </div>
         
         {/* Accreditation / Metrics Footer */}
