@@ -10,7 +10,7 @@ export default function ClientLogos() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full opacity-0 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
       {/* Marquee Container */}
       <div className="relative w-full flex overflow-hidden group py-2 md:py-4">
 
