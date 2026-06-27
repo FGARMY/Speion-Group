@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import { CheckCircle2, Layout, PenTool, MousePointer2, Figma, Eye, Users } from "lucide-react";
+import { CheckCircle2, Layout, PenTool, MousePointer2, Eye, Users } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
