@@ -9,6 +9,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "Pricing", path: "/pricing" },
   { label: "Contact", path: "/contact" }
 ];
 

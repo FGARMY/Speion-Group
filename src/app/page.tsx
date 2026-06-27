@@ -2,8 +2,8 @@ import Script from "next/script";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-
 import Services from "@/components/Services";
+import TechBadges from "@/components/TechBadges";
 import Process from "@/components/Process";
 
 import Testimonials from "@/components/Testimonials";
@@ -113,6 +113,12 @@ export default function Home() {
       <Hero />
 
       <Services />
+      
+      {/* TechBadges section moved below Services */}
+      <div className="py-12 bg-slate-50 dark:bg-slate-950">
+        <TechBadges />
+      </div>
+      
       <Process />
 
       <Testimonials />

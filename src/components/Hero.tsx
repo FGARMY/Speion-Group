@@ -60,7 +60,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-8 sm:mt-12 w-full">
+          <div className="mt-8 sm:mt-12 w-full flex flex-col gap-8">
             <ClientLogos />
           </div>
 

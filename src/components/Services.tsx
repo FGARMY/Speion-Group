@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Bot, ArrowRight } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -8,65 +8,72 @@ export default function Services() {
     {
       id: "01 / WEB",
       title: "Web Development",
-      desc: "High-performance web applications built with React, Next.js, and Node.js. Optimized for speed and Core Web Vitals.",
+      desc: "Engineered for 95+ Lighthouse Scores and <2s load times. We build highly scalable React and Next.js applications.",
       icon: <Monitor size={24} strokeWidth={1.5} />,
       image: "/services/web.png",
       expert: "Frontend Engineering Team",
-      link: "/services/web-development"
+      link: "/services/web-development",
+      price: "Starts ₹25k+"
     },
     {
       id: "02 / APP",
       title: "Mobile App Development",
-      desc: "High-performance mobile applications compiled to native code for iOS and Android.",
+      desc: "Native iOS and Android architectures compiling to maximum FPS for buttery-smooth user experiences.",
       icon: <Smartphone size={24} strokeWidth={1.5} />,
       image: "/services/app.png",
       expert: "Mobile Engineering Team",
-      link: "/services/mobile-app-development"
+      link: "/services/mobile-app-development",
+      price: "Starts ₹40k+"
     },
     {
       id: "03 / SFT",
       title: "Custom Software Development",
-      desc: "Architected software solutions built to handle complex business logic and heavy data loads without performance degradation.",
+      desc: "Enterprise-grade logic engineered to handle heavy data loads and complex workflows with 99.9% uptime.",
       icon: <Code size={24} strokeWidth={1.5} />,
       image: "/services/software.png",
       expert: "Architecture Team",
-      link: "/services/custom-software-development"
+      link: "/services/custom-software-development",
+      price: "Starts ₹75k+"
     },
     {
       id: "04 / ERP",
       title: "ERP Solutions",
-      desc: "Comprehensive Enterprise Resource Planning systems to integrate your operations, supply chain, and HR.",
+      desc: "Unify your entire supply chain, HR, and operations into one seamless dashboard with real-time analytics.",
       icon: <Server size={24} strokeWidth={1.5} />,
       image: "/services/erp.png",
       expert: "Enterprise Solutions Team",
-      link: "/services/erp-development"
+      link: "/services/erp-development",
+      price: "Custom Quote"
     },
     {
       id: "05 / UIX",
       title: "UI/UX Design",
-      desc: "Stunning, user-centric interfaces and wireframes that ensure high conversion rates and intuitive navigation.",
+      desc: "Data-driven interfaces and user flows designed to maximize conversion rates and user retention.",
       icon: <Layout size={24} strokeWidth={1.5} />,
       image: "/services/uiux.png",
       expert: "Design Team",
-      link: "/services/ui-ux-design"
+      link: "/services/ui-ux-design",
+      price: "Starts ₹15k+"
     },
     {
       id: "06 / AI",
       title: "AI Automations",
-      desc: "Streamline your workflows and operations with custom AI-powered automation solutions to drive efficiency and scale.",
+      desc: "Autonomous LLM agents and workflow automations that eliminate manual tasks and reduce operational overhead.",
       icon: <Bot size={24} strokeWidth={1.5} />,
       image: "/services/ai.png",
       expert: "AI & Automation Team",
-      link: "/services/ai-automations"
+      link: "/services/ai-automations",
+      price: "Starts ₹40k+"
     },
     {
       id: "07 / CRM",
       title: "CRM Development",
-      desc: "Custom Customer Relationship Management software to track leads, manage sales pipelines, and boost conversions.",
+      desc: "Custom lead tracking and pipeline management software designed precisely for your sales funnel.",
       icon: <Database size={24} strokeWidth={1.5} />,
       image: "/services/crm.png",
       expert: "Data Engineering Team",
-      link: "/services/crm-development"
+      link: "/services/crm-development",
+      price: "Custom Quote"
     }
   ];
 
@@ -129,6 +136,13 @@ export default function Services() {
                     {item.id}
                   </span>
                 </div>
+
+                {/* Pricing Badge */}
+                <div className="absolute top-4 right-4 bg-slate-900/90 dark:bg-slate-800/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-700/50 shadow-sm z-10 flex items-center gap-1">
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">
+                    {item.price}
+                  </span>
+                </div>
               </div>
 
               {/* Card Content */}
@@ -142,7 +156,7 @@ export default function Services() {
                   </h3>
                 </div>
                 
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-8 flex-1">
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
                   {item.desc}
                 </p>
                 
@@ -164,16 +178,20 @@ export default function Services() {
           ))}
         </div>
         
-        {/* Accreditation Footer */}
+        {/* Accreditation / Metrics Footer */}
         <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800 flex justify-center">
-          <div className="flex flex-wrap justify-center gap-12 text-slate-500 dark:text-slate-500">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-slate-700 dark:text-slate-300">
             <div className="flex items-center gap-3">
-              <ShieldCheck size={18} className="text-emerald-500/50" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Enterprise Grade Security</span>
+              <Zap size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">99.9% Uptime</span>
             </div>
             <div className="flex items-center gap-3">
-              <Activity size={18} className="text-rose-500/50" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">High-Performance Scalability</span>
+              <FolderOpen size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">20+ Completed Projects</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Blocks size={20} className="text-rose-500" />
+              <span className="text-sm font-bold uppercase tracking-wider">10+ Technologies</span>
             </div>
           </div>
         </div>
