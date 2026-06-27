@@ -4,34 +4,34 @@ export default function Testimonials() {
   const videoTestimonials = [
     {
       thumbnailUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
-      author: "Sarah Jenkins",
-      role: "CEO, TechNova"
+      author: "Dinesh Anand",
+      role: "CTO, iRA Synergy"
     },
     {
       thumbnailUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600",
-      author: "Michael Chang",
-      role: "Founder, RetailFlow"
+      author: "Piyush Bhamre",
+      role: "Founder, Ekvira"
     },
     {
       thumbnailUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600",
-      author: "Elena Rodriguez",
-      role: "VP Engineering, MedSync"
+      author: "Amit Deshmukh",
+      role: "CEO, SkillsParkConsultant"
     }
   ];
 
   const reviews = [
     {
       text: "Speion completely transformed our legacy ERP system. Their team delivered a highly scalable cloud architecture that improved our processing speed by 40%. The communication was transparent throughout the agile sprints.",
-      author: "Rajesh Kulkarni",
-      role: "CTO, Manufacturing Firm",
+      author: "Dinesh Anand",
+      role: "CTO, iRA Synergy",
       initials: "RK",
       color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500",
       logo: <Building2 size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
     },
     {
       text: "We partnered with Speion to build our mobile app from scratch. Not only did they deliver a stunning UI/UX, but the React Native codebase was incredibly clean and performant. Highly recommend their engineering team.",
-      author: "Priya Sharma",
-      role: "Founder, FinTech Startup",
+      author: "Piyush Bhamre",
+      role: "Founder, Ekvira",
       initials: "PS",
       color: "bg-slate-100 text-red-600 dark:bg-slate-800 dark:text-red-500",
       logo: <Hexagon size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
@@ -39,7 +39,7 @@ export default function Testimonials() {
     {
       text: "Finding a reliable software development agency in Pune was tough until we found Speion. They act as an extension of our in-house team. The custom CRM they built for us has automated hundreds of hours of manual work.",
       author: "Amit Deshmukh",
-      role: "VP Operations",
+      role: "CEO, SkillsParkConsultant",
       initials: "AD",
       color: "bg-slate-100 text-rose-600 dark:bg-slate-800 dark:text-rose-500",
       logo: <Globe size={28} className="text-slate-300 dark:text-slate-600 mb-6" />
@@ -48,7 +48,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 relative overflow-hidden">
-      
+
       {/* Background Decor */}
 
 
@@ -72,28 +72,28 @@ export default function Testimonials() {
         {/* Video Reels Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 lg:mb-24 px-4 sm:px-12 lg:px-24">
           {videoTestimonials.map((video, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-[0_15px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_50px_rgba(225,29,72,0.15)] dark:hover:shadow-[0_25px_50px_rgba(225,29,72,0.15)] transition-all duration-500 hover:-translate-y-2 border border-slate-200 dark:border-slate-800"
             >
               {/* Thumbnail */}
               <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800">
-                <img 
-                  src={video.thumbnailUrl} 
-                  alt={video.author} 
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out" 
+                <img
+                  src={video.thumbnailUrl}
+                  alt={video.author}
+                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
               </div>
-              
+
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90 pointer-events-none"></div>
 
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 flex items-center justify-center text-white group-hover:bg-rose-500 group-hover:border-rose-400 transition-all duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                    <Play size={28} fill="currentColor" className="ml-1.5 sm:ml-2" />
-                 </div>
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 flex items-center justify-center text-white group-hover:bg-rose-500 group-hover:border-rose-400 transition-all duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                  <Play size={28} fill="currentColor" className="ml-1.5 sm:ml-2" />
+                </div>
               </div>
 
               {/* "Reels" badge */}
@@ -106,8 +106,8 @@ export default function Testimonials() {
 
               {/* Details */}
               <div className="absolute bottom-0 left-0 w-full p-8 pb-10 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                 <h4 className="font-bold text-2xl text-white mb-1 tracking-tight">{video.author}</h4>
-                 <p className="text-sm text-slate-300 font-medium">{video.role}</p>
+                <h4 className="font-bold text-2xl text-white mb-1 tracking-tight">{video.author}</h4>
+                <p className="text-sm text-slate-300 font-medium">{video.role}</p>
               </div>
             </div>
           ))}
