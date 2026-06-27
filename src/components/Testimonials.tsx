@@ -1,4 +1,5 @@
 import { Star, Building2, Hexagon, Globe, Play } from "lucide-react";
+import MorphingBlobs from "./MorphingBlobs";
 
 export default function Testimonials() {
   const reviews = [
@@ -31,8 +32,8 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-24 px-4 sm:px-6 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 relative overflow-hidden">
 
-      {/* Background Decor */}
-
+      {/* Morphing Blob Background */}
+      <MorphingBlobs hueStart={160} hueEnd={240} opacity={0.07} />
 
       <div className="container mx-auto max-w-7xl relative z-10">
 

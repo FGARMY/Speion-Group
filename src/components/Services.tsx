@@ -2,6 +2,7 @@ import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Server
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import MorphingBlobs from "./MorphingBlobs";
 
 export default function Services() {
   const services = [
@@ -69,8 +70,11 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="pt-24 pb-20 px-4 sm:px-6 bg-[#FAFAFA] dark:bg-[#020617] relative">
-      <div className="container mx-auto max-w-7xl">
+    <section id="services" className="pt-24 pb-20 px-4 sm:px-6 bg-[#FAFAFA] dark:bg-[#020617] relative overflow-hidden">
+      {/* Morphing Blob Background */}
+      <MorphingBlobs hueStart={220} hueEnd={280} opacity={0.06} />
+
+      <div className="container mx-auto max-w-7xl relative z-10">
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-12 mb-16 lg:mb-20">
