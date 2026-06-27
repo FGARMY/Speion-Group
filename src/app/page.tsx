@@ -111,7 +111,6 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
-
       <Services />
       
       {/* TechBadges section moved below Services */}

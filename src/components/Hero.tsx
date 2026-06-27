@@ -60,18 +60,17 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-8 sm:mt-12 w-full flex flex-col gap-8">
-            <ClientLogos />
-          </div>
+
 
         </div>
 
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 opacity-50 text-slate-900 dark:text-white animate-bounce pointer-events-none">
-        <span className="text-[10px] uppercase tracking-widest font-bold">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+
+      
+      {/* Client Logos - Edge to Edge at Bottom of Hero */}
+      <div className="absolute bottom-8 lg:bottom-12 left-0 w-full pb-4 pt-12 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent z-10">
+        <ClientLogos />
       </div>
 
     </section>
