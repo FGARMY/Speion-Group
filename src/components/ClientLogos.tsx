@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ClientLogos() {
   const logos = [
     { name: "Panjara", src: "/client-logos/panjara.png", width: "w-40 md:w-64" },
-    { name: "iRA Synergy", src: "/client-logos/irasynergy1.png", width: "w-20 md:w-28" },
+    { name: "iRA Synergy", src: "/client-logos/irasynergy1.png", width: "w-28 md:w-40" },
     { name: "Neurosync", src: "/client-logos/Neruosync.png", width: "w-40 md:w-64" },
     { name: "Ekvira", src: "/client-logos/ekvira.png", width: "w-32 md:w-48" },
     { name: "MindMesh", src: "/client-logos/mindmesh.png", width: "w-40 md:w-64" }
