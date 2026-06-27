@@ -105,7 +105,7 @@ export default function Services() {
         </div>
 
         {/* Asymmetric Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 auto-rows-fr">
           {services.map((item, idx) => {
             // Determine column span for bento layout
             let spanClass = "";
@@ -123,7 +123,7 @@ export default function Services() {
               className={`group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 ${spanClass}`}
             >
               {/* Image Preview Header */}
-              <div className="h-60 sm:h-72 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <div className="h-48 sm:h-56 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <Image 
                   src={item.image} 
                   alt={item.title} 
@@ -147,7 +147,7 @@ export default function Services() {
               </div>
 
               {/* Card Content */}
-              <div className="p-8 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
+              <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="text-rose-600 dark:text-rose-500 p-2 bg-rose-50 dark:bg-rose-900/20 rounded-xl">
                     {item.icon}
