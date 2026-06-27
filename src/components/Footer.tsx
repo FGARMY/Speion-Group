@@ -23,14 +23,15 @@ export default function Footer() {
                 className="flex-1 bg-transparent px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
                 required
               />
-              <HoverBorderGradient
-                as="button"
-                type="submit"
-                containerClassName="shrink-0 rounded-full"
-                className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 font-semibold text-sm h-full flex items-center justify-center"
-              >
-                Subscribe
-              </HoverBorderGradient>
+              <button type="submit" className="shrink-0 rounded-full outline-none">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="shrink-0 rounded-full"
+                  className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 font-semibold text-sm h-full flex items-center justify-center"
+                >
+                  Subscribe
+                </HoverBorderGradient>
+              </button>
             </form>
           </div>
 
