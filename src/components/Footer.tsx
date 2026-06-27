@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Footer() {
   return (
@@ -22,12 +23,14 @@ export default function Footer() {
                 className="flex-1 bg-transparent px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
                 required
               />
-              <button
+              <HoverBorderGradient
+                as="button"
                 type="submit"
-                className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 rounded-full text-sm font-semibold transition-colors hover:bg-slate-800 dark:hover:bg-slate-200 shrink-0"
+                containerClassName="shrink-0 rounded-full"
+                className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 font-semibold text-sm h-full flex items-center justify-center"
               >
                 Subscribe
-              </button>
+              </HoverBorderGradient>
             </form>
           </div>
 

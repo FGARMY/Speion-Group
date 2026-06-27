@@ -4,6 +4,7 @@ import { Code2, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
@@ -100,12 +101,14 @@ export default function Navbar() {
           {/* Call to Action - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
-            <Link
-              href="/contact"
-              className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-pink-600 text-white hover:bg-pink-700"
-              aria-label="Start Project"
-            >
-              Book Free Consultation Now
+            <Link href="/contact" className="flex items-center" aria-label="Start Project">
+              <HoverBorderGradient
+                as="div"
+                containerClassName="rounded-full"
+                className="font-medium px-6 py-2.5 bg-rose-600 text-white text-sm transition-all flex items-center justify-center"
+              >
+                Book Free Consultation Now
+              </HoverBorderGradient>
             </Link>
           </div>
 
@@ -157,10 +160,16 @@ export default function Navbar() {
             <hr className="border-slate-100 dark:border-slate-800" />
             <Link
               href="/contact"
-              className="bg-pink-600 text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-pink-600/20 hover:bg-pink-700 transition-all active:scale-[0.98]"
+              className="w-full flex"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Start Project
+              <HoverBorderGradient
+                as="div"
+                containerClassName="rounded-2xl w-full"
+                className="bg-rose-600 text-white text-center py-4 font-display font-bold transition-all flex justify-center w-full"
+              >
+                Start Project
+              </HoverBorderGradient>
             </Link>
           </div>
         </div>
