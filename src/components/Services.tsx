@@ -105,7 +105,7 @@ export default function Services() {
         </div>
 
         {/* Asymmetric Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 auto-rows-fr">
           {services.map((item, idx) => {
             // Determine column span for bento layout
             let spanClass = "";
@@ -123,7 +123,7 @@ export default function Services() {
               className={`group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 ${spanClass}`}
             >
               {/* Image Preview Header */}
-              <div className="h-48 sm:h-56 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <div className="h-40 sm:h-48 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <Image 
                   src={item.image} 
                   alt={item.title} 
@@ -147,8 +147,8 @@ export default function Services() {
               </div>
 
               {/* Card Content */}
-              <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
-                <div className="flex items-center gap-4 mb-4">
+              <div className="p-5 sm:p-6 flex flex-col flex-1 relative z-10 bg-white dark:bg-slate-900">
+                <div className="flex items-center gap-4 mb-3">
                   <div className="text-rose-600 dark:text-rose-500 p-2 bg-rose-50 dark:bg-rose-900/20 rounded-xl">
                     {item.icon}
                   </div>
@@ -157,11 +157,11 @@ export default function Services() {
                   </h3>
                 </div>
                 
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-8 flex-1">
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-4 flex-1">
                   {item.desc}
                 </p>
                 
-                <div className="flex items-center justify-between pt-6 border-t border-slate-100 dark:border-slate-800">
+                <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
                   <div className="flex flex-col">
                     <span className="text-[9px] uppercase font-bold text-slate-400 tracking-widest mb-1">
                       Lead Division
