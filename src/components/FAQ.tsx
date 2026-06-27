@@ -30,40 +30,51 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-16 sm:py-24 px-6 bg-white dark:bg-slate-950 transition-colors duration-500">
+    <section id="faq" className="py-20 sm:py-28 px-6 bg-slate-50/50 dark:bg-slate-900/20 transition-colors duration-500">
       <div className="container mx-auto max-w-3xl">
         
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 dark:text-white mb-12 text-center tracking-tight">
           Frequently Asked Questions
         </h2>
         
-        <div className="flex flex-col border-t border-slate-200 dark:border-slate-800">
+        <div className="flex flex-col gap-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             
             return (
-              <div key={idx} className="border-b border-slate-200 dark:border-slate-800">
+              <div 
+                key={idx} 
+                className={`overflow-hidden transition-all duration-500 rounded-2xl border ${
+                  isOpen 
+                    ? 'bg-white dark:bg-slate-900 border-rose-200 dark:border-rose-500/30 shadow-md shadow-rose-100/50 dark:shadow-rose-900/20' 
+                    : 'bg-white/60 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm'
+                }`}
+              >
                 <button 
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full py-5 sm:py-6 flex items-center justify-between text-left focus:outline-none group"
+                  className="w-full px-6 py-5 sm:px-8 sm:py-6 flex items-start sm:items-center justify-between text-left focus:outline-none group"
                   aria-expanded={isOpen}
                 >
-                  <h3 className={`font-medium pr-4 transition-colors ${isOpen ? 'text-slate-900 dark:text-white' : 'text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
+                  <h3 className={`font-semibold text-base sm:text-lg pr-6 transition-colors duration-300 ${isOpen ? 'text-rose-600 dark:text-rose-400' : 'text-slate-800 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white'}`}>
                     {faq.q}
                   </h3>
-                  <div className={`flex-shrink-0 transition-transform duration-300 ${isOpen ? 'text-black dark:text-white rotate-180' : 'text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300'}`}>
+                  <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    isOpen 
+                      ? 'bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 rotate-180' 
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-slate-200 dark:group-hover:bg-slate-700 group-hover:text-slate-600 dark:group-hover:text-slate-300'
+                  }`}>
                     {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
                 </button>
                 
                 <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  className={`px-6 sm:px-8 overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen 
-                      ? 'max-h-96 pb-6 opacity-100' 
+                      ? 'max-h-96 pb-6 sm:pb-8 opacity-100' 
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed pr-0 sm:pr-8">
                     {faq.a}
                   </p>
                 </div>

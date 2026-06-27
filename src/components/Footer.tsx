@@ -59,7 +59,7 @@ export default function Footer() {
               <ul className="flex flex-col items-start lg:items-end gap-3.5">
                 <li><a href="https://instagram.com/speiongroup" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Instagram</a></li>
                 <li><a href="https://facebook.com/speion" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Facebook</a></li>
-                <li><a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">WhatsApp</a></li>
+                <li><a href="https://wa.me/7758866318" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">WhatsApp</a></li>
               </ul>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="mt-32 w-full relative flex items-end justify-center z-10 pt-12 min-h-[120px] lg:min-h-[160px]">
-          
+
           {/* Massive Text (Centered behind) */}
           <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none -z-10 overflow-hidden">
             <span className="text-[14vw] md:text-[180px] lg:text-[200px] font-display font-medium tracking-wide text-slate-100 dark:text-slate-900/40 select-none leading-[0.75] mb-2 lg:mb-4">
