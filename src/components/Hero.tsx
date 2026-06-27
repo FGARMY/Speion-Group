@@ -1,32 +1,13 @@
 import { ArrowRight, Star, Code, Database, Cpu, Sparkles, StarHalf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ClientLogos from "./ClientLogos";
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col justify-center overflow-hidden transition-colors duration-500">
 
-      {/* Dynamic Background Elements */}
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
-      {/* Animated Light Leaks */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-rose-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse duration-[10000ms]"></div>
-      <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-red-600/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-      {/* Floating Tech Particles */}
-      <div className="absolute top-[15%] left-[5%] text-rose-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '0s' }}>
-        <Code size={48} />
-      </div>
-      <div className="absolute top-[60%] left-[40%] text-red-500/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '2s' }}>
-        <Cpu size={32} />
-      </div>
-      <div className="absolute top-[20%] right-[15%] text-rose-400/20 animate-float pointer-events-none hidden lg:block" style={{ animationDelay: '4s' }}>
-        <Database size={40} />
-      </div>
-
-      {/* Decorative Crosses */}
-      <div className="absolute top-[25%] left-[12%] text-slate-900/10 dark:text-white/5 font-light text-6xl pointer-events-none select-none opacity-50">+</div>
-      <div className="absolute bottom-[35%] left-[30%] text-slate-900/5 dark:text-white/5 font-light text-4xl pointer-events-none select-none opacity-30">+</div>
 
       <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 lg:pt-20 h-full min-h-[100dvh]">
 
@@ -50,50 +31,21 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5 mt-4 w-full px-4 sm:px-0 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <Link href="/contact" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
-              Start Project
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-5 mt-4 w-full px-2 sm:px-0 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <Link href="/contact" className="w-full sm:w-auto px-4 sm:px-10 py-4 sm:py-5 rounded-full bg-rose-600 border border-rose-500 text-white font-bold hover:bg-rose-500 transition-all shadow-2xl text-sm sm:text-base text-center flex items-center justify-center gap-2 group transform active:scale-95">
+              Book Free Consultation Now
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform sm:w-5 sm:h-5" />
             </Link>
-            <Link href="/services" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-full border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-base text-center hover:shadow-lg">
+            <Link href="/services" className="w-full sm:w-auto px-4 sm:px-10 py-4 sm:py-5 rounded-full border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-sm sm:text-base text-center hover:shadow-lg">
               Explore Services
             </Link>
           </div>
 
-          {/* Optimized Social Proof Badge for all backgrounds */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-            <div className="flex -space-x-4 overflow-hidden p-0.5">
-              {[
-                "/images/client1.jpeg",
-                "/images/client2.jpeg",
-                "/images/client3.jpeg",
-                "/images/client4.jpeg"
-              ].map((src, i) => (
-                <div key={i} className="inline-block h-12 w-12 rounded-full ring-2 ring-rose-500 dark:ring-rose-600 bg-white/20 backdrop-blur-md overflow-hidden flex items-center justify-center relative">
-                  <Image
-                    src={src}
-                    alt={`Client avatar ${i + 1}`}
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="text-left">
-              <div className="flex items-center justify-start gap-1">
-                {[1, 2, 3, 4].map((s) => (
-                  <Star key={s} size={14} className="fill-amber-400 text-amber-400" />
-                ))}
-                <StarHalf size={14} className="fill-amber-400 text-amber-400" />
-                <span className="text-slate-900 dark:text-white font-bold ml-1 text-sm tracking-tight">4.3/5.0</span>
-              </div>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.15em] leading-none mt-1.5">Trusted by Enterprises in Pune, Nashik & Worldwide</p>
-            </div>
+          <div className="mt-8 sm:mt-12 w-full">
+            <ClientLogos />
           </div>
 
         </div>
-
 
       </div>
 

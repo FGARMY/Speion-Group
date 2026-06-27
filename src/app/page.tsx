@@ -2,12 +2,12 @@ import Script from "next/script";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import ClientLogos from "@/components/ClientLogos";
+
 import Services from "@/components/Services";
-import WhyUs from "@/components/WhyUs";
+import Process from "@/components/Process";
+
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -111,42 +111,12 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
-      <ClientLogos />
+
       <Services />
-      <WhyUs />
-      <section className="py-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.35em] text-teal-500 font-bold mb-3">Local software development</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">
-              Local offices in Nashik, Pune and Maharashtra
-            </h2>
-            <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Discover our city-specific software development services for startups, enterprises, and manufacturing businesses across Maharashtra.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            <Link href="/locations/software-development-nashik" className="group block rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-lg hover:-translate-y-1 transition">
-              <p className="text-sm uppercase tracking-[0.35em] text-teal-500 font-bold mb-3">Nashik</p>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Software Development Company Nashik</h3>
-              <p className="text-slate-600 dark:text-slate-400">Custom software, ERP, and digital transformation for Nashik businesses.</p>
-            </Link>
-            <Link href="/locations/software-development-pune" className="group block rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-lg hover:-translate-y-1 transition">
-              <p className="text-sm uppercase tracking-[0.35em] text-teal-500 font-bold mb-3">Pune</p>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Software Development Company Pune</h3>
-              <p className="text-slate-600 dark:text-slate-400">Enterprise-grade app development and SaaS engineering in Pune.</p>
-            </Link>
-            <Link href="/locations/software-development-maharashtra" className="group block rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 shadow-lg hover:-translate-y-1 transition">
-              <p className="text-sm uppercase tracking-[0.35em] text-teal-500 font-bold mb-3">Maharashtra</p>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Software Development Company Maharashtra</h3>
-              <p className="text-slate-600 dark:text-slate-400">State-wide custom software services for Maharashtra enterprises.</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Process />
+
       <Testimonials />
       <FAQ />
-      <Contact />
       <CTA />
       <Footer />
     </main>

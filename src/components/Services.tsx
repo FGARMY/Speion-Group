@@ -101,10 +101,9 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-40 px-4 sm:px-6 bg-[#fafafa] dark:bg-[#020617] relative overflow-hidden grain-texture transition-colors duration-500">
+    <section id="services" className="pt-16 pb-12 px-4 sm:px-6 bg-[#fafafa] dark:bg-[#020617] relative overflow-hidden transition-colors duration-500">
       
-      {/* Background - Discrete Registry Grid */}
-      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#e11d48 0.5px, transparent 0.5px)', backgroundSize: '40px 40px' }}></div>
+
 
       <div className="container mx-auto max-w-7xl relative z-10">
         
@@ -185,7 +184,7 @@ export default function Services() {
         </div>
 
         {/* Accreditation Footer */}
-        <div className="mt-32 flex flex-col items-center justify-center gap-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-12 flex flex-col items-center justify-center gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="h-[1px] w-24 bg-slate-200 dark:bg-slate-800"></div>
           <div className="flex flex-wrap justify-center gap-12 text-slate-300 dark:text-slate-700">
             <div className="flex items-center gap-3">
