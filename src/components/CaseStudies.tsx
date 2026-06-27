@@ -1,6 +1,8 @@
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'motion/react';
 
 const caseStudies = [
   {
@@ -84,31 +86,40 @@ const caseStudies = [
 ];
 
 export default function CaseStudies() {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"]);
+
   return (
-    <section className="py-20 sm:py-24 bg-white dark:bg-slate-950 relative z-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
+    <section ref={targetRef} className="relative h-[300vh] bg-white dark:bg-slate-950 z-20">
+      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden py-24">
         
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h3 className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
-              CASE STUDIES
-            </h3>
-            <h2 className="text-slate-900 dark:text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-              Real Results. <br />
-              Real Impact.
-            </h2>
+        {/* Header (Stays sticky) */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl mb-12 sm:mb-16 shrink-0">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <h3 className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
+                CASE STUDIES
+              </h3>
+              <h2 className="text-slate-900 dark:text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                Real Results. <br />
+                Real Impact.
+              </h2>
+            </div>
+            <Link href="/case-studies" className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-semibold hover:text-rose-700 dark:hover:text-rose-400 transition-colors group">
+              View all case studies
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
-          <Link href="/case-studies" className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-semibold hover:text-rose-700 dark:hover:text-rose-400 transition-colors group">
-            View all case studies
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
 
-        {/* Horizontal Carousel */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 sm:gap-8 pb-12 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-12 lg:px-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        {/* Scroll Hijacked Horizontal Motion Container */}
+        <motion.div style={{ x }} className="flex gap-6 sm:gap-8 px-4 sm:px-6 lg:px-12 ml-0 lg:ml-[calc((100vw-80rem)/2)]">
           {caseStudies.map((study, idx) => (
-            <div key={idx} className="w-[85vw] sm:w-[60vw] lg:w-[35vw] flex-shrink-0 snap-center sm:snap-start bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 flex flex-col gap-8 shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 group relative overflow-hidden">
+            <div key={idx} className="w-[85vw] sm:w-[60vw] lg:w-[40vw] flex-shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 sm:p-10 flex flex-col gap-8 shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 group relative overflow-hidden">
               
               {/* Subtle background glow on hover */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 dark:bg-rose-500/10 rounded-full blur-2xl -z-10 group-hover:scale-150 transition-transform duration-700"></div>
@@ -127,14 +138,14 @@ export default function CaseStudies() {
                 
                 <div className="grid grid-cols-2 gap-6 mt-auto mb-10 border-t border-slate-100 dark:border-slate-800 pt-8">
                   {study.metrics.map((metric, i) => (
-                    <div key={i} className="flex flex-col">
-                      <span className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-bold mb-1 tracking-tight">
-                        {metric.value}
-                      </span>
-                      <span className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-widest">
-                        {metric.label}
-                      </span>
-                    </div>
+                     <div key={i} className="flex flex-col">
+                       <span className="text-slate-900 dark:text-white text-2xl sm:text-3xl font-bold mb-1 tracking-tight">
+                         {metric.value}
+                       </span>
+                       <span className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-widest">
+                         {metric.label}
+                       </span>
+                     </div>
                   ))}
                 </div>
 
@@ -150,7 +161,7 @@ export default function CaseStudies() {
 
             </div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
