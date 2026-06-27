@@ -1,24 +1,6 @@
 import { Star, Building2, Hexagon, Globe, Play } from "lucide-react";
 
 export default function Testimonials() {
-  const videoTestimonials = [
-    {
-      thumbnailUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
-      author: "Dinesh Anand",
-      role: "CTO, iRA Synergy"
-    },
-    {
-      thumbnailUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600",
-      author: "Piyush Bhamre",
-      role: "Founder, Ekvira"
-    },
-    {
-      thumbnailUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600",
-      author: "Amit Deshmukh",
-      role: "CEO, SkillsParkConsultant"
-    }
-  ];
-
   const reviews = [
     {
       text: "Speion completely transformed our legacy ERP system. Their team delivered a highly scalable cloud architecture that improved our processing speed by 40%. The communication was transparent throughout the agile sprints.",
@@ -67,50 +49,6 @@ export default function Testimonials() {
           <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
             Real success stories from enterprises and startups we've partnered with to build world-class software.
           </p>
-        </div>
-
-        {/* Video Reels Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 lg:mb-24 px-4 sm:px-12 lg:px-24">
-          {videoTestimonials.map((video, idx) => (
-            <div
-              key={idx}
-              className="relative aspect-[9/16] rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-[0_15px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_50px_rgba(225,29,72,0.15)] dark:hover:shadow-[0_25px_50px_rgba(225,29,72,0.15)] transition-all duration-500 hover:-translate-y-2 border border-slate-200 dark:border-slate-800"
-            >
-              {/* Thumbnail */}
-              <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800">
-                <img
-                  src={video.thumbnailUrl}
-                  alt={video.author}
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90 pointer-events-none"></div>
-
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-xl border border-white/30 flex items-center justify-center text-white group-hover:bg-rose-500 group-hover:border-rose-400 transition-all duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                  <Play size={28} fill="currentColor" className="ml-1.5 sm:ml-2" />
-                </div>
-              </div>
-
-              {/* "Reels" badge */}
-              <div className="absolute top-6 left-6">
-                <div className="bg-black/40 backdrop-blur-md border border-white/20 text-white text-[10px] uppercase tracking-wider font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
-                  Video Review
-                </div>
-              </div>
-
-              {/* Details */}
-              <div className="absolute bottom-0 left-0 w-full p-8 pb-10 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                <h4 className="font-bold text-2xl text-white mb-1 tracking-tight">{video.author}</h4>
-                <p className="text-sm text-slate-300 font-medium">{video.role}</p>
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Text Cards */}
