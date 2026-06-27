@@ -19,8 +19,8 @@ export default function Footer() {
             <form className="flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full p-1.5 w-full max-w-sm shadow-sm transition-shadow focus-within:shadow-md" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 bg-transparent px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
+                placeholder="Email address"
+                className="flex-1 w-full min-w-0 bg-transparent px-4 sm:px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
                 required
               />
               <button type="submit" className="shrink-0 rounded-full outline-none">
