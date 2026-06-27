@@ -24,7 +24,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-full text-sm font-semibold transition-colors hover:bg-slate-800 dark:hover:bg-slate-200"
+                className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 rounded-full text-sm font-semibold transition-colors hover:bg-slate-800 dark:hover:bg-slate-200 shrink-0"
               >
                 Subscribe
               </button>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Right Side: Links */}
-          <div className="flex gap-16 lg:gap-24 text-right w-full lg:w-auto justify-start lg:justify-end">
+          <div className="flex flex-wrap lg:flex-nowrap gap-10 sm:gap-16 lg:gap-24 text-left w-full lg:w-auto justify-start lg:justify-end">
 
             <div className="flex flex-col items-start lg:items-end gap-5">
               <h4 className="text-slate-400 font-semibold text-sm mb-2">Links</h4>
