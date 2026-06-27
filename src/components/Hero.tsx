@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-12 pt-24 sm:pt-28 lg:pt-20 h-full min-h-[100dvh]">
 
         {/* Centered Content - Fluid Typography */}
-        <div className="w-full relative z-20 flex flex-col gap-6 sm:gap-8 text-center items-center justify-center pt-4 sm:pt-6 lg:pt-0 lg:-mt-20">
+        <div className="w-full relative z-20 flex flex-col gap-6 sm:gap-8 text-center items-center justify-center -mt-16 sm:-mt-24 lg:-mt-32">
 
           <div className="bg-white/50 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white text-[10px] sm:text-xs md:text-sm font-semibold px-4 py-2 sm:px-5 sm:py-2 rounded-full inline-flex items-center w-fit shadow-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <span className="w-2 h-2 rounded-full bg-rose-500 mr-2 sm:mr-3 animate-pulse ring-4 ring-rose-500/20"></span>
