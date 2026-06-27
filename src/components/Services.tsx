@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Layout, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -45,16 +45,7 @@ export default function Services() {
       link: "/services/erp-development",
       price: "Custom Quote"
     },
-    {
-      id: "05 / UIX",
-      title: "UI/UX Design",
-      desc: "Data-driven interfaces and user flows designed to maximize conversion rates and user retention.",
-      icon: <Layout size={24} strokeWidth={1.5} />,
-      image: "/services/uiux.png",
-      expert: "Design Team",
-      link: "/services/ui-ux-design",
-      price: "Starts ₹15k+"
-    },
+
     {
       id: "06 / AI",
       title: "AI Automations",
@@ -113,16 +104,26 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Balanced Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((item, idx) => (
+        {/* Asymmetric Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 auto-rows-fr">
+          {services.map((item, idx) => {
+            // Determine column span for bento layout
+            let spanClass = "";
+            if (idx === 0) spanClass = "md:col-span-2 lg:col-span-2";      // Web (Wide)
+            else if (idx === 1) spanClass = "md:col-span-1 lg:col-span-1"; // App (Square)
+            else if (idx === 2) spanClass = "md:col-span-1 lg:col-span-1"; // Software (Square)
+            else if (idx === 3) spanClass = "md:col-span-2 lg:col-span-2"; // ERP (Wide)
+            else if (idx === 4) spanClass = "md:col-span-2 lg:col-span-2"; // AI (Wide)
+            else if (idx === 5) spanClass = "md:col-span-1 lg:col-span-1"; // CRM (Square)
+            
+            return (
             <Link 
               href={item.link}
               key={idx} 
-              className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 transition-all duration-500 hover:-translate-y-2"
+              className={`group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 ${spanClass}`}
             >
               {/* Image Preview Header */}
-              <div className="h-56 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
+              <div className="h-60 sm:h-72 w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <Image 
                   src={item.image} 
                   alt={item.title} 
@@ -175,7 +176,8 @@ export default function Services() {
                 </div>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
         
         {/* Accreditation / Metrics Footer */}
