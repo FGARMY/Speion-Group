@@ -33,7 +33,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col overflow-hidden transition-colors duration-500">
+    <section className="relative w-full lg:min-h-[100dvh] bg-slate-50 dark:bg-slate-950 flex flex-col overflow-hidden transition-colors duration-500">
 
       {/* Morphing Blob Background */}
       <MorphingBlobs hueStart={0} hueEnd={45} opacity={0.08} className="z-0" />
@@ -46,11 +46,11 @@ export default function Hero() {
         {/* Ambient Top Glow highlighting the grid */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-rose-500/10 dark:bg-rose-500/20 rounded-[100%] blur-[80px]"></div>
       </div>
-      <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-12 pt-32 sm:pt-40 lg:pt-0 flex-1">
+      <div className="container mx-auto max-w-7xl relative z-10 w-full flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-12 pt-32 sm:pt-40 pb-16 lg:pb-0 lg:pt-0 lg:flex-1">
 
         {/* Centered Content - Fluid Typography */}
         <motion.div 
-          className="w-full relative z-20 flex flex-col gap-6 sm:gap-8 text-center items-center justify-center mt-8 sm:-mt-12 lg:-mt-24"
+          className="w-full relative z-20 flex flex-col gap-6 sm:gap-8 text-center items-center justify-center sm:-mt-12 lg:-mt-24"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
