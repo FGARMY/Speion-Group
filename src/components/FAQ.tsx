@@ -5,8 +5,12 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    q: "What tech stack does Speion use for development?",
-    a: "We are framework-agnostic but specialize in modern, scalable technologies. For web, we use React, Next.js, and Node.js. For mobile, we leverage React Native and Flutter. Our backend systems are typically built on Python, Go, or Node, hosted on AWS or Google Cloud."
+    q: "What tech stack does Speion use for custom software development?",
+    a: "Speion specializes in scalable, modern technologies including React, Next.js, and Node.js for web applications; React Native and Flutter for mobile; and Python, Go, and AWS for enterprise backend infrastructure."
+  },
+  {
+    q: "Does Speion provide AI automation services?",
+    a: "Yes, Speion builds custom AI automation workflows, integrates Large Language Models (LLMs) into existing software, and develops autonomous AI agents to streamline business operations."
   },
   {
     q: "How long does it take to build a custom software application?",
