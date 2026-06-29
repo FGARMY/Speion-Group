@@ -3,6 +3,14 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
+import Script from "next/script";
+import {
+  jsonLdGraph,
+  founderSchema,
+  breadcrumbSchema,
+  organizationSchema,
+} from "@/lib/schemas";
+import { siteUrl } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Us | Speion Group",
@@ -11,8 +19,22 @@ export const metadata = pageMetadata({
 });
 
 export default function AboutPage() {
+  const jsonLd = jsonLdGraph(
+    organizationSchema(),
+    founderSchema(),
+    breadcrumbSchema([
+      { name: "Home", url: siteUrl },
+      { name: "About", url: `${siteUrl}/about` },
+    ]),
+  );
+
   return (
     <main className="min-h-screen relative bg-slate-50 dark:bg-slate-950">
+      <Script
+        id="about-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       
       {/* Hero Section */}
@@ -45,7 +67,7 @@ export default function AboutPage() {
           <div className="bg-rose-600 p-10 rounded-3xl text-white shadow-xl shadow-rose-600/20">
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
             <p className="text-rose-50 leading-relaxed">
-              To be the most trusted technology partner in the region, recognized for our uncompromising engineering quality, transparent communication, and deep commitment to our clients' long-term success.
+              To be the most trusted technology partner in the region, recognized for our uncompromising engineering quality, transparent communication, and deep commitment to our clients&apos; long-term success.
             </p>
           </div>
         </div>
@@ -104,7 +126,7 @@ export default function AboutPage() {
                 {/* Quote Block */}
                 <div className="pt-8 mt-8 border-t border-slate-200 dark:border-slate-800">
                   <p className="italic font-medium text-slate-800 dark:text-slate-200 text-xl leading-relaxed">
-                    "Our goal isn't just to write software. It's to build the robust digital infrastructure that empowers our clients to scale limitlessly and dominate their industries."
+                    &quot;Our goal isn&apos;t just to write software. It&apos;s to build the robust digital infrastructure that empowers our clients to scale limitlessly and dominate their industries.&quot;
                   </p>
                 </div>
               </div>

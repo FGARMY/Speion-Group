@@ -96,11 +96,11 @@ export default function Services() {
           <div className="md:max-w-sm bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 p-6 sm:p-8 rounded-[2rem] shadow-xl shadow-rose-900/5 dark:shadow-none relative group overflow-hidden shrink-0">
              <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/10 rounded-full blur-[60px] -z-10 group-hover:bg-rose-500/20 transition-colors duration-500"></div>
              <div className="flex items-center justify-between mb-6">
-               <span className="text-[10px] font-bold uppercase tracking-widest text-rose-600 dark:text-rose-500">CTO's Memorandum</span>
+               <span className="text-[10px] font-bold uppercase tracking-widest text-rose-600 dark:text-rose-500">CTO&apos;s Memorandum</span>
                <Code size={16} className="text-slate-300 dark:text-slate-700" />
              </div>
              <p className="font-serif italic text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-               "Software architecture is underpinned by meticulous observation and scalable design. Every codebase tells a narrative of innovation that we are committed to perfecting."
+               &quot;Software architecture is underpinned by meticulous observation and scalable design. Every codebase tells a narrative of innovation that we are committed to perfecting.&quot;
              </p>
              <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
                <div className="text-xs font-bold text-slate-900 dark:text-white">Speion Technical Leadership</div>

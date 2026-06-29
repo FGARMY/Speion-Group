@@ -29,7 +29,7 @@ export default function NotFound() {
         </h2>
         
         <p className="text-lg text-slate-500 font-light leading-relaxed mb-12">
-          It seems the link you followed has been misplaced. No need to worry—even the best specialists lose their way sometimes. Let's get you back to safety.
+          It seems the link you followed has been misplaced. No need to worry—even the best specialists lose their way sometimes. Let&apos;s get you back to safety.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

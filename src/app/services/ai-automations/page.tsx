@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Bot, BrainCircuit, Sparkles, Workflow, LineChart, MessageSquare } from "lucide-react";
@@ -15,6 +16,16 @@ export const metadata = pageMetadata({
 export default function AiAutomationsPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-violet-500/30">
+      <ServicePageSchema
+        serviceName="AI & Automation"
+        serviceDescription="Speion integrates custom AI models and automations to streamline workflows, reduce overhead, and drive massive operational efficiency."
+        pathname="/services/ai-automations"
+        faqs={[
+          { question: "What types of AI automation can Speion build?", answer: "We build custom LLM integrations (OpenAI, Llama), AI chatbots for 24/7 customer support, workflow automation connecting your entire tech stack (Zapier, Make.com, custom APIs), predictive analytics dashboards, and Retrieval-Augmented Generation (RAG) systems trained on your company data." },
+          { question: "How much does AI automation cost for a business?", answer: "AI automation projects start at ₹40,000 for basic chatbot integrations and can scale to ₹5,00,000+ for enterprise-grade systems with custom LLM fine-tuning, multi-system integrations, and advanced analytics. We scope each project individually based on complexity and ROI potential." },
+          { question: "How long does it take to implement AI automation?", answer: "A basic AI chatbot can be deployed in 2-3 weeks. Custom LLM integrations with RAG and workflow automation typically take 4-8 weeks. Enterprise AI systems with multiple integrations and custom model training can take 3-6 months." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}

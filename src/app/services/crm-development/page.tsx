@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Database, Users, TrendingUp, Target, PieChart, Layers } from "lucide-react";
@@ -15,6 +16,16 @@ export const metadata = pageMetadata({
 export default function CrmDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-orange-500/30">
+      <ServicePageSchema
+        serviceName="CRM Development"
+        serviceDescription="Speion builds Custom Customer Relationship Management (CRM) software to track leads, manage pipelines, and boost enterprise conversions."
+        pathname="/services/crm-development"
+        faqs={[
+          { question: "Why build a custom CRM instead of using Salesforce or HubSpot?", answer: "Off-the-shelf CRMs charge per-seat licensing fees that scale exponentially. A custom CRM built by Speion costs a one-time development fee, you own the IP forever, and it's tailored exactly to your sales pipeline — no unnecessary features bloating your workflow, no vendor lock-in." },
+          { question: "How long does it take to build a custom CRM?", answer: "A basic CRM with lead tracking, contact management, and pipeline visualization takes 6-10 weeks. Enterprise CRMs with advanced analytics, multi-team RBAC, email integrations, and API connections to your existing tools take 3-6 months." },
+          { question: "Can Speion migrate data from our existing CRM to a custom solution?", answer: "Yes. We handle complete data migration from Salesforce, HubSpot, Zoho, or any other CRM. We map your existing data schema, clean and validate records, and import everything into your new custom CRM with zero data loss." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}

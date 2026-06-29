@@ -48,7 +48,7 @@ export default function Testimonials() {
             & Engineering Leaders
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
-            Real success stories from enterprises and startups we've partnered with to build world-class software.
+            Real success stories from enterprises and startups we&apos;ve partnered with to build world-class software.
           </p>
         </div>
 

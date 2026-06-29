@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Server, BarChart3, Database, Shield, Globe2, Briefcase } from "lucide-react";
@@ -15,6 +16,16 @@ export const metadata = pageMetadata({
 export default function ErpDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-cyan-500/30">
+      <ServicePageSchema
+        serviceName="ERP Development"
+        serviceDescription="Speion builds comprehensive Enterprise Resource Planning (ERP) systems to unify your operations, supply chain, and HR into one powerful dashboard."
+        pathname="/services/erp-development"
+        faqs={[
+          { question: "What is a custom ERP system and why do I need one?", answer: "A custom ERP (Enterprise Resource Planning) system unifies your business operations — inventory, HR, accounting, supply chain, manufacturing — into one centralized digital platform. You need a custom ERP when off-the-shelf solutions like SAP or Oracle are too expensive, too complex, or don’t fit your specific business processes." },
+          { question: "How long does it take to build a custom ERP?", answer: "A complete custom ERP migration typically takes 6-12 months depending on the complexity of your legacy database and the number of modules required. Speion uses the Strangler Fig Pattern to migrate module by module, ensuring zero operational downtime during the transition." },
+          { question: "How much does a custom ERP cost compared to SAP or Oracle?", answer: "Custom ERPs built by Speion eliminate recurring per-seat licensing fees that can cost $100-$300/user/month with SAP or Oracle. Our clients typically save $120,000+ per year in licensing alone. The one-time development cost is structured with milestone-based payments and transparent pricing." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}

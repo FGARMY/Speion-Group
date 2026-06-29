@@ -63,7 +63,7 @@ export default function WhyUs() {
             Built for Scale. <br className="block sm:hidden" /> Engineered for ROI.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed px-2 sm:px-0">
-            We don't just write code. We architect systems that solve complex technical debt and drive revenue growth.
+            We don&apos;t just write code. We architect systems that solve complex technical debt and drive revenue growth.
           </p>
         </motion.div>
 

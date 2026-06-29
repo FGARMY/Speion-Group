@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
     {
       title: "FinTech Mobile Banking App",
       client: "Global Financial Services",
-      challenge: "The client's legacy mobile app suffered from high latency, frequent crashes, and couldn't scale beyond 100k users. Security compliance was also a major concern.",
+      challenge: "The client&apos;s legacy mobile app suffered from high latency, frequent crashes, and couldn't scale beyond 100k users. Security compliance was also a major concern.",
       solution: "We engineered a cloud-native, microservices architecture using Node.js and a highly optimized React Native frontend. Implemented end-to-end encryption and biometric auth.",
       results: "Achieved 99.99% uptime, successfully scaled to handle 1M+ daily active users without performance degradation, and reduced transaction latency by 60%.",
       tech: ["React Native", "Node.js", "AWS", "PostgreSQL", "Redis"],
@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Work</span>
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Deep dives into how we've architected scalable, mission-critical systems for global enterprises.
+              Deep dives into how we&apos;ve architected scalable, mission-critical systems for global enterprises.
             </p>
           </div>
 

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Code2, Cpu, Network, Layout, Shield, Server } from "lucide-react";
@@ -15,6 +16,16 @@ export const metadata = pageMetadata({
 export default function CustomSoftwareDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-emerald-500/30">
+      <ServicePageSchema
+        serviceName="Custom Software Development"
+        serviceDescription="Speion architects custom software solutions built to handle complex business logic, heavy data loads, and enterprise integrations."
+        pathname="/services/custom-software-development"
+        faqs={[
+          { question: "What is custom software development and when do I need it?", answer: "Custom software development is the process of designing, building, and deploying software tailored specifically to your business processes. You need it when off-the-shelf solutions cannot handle your unique workflows, when you need full control over your IP, or when you want to eliminate recurring SaaS licensing fees that scale with your team size." },
+          { question: "How much does custom software development cost in India?", answer: "Custom software projects start at ₹75,000 for MVPs and can scale to ₹10,00,000+ for enterprise-grade applications. The cost depends on complexity, number of integrations, user roles, and the tech stack required. Speion provides transparent, milestone-based pricing with no hidden costs." },
+          { question: "Do I own the source code after the project is completed?", answer: "100%. Once the final milestone payment is cleared, all intellectual property, source code, deployment assets, and documentation are fully transferred to your organization. There is no vendor lock-in and no recurring licensing fees." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}
