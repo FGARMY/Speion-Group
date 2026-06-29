@@ -48,6 +48,16 @@ export default function Services() {
     },
 
     {
+      id: "05 / UX",
+      title: "UI/UX Design",
+      desc: "Pixel-perfect, conversion-optimized interfaces designed in Figma and tailored for seamless user journeys.",
+      icon: <Blocks size={24} strokeWidth={1.5} />,
+      image: "/services/uiux.png",
+      expert: "Design Team",
+      link: "/services/ui-ux-design",
+      price: "Starts $10+"
+    },
+    {
       id: "06 / AI",
       title: "AI Automations",
       desc: "Autonomous LLM agents and workflow automations that eliminate manual tasks and reduce operational overhead.",
@@ -55,7 +65,7 @@ export default function Services() {
       image: "/services/ai.png",
       expert: "AI & Automation Team",
       link: "/services/ai-automations",
-      price: "Starts ₹40k+"
+      price: "Starts $25+"
     },
     {
       id: "07 / CRM",

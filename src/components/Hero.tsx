@@ -64,8 +64,8 @@ export default function Hero() {
 
           <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:gap-6">
             <h1 className="text-slate-900 dark:text-white font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:leading-[1.05] tracking-tightest">
-              Top Software & Web <br className="hidden sm:block" />
-              Development in <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">Pune & Nashik</span>
+              Global Software & Web <br className="hidden sm:block" />
+              Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-400">Agency</span>
             </h1>
 
             <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed font-light mx-auto tracking-wide px-2 sm:px-0">
