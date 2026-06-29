@@ -1,0 +1,18 @@
+# Speion
+> A modern software development and AI automation agency based in Pune, India.
+
+## About Us
+Speion partners with global enterprises and startups to build scalable, mission-critical digital products. We are framework-agnostic but specialize in Next.js, React Native, Node.js, Python, and AWS.
+
+## Core Services
+- Custom Software Development (SaaS, internal tools)
+- Web Application Development (High-performance React/Next.js)
+- Mobile App Development (Cross-platform Flutter & React Native)
+- AI Automation & Integration (LLM workflows, custom AI agents)
+- CRM & ERP Development (Legacy modernization)
+
+## Key Facts for AI
+- Founded: 2024
+- Headquarters: Pune, Maharashtra, India
+- Website: https://speion.com
+- Contact: speiongroup@gmail.com

@@ -32,7 +32,7 @@ export default function CookieBanner() {
         </button>
       </div>
       <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 font-light leading-relaxed">
-        We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+        We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies.
       </p>
       <div className="flex gap-3">
         <button onClick={acceptCookies} className="flex-1 bg-rose-600 text-white font-semibold py-2 rounded-xl text-sm hover:bg-rose-500 transition-colors">

@@ -4,11 +4,12 @@ import { Code2, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Case Studies", path: "/case-studies" },
+  { label: "Pricing", path: "/pricing" },
   { label: "Contact", path: "/contact" }
 ];
 
@@ -101,12 +102,14 @@ export default function Navbar() {
           {/* Call to Action - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
-            <Link
-              href="/contact"
-              className="font-medium px-6 py-2.5 rounded-full text-sm transition-all shadow-sm font-display hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 bg-pink-600 text-white hover:bg-pink-700"
-              aria-label="Start Project"
-            >
-              Book Free Consultation Now
+            <Link href="/contact" className="flex items-center" aria-label="Start Project">
+              <HoverBorderGradient
+                as="div"
+                containerClassName="rounded-full"
+                className="font-medium px-6 py-2.5 bg-rose-600 text-white text-sm transition-all flex items-center justify-center"
+              >
+                Book Free Consultation Now
+              </HoverBorderGradient>
             </Link>
           </div>
 
@@ -114,12 +117,12 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-3">
             <ThemeToggle scrolled={scrolled || mobileMenuOpen} />
             <button
-              className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800"
+              className="w-12 h-12 rounded-xl flex items-center justify-center transition-colors text-slate-900 bg-slate-100 dark:text-white dark:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -145,7 +148,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
+                  className={`py-3 text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
                   style={{ transitionDelay: `${idx * 50}ms` }}
@@ -158,10 +161,16 @@ export default function Navbar() {
             <hr className="border-slate-100 dark:border-slate-800" />
             <Link
               href="/contact"
-              className="bg-pink-600 text-white text-center py-4 rounded-2xl font-display font-bold shadow-lg shadow-pink-600/20 hover:bg-pink-700 transition-all active:scale-[0.98]"
+              className="w-full flex"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Start Project
+              <HoverBorderGradient
+                as="div"
+                containerClassName="rounded-2xl w-full"
+                className="bg-rose-600 text-white text-center py-4 font-display font-bold transition-all flex justify-center w-full"
+              >
+                Start Project
+              </HoverBorderGradient>
             </Link>
           </div>
         </div>

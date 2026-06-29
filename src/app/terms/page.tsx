@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/seo';
 
 export const metadata = pageMetadata({
   title: "Terms of Service | Speion",
-  description: "Terms and conditions for using Speion's website and software development services.",
+  description: "Terms and conditions for using Speion&apos;s website and software development services.",
   pathname: '/terms',
 });
 
@@ -33,7 +33,7 @@ export default function TermsPage() {
 
             <h2>3. Service Level Agreements (SLAs)</h2>
             <p>
-              For our enterprise clients, specific SLAs regarding uptime, maintenance, and support are defined in individual Master Service Agreements (MSAs). This website's terms do not override specific contractual agreements.
+              For our enterprise clients, specific SLAs regarding uptime, maintenance, and support are defined in individual Master Service Agreements (MSAs). This website&apos;s terms do not override specific contractual agreements.
             </p>
 
             <h2>4. Limitation of Liability</h2>

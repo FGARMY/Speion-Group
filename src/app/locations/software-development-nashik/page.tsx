@@ -34,7 +34,7 @@ export default function NashikLocationPage() {
             Top Software Development Company in <span className="text-teal-300">Nashik</span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-            Empowering Nashik's growing IT ecosystem. We partner with local manufacturers, wineries, and startups to build custom digital solutions that scale globally.
+            Empowering Nashik&apos;s growing IT ecosystem. We partner with local manufacturers, wineries, and startups to build custom digital solutions that scale globally.
           </p>
         </div>
       </section>

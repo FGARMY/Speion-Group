@@ -3,7 +3,9 @@ import { getPostBySlug, getAllPosts } from '@/lib/mdx';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
-import { pageMetadata } from '@/lib/seo';
+import Script from 'next/script';
+import { pageMetadata, siteUrl } from '@/lib/seo';
+import { jsonLdGraph, articleSchema, breadcrumbSchema } from '@/lib/schemas';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
@@ -50,8 +52,29 @@ export default async function BlogPost({ params }: Props) {
     notFound();
   }
 
+  const articleJsonLd = jsonLdGraph(
+    articleSchema({
+      title: post.meta.title,
+      description: post.meta.excerpt,
+      url: `${siteUrl}/insights/${slug}`,
+      datePublished: post.meta.date,
+      author: post.meta.author,
+      image: post.meta.coverImage,
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: siteUrl },
+      { name: 'Insights', url: `${siteUrl}/insights` },
+      { name: post.meta.title, url: `${siteUrl}/insights/${slug}` },
+    ]),
+  );
+
   return (
     <article className="min-h-screen bg-slate-50 dark:bg-slate-950 pt-32 pb-24 px-4 sm:px-6 relative selection:bg-rose-500/30">
+      <Script
+        id={`blog-schema-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="container mx-auto max-w-3xl relative z-10">
         
         <Link href="/insights" className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-rose-600 transition-colors mb-12 group">

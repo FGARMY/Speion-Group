@@ -1,4 +1,6 @@
 import { CalendarPlus, PhoneCall } from "lucide-react";
+import Link from "next/link";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function CTA() {
   return (
@@ -20,14 +22,26 @@ export default function CTA() {
               Secure an elite engineering pod and modernize your architecture today.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="/contact" className="w-full sm:w-auto bg-pink-600 text-white px-10 py-5 rounded-full font-bold shadow-xl hover:bg-pink-700 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
-                <CalendarPlus size={22} />
-                Book Consultation
-              </a>
-              <a href="tel:+918237077659" className="w-full sm:w-auto bg-white/50 dark:bg-white/10 backdrop-blur-md border border-rose-200 dark:border-white/20 text-slate-900 dark:text-white px-10 py-5 rounded-full font-bold hover:bg-white/80 dark:hover:bg-white/20 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3 text-lg">
-                <PhoneCall size={22} />
-                Quick Call
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
+              <Link href="/contact" className="w-full sm:w-auto flex justify-center">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="rounded-full w-full sm:w-auto"
+                  className="w-full sm:w-auto bg-rose-600 text-white px-8 sm:px-10 py-4 font-bold transition-all text-base sm:text-lg flex items-center justify-center gap-3"
+                >
+                  <CalendarPlus size={22} />
+                  Book Consultation
+                </HoverBorderGradient>
+              </Link>
+              <a href="tel:+918237077659" className="w-full sm:w-auto flex justify-center">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="rounded-full w-full sm:w-auto"
+                  className="w-full sm:w-auto bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white px-8 sm:px-10 py-4 font-bold transition-all text-base sm:text-lg flex items-center justify-center gap-3"
+                >
+                  <PhoneCall size={22} />
+                  Quick Call
+                </HoverBorderGradient>
               </a>
             </div>
           </div>

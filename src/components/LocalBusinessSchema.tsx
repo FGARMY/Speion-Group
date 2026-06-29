@@ -16,30 +16,34 @@ export default function LocalBusinessSchema({
   name = "Speion",
   description,
   url,
-  telephone = "+91 00000 00000",
+  telephone = "+91 77588 66318",
   addressLocality,
   addressRegion = "Maharashtra",
-  postalCode = "000000",
+  postalCode,
   addressCountry = "IN",
-  image = "https://speion.com/images/logo.png",
+  image = "https://speion.com/images/Primary-white.png",
 }: LocalBusinessSchemaProps) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareOrganization",
+    "@type": "ProfessionalService",
     name,
     image,
     url,
     telephone,
+    email: "speiongroup@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality,
       addressRegion,
-      postalCode,
+      ...(postalCode && { postalCode }),
       addressCountry,
     },
     description,
+    parentOrganization: {
+      "@id": "https://speion.com/#organization",
+    },
     sameAs: [
-      "https://twitter.com/speion",
+      "https://instagram.com/speiongroup",
       "https://linkedin.com/company/speion",
     ],
   };
@@ -51,3 +55,4 @@ export default function LocalBusinessSchema({
     />
   );
 }
+

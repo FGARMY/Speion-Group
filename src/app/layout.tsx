@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CookieBanner from "@/components/CookieBanner";
+import FloatingContact from "@/components/FloatingContact";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { metadataBase as siteMetadataBase } from "@/lib/seo";
@@ -84,8 +84,8 @@ export default function RootLayout({
       <body className="antialiased bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <a
@@ -94,10 +94,10 @@ export default function RootLayout({
           >
             Skip to Content
           </a>
-          <div id="main-content">
+          <div id="main-content" className="w-full overflow-x-hidden flex flex-col min-h-screen">
             {children}
           </div>
-          <ScrollToTop />
+          <FloatingContact />
           <CookieBanner />
           <Analytics />
           <SpeedInsights />
