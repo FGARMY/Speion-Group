@@ -10,6 +10,7 @@ export function ThemeToggle({ scrolled }: { scrolled?: boolean }) {
 
   // Avoid hydration mismatch
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     setMounted(true);
   }, []);
 

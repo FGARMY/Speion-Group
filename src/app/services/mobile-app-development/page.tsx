@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Smartphone, Cpu, Zap, Layout, Shield, Globe } from "lucide-react";
@@ -15,6 +16,16 @@ export const metadata = pageMetadata({
 export default function MobileAppDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-rose-500/30">
+      <ServicePageSchema
+        serviceName="Mobile App Development"
+        serviceDescription="Speion develops native and cross-platform mobile applications for iOS and Android with maximum FPS, sleek design, and robust backends."
+        pathname="/services/mobile-app-development"
+        faqs={[
+          { question: "Should I choose React Native or Flutter for my mobile app?", answer: "We recommend React Native when your organization already has a React web ecosystem and you want to share business logic across platforms. We recommend Flutter for highly graphical, UI-heavy applications that require pixel-perfect rendering across fragmented Android devices. Both produce native-quality apps — Speion helps you choose based on your specific needs." },
+          { question: "How much does mobile app development cost in India?", answer: "A basic MVP mobile app (3-5 screens, auth, basic API) starts at ₹75,000. Full-featured mobile apps with real-time features, push notifications, payment integrations, and offline support typically range from ₹2,00,000 to ₹8,00,000. Enterprise apps with complex backends can exceed ₹10,00,000." },
+          { question: "Do you build for both iOS and Android?", answer: "Yes. We primarily use React Native and Flutter which allow us to build for both iOS and Android from a single codebase, reducing development time by 40-60% compared to building two separate native apps. The result is indistinguishable from fully native applications." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}

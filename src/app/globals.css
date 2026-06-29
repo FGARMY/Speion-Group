@@ -77,6 +77,15 @@
     transform: translateY(-2px);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
+  /* Dark mode polish: Premium glowing buttons */
+  .dark .glow-effect {
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.25), 0 0 30px rgba(244, 63, 94, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .dark .glow-effect:hover {
+    box-shadow: 0 0 25px rgba(244, 63, 94, 0.5), 0 0 50px rgba(244, 63, 94, 0.2);
+  }
 }
 
 @keyframes scale-in {
@@ -152,4 +161,55 @@ body {
 
 .animate-marquee-reverse {
   animation: marquee-reverse 35s linear infinite;
+}
+
+/* ========== Morphing Blob Animations ========== */
+
+/* Blob 1 — organic border-radius morph */
+@keyframes morphBlob1 {
+  0%   { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  25%  { border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; }
+  50%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  75%  { border-radius: 60% 40% 50% 50% / 40% 50% 60% 50%; }
+  100% { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; }
+}
+
+/* Blob 2 — different morph pattern */
+@keyframes morphBlob2 {
+  0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%  { border-radius: 40% 60% 50% 50% / 40% 60% 40% 60%; }
+  50%  { border-radius: 70% 30% 50% 50% / 30% 50% 70% 50%; }
+  75%  { border-radius: 50% 50% 60% 40% / 50% 40% 50% 60%; }
+  100% { border-radius: 30% 70% 40% 60% / 70% 30% 50% 50%; }
+}
+
+/* Blob 3 — accent morph */
+@keyframes morphBlob3 {
+  0%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  33%  { border-radius: 70% 30% 50% 50% / 30% 70% 30% 70%; }
+  66%  { border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%; }
+  100% { border-radius: 50% 50% 30% 70% / 70% 30% 70% 30%; }
+}
+
+/* Blob 1 — slow diagonal drift */
+@keyframes driftBlob1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(5%, 8%) scale(1.05); }
+  50%      { transform: translate(-3%, 4%) scale(0.95); }
+  75%      { transform: translate(7%, -5%) scale(1.02); }
+}
+
+/* Blob 2 — counter drift */
+@keyframes driftBlob2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(-6%, -4%) scale(1.03); }
+  50%      { transform: translate(4%, -8%) scale(0.97); }
+  75%      { transform: translate(-3%, 6%) scale(1.04); }
+}
+
+/* Blob 3 — gentle orbit */
+@keyframes driftBlob3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(-8%, 5%) scale(1.06); }
+  66%      { transform: translate(6%, -6%) scale(0.94); }
 }

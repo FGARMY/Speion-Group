@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Globe, Server, Zap, Layout, Shield, ArrowRight, Code2, Database } from "lucide-react";
@@ -25,6 +26,16 @@ export const metadata = pageMetadata({
 export default function WebDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-rose-500/30">
+      <ServicePageSchema
+        serviceName="Web Development"
+        serviceDescription="Speion engineers high-performance, secure, and scalable web applications using React, Next.js, and modern architectures."
+        pathname="/services/web-development"
+        faqs={[
+          { question: "How much does a custom website cost in India?", answer: "A custom corporate website built with modern technologies like React and Next.js typically starts at ₹25,000 and can go up to ₹2,00,000+ depending on complexity, number of pages, custom integrations, and whether you need a CMS. Speion provides detailed quotes after a discovery call to understand your specific requirements." },
+          { question: "How long does it take to build a custom web application?", answer: "A standard corporate website takes 2-4 weeks. A complex web application with user authentication, dashboards, and third-party integrations typically takes 6-12 weeks. We follow agile sprints with weekly demos so you can track progress in real time." },
+          { question: "What technologies does Speion use for web development?", answer: "We specialize in React.js, Next.js, TypeScript, and Tailwind CSS for the frontend. For backends, we use Node.js, PostgreSQL, Redis, and deploy on AWS or Vercel. All our websites are optimized for Core Web Vitals, SEO, and accessibility out of the box." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}

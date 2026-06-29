@@ -35,7 +35,7 @@ export default function PricingPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mx-auto mb-12">
-            We don't just write code—we build revenue-generating digital infrastructure. Our pricing is structured to deliver massive ROI through high performance, robust security, and zero technical debt.
+            We don&apos;t just write code—we build revenue-generating digital infrastructure. Our pricing is structured to deliver massive ROI through high performance, robust security, and zero technical debt.
           </p>
         </div>
       </section>
@@ -203,7 +203,7 @@ export default function PricingPage() {
                 <Zap className="text-rose-600 dark:text-rose-400" size={24} />
               </div>
               <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Zero Tech Debt</h4>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We use modern, typed languages (TypeScript) and proven architectures so your software doesn't break when you scale.</p>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We use modern, typed languages (TypeScript) and proven architectures so your software doesn&apos;t break when you scale.</p>
             </div>
             <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
               <div className="w-12 h-12 bg-rose-100 dark:bg-rose-900/30 rounded-full flex items-center justify-center mb-6">

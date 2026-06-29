@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Bot, BrainCircuit, Sparkles, Workflow, LineChart, MessageSquare } from "lucide-react";
@@ -7,14 +8,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "AI & Automation Services | Enterprise AI | Speion",
-  description: "Speion integrates custom AI models and automations to streamline workflows, reduce overhead, and drive massive operational efficiency.",
+  title: "Enterprise AI Automation & Integration Agency | Speion",
+  description: "Transform your business with Speion's custom AI automation workflows, LLM integrations, and autonomous AI agents designed to reduce costs and scale operations.",
   pathname: "/services/ai-automations",
 });
 
 export default function AiAutomationsPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-violet-500/30">
+      <ServicePageSchema
+        serviceName="AI & Automation"
+        serviceDescription="Speion integrates custom AI models and automations to streamline workflows, reduce overhead, and drive massive operational efficiency."
+        pathname="/services/ai-automations"
+        faqs={[
+          { question: "What types of AI automation can Speion build?", answer: "We build custom LLM integrations (OpenAI, Llama), AI chatbots for 24/7 customer support, workflow automation connecting your entire tech stack (Zapier, Make.com, custom APIs), predictive analytics dashboards, and Retrieval-Augmented Generation (RAG) systems trained on your company data." },
+          { question: "How much does AI automation cost for a business?", answer: "AI automation projects start at ₹40,000 for basic chatbot integrations and can scale to ₹5,00,000+ for enterprise-grade systems with custom LLM fine-tuning, multi-system integrations, and advanced analytics. We scope each project individually based on complexity and ROI potential." },
+          { question: "How long does it take to implement AI automation?", answer: "A basic AI chatbot can be deployed in 2-3 weeks. Custom LLM integrations with RAG and workflow automation typically take 4-8 weeks. Enterprise AI systems with multiple integrations and custom model training can take 3-6 months." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}
@@ -48,6 +59,16 @@ export default function AiAutomationsPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Citable AI Answer Block */}
+      <section aria-label="About our AI Automation Services" className="px-4 sm:px-6 pb-12">
+        <div className="container mx-auto max-w-4xl text-center bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4">How Speion Integrates AI Automation</h3>
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+            Speion is at the forefront of enterprise AI automation, helping organizations integrate cutting-edge Large Language Models (LLMs) and autonomous agents directly into their daily workflows. We do not just implement generic AI chatbots; we build deep, programmatic AI integrations that connect seamlessly with your existing CRM, ERP, and proprietary databases. Our engineering team designs custom AI pipelines capable of automating complex data extraction, predictive analytics, and dynamic customer support. By utilizing frameworks like LangChain alongside OpenAI and open-source models, we ensure maximum data privacy and low-latency performance. Whether you are looking to automate repetitive administrative tasks, generate real-time business intelligence, or deploy internal RAG (Retrieval-Augmented Generation) search engines, Speion provides the robust architecture required to safely and effectively scale artificial intelligence within your business.
+          </p>
         </div>
       </section>
 

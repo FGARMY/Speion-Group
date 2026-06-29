@@ -34,7 +34,7 @@ export default function PuneLocationPage() {
             Top Software Development Company in <span className="text-teal-300">Pune</span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-            Headquartered in Pune's thriving IT corridor. We partner with tech startups, fintechs, and global enterprises to engineer world-class digital products.
+            Headquartered in Pune&apos;s thriving IT corridor. We partner with tech startups, fintechs, and global enterprises to engineer world-class digital products.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function PuneLocationPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Enterprise Grade Architecture", desc: "We design software using microservices and cloud-native infrastructure capable of handling millions of requests.", icon: <Building2 size={24} /> },
-              { title: "Top 1% Engineering Talent", desc: "Located in the heart of Pune's tech hub, we recruit only the sharpest full-stack developers and DevOps engineers.", icon: <Code2 size={24} /> },
+              { title: "Top 1% Engineering Talent", desc: "Located in the heart of Pune&apos;s tech hub, we recruit only the sharpest full-stack developers and DevOps engineers.", icon: <Code2 size={24} /> },
               { title: "Startup to Scale-up", desc: "From MVP development to Series B scaling, we provide the technical firepower needed to grow your business rapidly.", icon: <Rocket size={24} /> },
             ].map((feat, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-xl group hover:-translate-y-2 transition-all">

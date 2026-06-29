@@ -19,18 +19,19 @@ export default function Footer() {
             <form className="flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full p-1.5 w-full max-w-sm shadow-sm transition-shadow focus-within:shadow-md" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 bg-transparent px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
+                placeholder="Email address"
+                className="flex-1 w-full min-w-0 bg-transparent px-4 sm:px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
                 required
               />
-              <HoverBorderGradient
-                as="button"
-                type="submit"
-                containerClassName="shrink-0 rounded-full"
-                className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 font-semibold text-sm h-full flex items-center justify-center"
-              >
-                Subscribe
-              </HoverBorderGradient>
+              <button type="submit" className="shrink-0 rounded-full outline-none">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="shrink-0 rounded-full"
+                  className="bg-black dark:bg-white text-white dark:text-black px-5 sm:px-8 py-3 font-semibold text-sm h-full flex items-center justify-center"
+                >
+                  Subscribe
+                </HoverBorderGradient>
+              </button>
             </form>
           </div>
 
@@ -38,28 +39,32 @@ export default function Footer() {
           <div className="flex flex-wrap lg:flex-nowrap gap-10 sm:gap-16 lg:gap-24 text-left w-full lg:w-auto justify-start lg:justify-end">
 
             <div className="flex flex-col items-start lg:items-end gap-5">
-              <h4 className="text-slate-400 font-semibold text-sm mb-2">Links</h4>
+              <h4 className="text-slate-400 font-semibold text-sm mb-2">Company</h4>
               <ul className="flex flex-col items-start lg:items-end gap-3.5">
                 <li><Link href="/" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Home</Link></li>
-                <li><Link href="/services" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Services</Link></li>
-                <li><Link href="/contact" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Contact</Link></li>
                 <li><Link href="/about" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Services</Link></li>
+                <li><Link href="/pricing" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Pricing</Link></li>
+                <li><Link href="/contact" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Contact</Link></li>
+                <li><Link href="/careers" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Careers</Link></li>
               </ul>
             </div>
 
             <div className="flex flex-col items-start lg:items-end gap-5">
-              <h4 className="text-slate-400 font-semibold text-sm mb-2">More Resources</h4>
+              <h4 className="text-slate-400 font-semibold text-sm mb-2">Resources</h4>
               <ul className="flex flex-col items-start lg:items-end gap-3.5">
-                <li><Link href="/insights" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Blogs</Link></li>
+                <li><Link href="/insights" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Blog</Link></li>
+                <li><Link href="/case-studies" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Case Studies</Link></li>
+                <li><Link href="/faq" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">FAQ</Link></li>
                 <li><Link href="/terms" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Terms & Conditions</Link></li>
                 <li><Link href="/privacy-policy" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/refund-policy" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
 
             <div className="flex flex-col items-start lg:items-end gap-5">
               <h4 className="text-slate-400 font-semibold text-sm mb-2">Social Media</h4>
               <ul className="flex flex-col items-start lg:items-end gap-3.5">
+                <li><a href="https://linkedin.com/company/speion" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">LinkedIn</a></li>
                 <li><a href="https://instagram.com/speiongroup" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Instagram</a></li>
                 <li><a href="https://facebook.com/speion" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Facebook</a></li>
                 <li><a href="https://wa.me/7758866318" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">WhatsApp</a></li>
@@ -69,7 +74,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-32 w-full relative flex items-end justify-center z-10 pt-12 min-h-[120px] lg:min-h-[160px]">
+        <div className="mt-32 w-full relative flex flex-col items-center justify-end z-10 pt-12 min-h-[120px] lg:min-h-[160px]">
+
+          {/* Copyright */}
+          <p className="text-xs text-slate-400 dark:text-slate-600 mb-4 z-10">
+            &copy; {new Date().getFullYear()} Speion Group. All rights reserved.
+          </p>
 
           {/* Massive Text (Centered behind) */}
           <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none -z-10 overflow-hidden">
@@ -83,3 +93,4 @@ export default function Footer() {
     </footer>
   );
 }
+

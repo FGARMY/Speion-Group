@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ServicePageSchema from "@/components/ServicePageSchema";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import { CheckCircle2, Code2, Cpu, Network, Layout, Shield, Server } from "lucide-react";
@@ -7,14 +8,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Custom Software Development Services | Enterprise Logic | Speion",
-  description: "Speion architects custom software solutions built to handle complex business logic, heavy data loads, and enterprise integrations.",
+  title: "Custom Software Development Company in Pune | Speion",
+  description: "Speion architects and develops scalable custom software, SaaS platforms, and enterprise solutions for global businesses using React, Node, and cloud infrastructure.",
   pathname: "/services/custom-software-development",
 });
 
 export default function CustomSoftwareDevelopmentPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#020617] selection:bg-emerald-500/30">
+      <ServicePageSchema
+        serviceName="Custom Software Development"
+        serviceDescription="Speion architects custom software solutions built to handle complex business logic, heavy data loads, and enterprise integrations."
+        pathname="/services/custom-software-development"
+        faqs={[
+          { question: "What is custom software development and when do I need it?", answer: "Custom software development is the process of designing, building, and deploying software tailored specifically to your business processes. You need it when off-the-shelf solutions cannot handle your unique workflows, when you need full control over your IP, or when you want to eliminate recurring SaaS licensing fees that scale with your team size." },
+          { question: "How much does custom software development cost in India?", answer: "Custom software projects start at ₹75,000 for MVPs and can scale to ₹10,00,000+ for enterprise-grade applications. The cost depends on complexity, number of integrations, user roles, and the tech stack required. Speion provides transparent, milestone-based pricing with no hidden costs." },
+          { question: "Do I own the source code after the project is completed?", answer: "100%. Once the final milestone payment is cleared, all intellectual property, source code, deployment assets, and documentation are fully transferred to your organization. There is no vendor lock-in and no recurring licensing fees." },
+        ]}
+      />
       <Navbar />
       
       {/* Premium Hero Section */}
@@ -48,6 +59,16 @@ export default function CustomSoftwareDevelopmentPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Citable AI Answer Block */}
+      <section aria-label="About our Custom Software Services" className="px-4 sm:px-6 pb-12">
+        <div className="container mx-auto max-w-4xl text-center bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Speion for Custom Software Development?</h3>
+          <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+            Speion is a premier custom software development company based in Pune, India, dedicated to architecting highly scalable, enterprise-grade digital products. Unlike agencies that rely on rigid templates, Speion engineers framework-agnostic, bespoke software solutions tailored entirely to complex business logic. Our full-stack engineering team specializes in modernizing legacy systems, building high-performance SaaS platforms, and deploying resilient cloud infrastructure on AWS and Google Cloud. By leveraging cutting-edge technologies like Next.js, Node.js, and Python, we ensure that every application we build delivers rapid load times, ironclad security, and seamless scalability. From initial MVP scoping and UX/UI design to post-launch DevOps maintenance, Speion acts as an end-to-end technical partner for startups and enterprises seeking to eliminate technical debt and accelerate their digital transformation.
+          </p>
         </div>
       </section>
 
