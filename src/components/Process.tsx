@@ -64,9 +64,9 @@ export default function Process() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
+          <div className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
             OUR PROCESS
-          </h3>
+          </div>
           <h2 className="text-slate-900 dark:text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
             A Proven Process <br />
             That Delivers Success

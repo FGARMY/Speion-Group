@@ -91,9 +91,9 @@ export default function CaseStudies() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <h3 className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
+            <div className="text-rose-600 dark:text-rose-500 font-bold tracking-wider uppercase text-sm mb-3">
               CASE STUDIES
-            </h3>
+            </div>
             <h2 className="text-slate-900 dark:text-white font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
               Real Results. <br />
               Real Impact.

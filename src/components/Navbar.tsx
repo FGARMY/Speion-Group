@@ -2,6 +2,7 @@
 
 import { Code2, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -75,7 +76,7 @@ export default function Navbar() {
         >
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 md:gap-3 group" aria-label="Speion Home" onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <img src="/images/Primary-white.png" alt="Speion" className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
+            <Image src="/images/Primary-white.png" alt="Speion" width={150} height={40} priority className="h-8 md:h-10 w-auto object-contain invert dark:invert-0" />
             <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">Speion</span>
           </Link>
 
@@ -129,49 +130,48 @@ export default function Navbar() {
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`lg:hidden fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm transition-all duration-500 ${mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          className={`lg:hidden fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-500 ${mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           onClick={() => setMobileMenuOpen(false)}
         />
 
         {/* Mobile Menu Content */}
         <div
-          className={`lg:hidden absolute top-20 left-4 right-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl rounded-3xl p-6 shadow-2xl dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-4 duration-300 z-50 ${mobileMenuOpen
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
+          className={`lg:hidden absolute top-[calc(100%+12px)] left-4 right-4 bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl rounded-3xl p-6 shadow-2xl dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800/80 transition-all duration-300 z-50 origin-top ${mobileMenuOpen
+            ? "opacity-100 scale-y-100 translate-y-0"
+            : "opacity-0 scale-y-95 -translate-y-4 pointer-events-none"
             }`}
         >
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-1">
             {NAV_ITEMS.map((item, idx) => {
               const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               return (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`py-3 text-2xl font-display font-semibold tracking-tight transition-all flex items-center justify-between group ${isActive ? "text-primary translate-x-1 dark:text-primary-light" : "text-slate-800 dark:text-slate-200"
+                  className={`py-4 px-2 text-[17px] font-medium tracking-tight border-b border-slate-100 dark:border-slate-800/50 flex items-center justify-between transition-colors ${isActive ? "text-rose-600 dark:text-rose-500" : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
-                  style={{ transitionDelay: `${idx * 50}ms` }}
                 >
                   {item.label}
-                  {isActive && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${isActive ? 'bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-500' : 'bg-slate-50 dark:bg-slate-800/50 text-slate-400'}`}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </Link>
               );
             })}
-            <hr className="border-slate-100 dark:border-slate-800" />
-            <Link
-              href="/contact"
-              className="w-full flex"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <HoverBorderGradient
-                as="div"
-                containerClassName="rounded-2xl w-full"
-                className="bg-rose-600 text-white text-center py-4 font-display font-bold transition-all flex justify-center w-full"
+            
+            <div className="mt-6">
+              <Link
+                href="/contact"
+                className="w-full flex items-center justify-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-medium text-[15px] rounded-xl py-3.5 transition-transform active:scale-95 shadow-md"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                Start Project
-              </HoverBorderGradient>
-            </Link>
+                Start Your Project
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
