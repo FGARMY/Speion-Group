@@ -50,7 +50,7 @@ export default function SocialMediaManagementPage() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mb-12">
-              We engineer viral social strategies and manage your digital presence across all major platforms. From aesthetic organic content creation to precision-targeted ad campaigns, we guarantee high ROI.
+              We don&apos;t just post; we engineer viral social strategies that dominate algorithms and capture market share. Whether you need explosive organic growth on TikTok and Instagram, or precision-targeted B2B campaigns on LinkedIn that generate high-ticket leads, our expert team manages your entire digital footprint to guarantee a massive return on investment.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -93,7 +93,7 @@ export default function SocialMediaManagementPage() {
               <TrendingUp className="w-12 h-12 text-rose-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Organic Content Strategy</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                We craft visually stunning, highly shareable content designed to build brand loyalty and authority. Our strategies adapt to the algorithm shifts on LinkedIn, Instagram, and TikTok to ensure maximum organic reach.
+                We craft visually stunning, highly shareable content designed to build undeniable brand loyalty and authority in your niche. Our strategies are aggressively proactive—we adapt to real-time algorithm shifts on LinkedIn, Instagram, and TikTok to ensure your organic reach never stagnates. We turn passive scrollers into active brand advocates through compelling storytelling.
               </p>
               <ul className="space-y-2">
                 {['High-Fidelity Graphic Design', 'Short-Form Video Editing (Reels/TikTok)', 'Trend Analysis & Copywriting'].map((item, i) => (
@@ -109,7 +109,7 @@ export default function SocialMediaManagementPage() {
               <Target className="w-12 h-12 text-rose-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Performance Ads</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Highly targeted Meta and LinkedIn ad campaigns designed to generate qualified leads and drive conversions at the lowest possible CPA.
+                We design and execute highly targeted Meta, Google, and LinkedIn ad campaigns optimized for maximum conversion. By leveraging advanced audience segmentation and hyper-specific retargeting pixels, we generate qualified leads at the lowest possible Cost-Per-Acquisition (CPA).
               </p>
             </div>
             
@@ -118,7 +118,7 @@ export default function SocialMediaManagementPage() {
               <Users className="w-12 h-12 text-rose-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Community Management</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Active engagement with your audience. We manage comments, direct messages, and brand mentions to foster a highly loyal community.
+                We actively manage your digital ecosystem by engaging with comments, direct messages, and brand mentions within minutes. We transform your social platforms into thriving, highly loyal communities that champion your brand.
               </p>
             </div>
             
@@ -127,7 +127,7 @@ export default function SocialMediaManagementPage() {
               <BarChart className="w-12 h-12 text-rose-500 mb-6 relative z-10" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 relative z-10">Advanced Analytics & Reporting</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl relative z-10">
-                Data is everything. We provide comprehensive monthly reports detailing audience growth, engagement rates, and ROI metrics. We continuously A/B test creatives and adjust strategies based on hard data, not guesswork.
+                Data is everything. We provide comprehensive, granular monthly reports detailing audience demographics, engagement velocities, and precise ROI metrics. By continuously A/B testing ad creatives, copy, and posting times, we pivot strategies based on hard statistical evidence rather than guesswork, ensuring your growth curve always trends upward.
               </p>
               <div className="absolute right-0 bottom-0 w-64 h-64 bg-gradient-to-tl from-rose-500/10 to-transparent rounded-tl-[100%] pointer-events-none group-hover:scale-150 transition-transform duration-700"></div>
             </div>
