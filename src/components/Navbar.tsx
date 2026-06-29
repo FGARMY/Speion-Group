@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Menu, X } from "lucide-react";
+import { Code2, Menu, X, ChevronDown, Monitor, Smartphone, Server, Blocks, Bot, Database, Share2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -12,6 +12,17 @@ const NAV_ITEMS = [
   { label: "Services", path: "/services" },
   { label: "Pricing", path: "/pricing" },
   { label: "Contact", path: "/contact" }
+];
+
+const SERVICES_MENU = [
+  { label: "Web Development", path: "/services/web-development", icon: Monitor },
+  { label: "Mobile Apps", path: "/services/mobile-app-development", icon: Smartphone },
+  { label: "Custom Software", path: "/services/custom-software-development", icon: Code2 },
+  { label: "ERP Solutions", path: "/services/erp-development", icon: Server },
+  { label: "UI/UX Design", path: "/services/ui-ux-design", icon: Blocks },
+  { label: "AI Automations", path: "/services/ai-automations", icon: Bot },
+  { label: "CRM Development", path: "/services/crm-development", icon: Database },
+  { label: "Social Media", path: "/services/social-media-management", icon: Share2 },
 ];
 
 /**
@@ -84,11 +95,54 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
+              
+              if (item.label === "Services") {
+                return (
+                  <div key={item.label} className="relative group">
+                    <Link
+                      href={item.path}
+                      className={`flex items-center gap-1 py-4 text-sm font-semibold tracking-wide transition-colors duration-300 ${isActive
+                        ? "text-rose-600 dark:text-rose-400"
+                        : "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400"
+                        }`}
+                    >
+                      {item.label}
+                      <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                    </Link>
+                    
+                    {/* Hover Mega Menu */}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:translate-y-0 translate-y-2">
+                      <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-slate-900/50 p-4 w-[500px] grid grid-cols-2 gap-2">
+                        {SERVICES_MENU.map((service, idx) => {
+                          const Icon = service.icon;
+                          return (
+                            <Link 
+                              key={idx} 
+                              href={service.path}
+                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group/item"
+                            >
+                              <div className="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
+                                <Icon size={16} className="text-rose-600 dark:text-rose-500" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5 group-hover/item:text-rose-600 dark:group-hover/item:text-rose-400 transition-colors">
+                                  {service.label}
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`text-sm font-semibold tracking-wide transition-colors duration-300 ${isActive
+                  className={`py-4 text-sm font-semibold tracking-wide transition-colors duration-300 ${isActive
                     ? "text-rose-600 dark:text-rose-400"
                     : "text-slate-600 hover:text-rose-600 dark:text-slate-300 dark:hover:text-rose-400"
                     }`}
