@@ -23,7 +23,7 @@ export default function Footer() {
                 className="flex-1 w-full min-w-0 bg-transparent px-4 sm:px-5 py-3 text-sm outline-none text-slate-700 dark:text-slate-300 placeholder-slate-400"
                 required
               />
-              <button type="submit" className="shrink-0 rounded-full outline-none">
+              <button type="submit" className="shrink-0 rounded-full outline-none" aria-label="Subscribe to newsletter">
                 <HoverBorderGradient
                   as="div"
                   containerClassName="shrink-0 rounded-full"
