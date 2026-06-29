@@ -40,26 +40,9 @@ export default function MorphingBlobs({
       className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
       aria-hidden="true"
     >
-      {/* SVG Gooey Filter — makes overlapping blobs merge organically */}
-      <svg className="absolute w-0 h-0">
-        <defs>
-          <filter id="gooey">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur" />
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8"
-              result="goo"
-            />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-          </filter>
-        </defs>
-      </svg>
-
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 opacity-60 md:opacity-100"
         style={{
-          filter: "url(#gooey)",
           opacity,
           // @ts-expect-error -- Framer Motion MotionValue works with CSS custom properties
           "--hue": hueRotate,
@@ -67,31 +50,34 @@ export default function MorphingBlobs({
       >
         {/* Blob 1 — large, slow drift */}
         <div
-          className="absolute w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full top-[-10%] left-[-5%]"
+          className="absolute w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] rounded-full top-[-10%] left-[-5%] blur-[80px] md:blur-[120px] mix-blend-multiply dark:mix-blend-screen"
           style={{
             background: "linear-gradient(135deg, hsl(340, 80%, 55%), hsl(280, 70%, 50%))",
             animation: "morphBlob1 18s ease-in-out infinite alternate, driftBlob1 25s ease-in-out infinite",
             filter: `hue-rotate(var(--hue, 0deg))`,
+            willChange: "transform, border-radius",
           }}
         />
 
         {/* Blob 2 — medium, counter-drift */}
         <div
-          className="absolute w-[400px] h-[400px] sm:w-[550px] sm:h-[550px] rounded-full bottom-[-5%] right-[-8%]"
+          className="absolute w-[400px] h-[400px] sm:w-[550px] sm:h-[550px] rounded-full bottom-[-5%] right-[-8%] blur-[80px] md:blur-[120px] mix-blend-multiply dark:mix-blend-screen"
           style={{
             background: "linear-gradient(225deg, hsl(260, 75%, 55%), hsl(200, 80%, 50%))",
             animation: "morphBlob2 22s ease-in-out infinite alternate, driftBlob2 30s ease-in-out infinite",
             filter: `hue-rotate(var(--hue, 0deg))`,
+            willChange: "transform, border-radius",
           }}
         />
 
         {/* Blob 3 — small accent, faster morph */}
         <div
-          className="absolute w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rounded-full top-[30%] left-[40%]"
+          className="absolute w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] rounded-full top-[30%] left-[40%] blur-[80px] md:blur-[120px] mix-blend-multiply dark:mix-blend-screen"
           style={{
             background: "linear-gradient(315deg, hsl(310, 70%, 50%), hsl(240, 65%, 55%))",
             animation: "morphBlob3 15s ease-in-out infinite alternate, driftBlob3 20s ease-in-out infinite",
             filter: `hue-rotate(var(--hue, 0deg))`,
+            willChange: "transform, border-radius",
           }}
         />
       </motion.div>
