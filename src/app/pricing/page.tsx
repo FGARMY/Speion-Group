@@ -44,7 +44,7 @@ export default function PricingPage() {
       <section className="py-12 px-4 sm:px-6 relative z-20">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            
+
             {/* Website Development */}
             <div className="bg-white dark:bg-slate-900 rounded-[2rem] p-8 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -57,7 +57,7 @@ export default function PricingPage() {
               <div className="mb-8 relative z-10">
                 <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Starts at</span>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-4xl font-display font-bold text-slate-900 dark:text-white">₹25k</span>
+                  <span className="text-4xl font-display font-bold text-slate-900 dark:text-white">$15</span>
                   <span className="text-rose-500 font-bold text-xl">+</span>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function PricingPage() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-rose-600 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-4 rounded-b-lg">
                 Most Popular
               </div>
-              
+
               <div className="mb-6 relative z-10 mt-4">
                 <h3 className="text-2xl font-bold text-white mb-2">AI Automation</h3>
                 <p className="text-slate-400 text-sm h-10">Intelligent chatbots, workflow automation & LLM integrations.</p>
@@ -97,7 +97,7 @@ export default function PricingPage() {
               <div className="mb-8 relative z-10">
                 <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">Starts at</span>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-4xl font-display font-bold text-white">₹40k</span>
+                  <span className="text-4xl font-display font-bold text-white">$25</span>
                   <span className="text-rose-500 font-bold text-xl">+</span>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function PricingPage() {
               <div className="mb-8 relative z-10">
                 <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Starts at</span>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-4xl font-display font-bold text-slate-900 dark:text-white">₹75k</span>
+                  <span className="text-4xl font-display font-bold text-slate-900 dark:text-white">Custom Quote</span>
                   <span className="text-rose-500 font-bold text-xl">+</span>
                 </div>
               </div>
