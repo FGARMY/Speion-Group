@@ -50,7 +50,7 @@ export default function ErpDevelopmentPage() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mb-12">
-              Bespoke Enterprise Resource Planning (ERP) software that breaks down data silos. Manage inventory, HR, finance, and supply chain from a single, infinitely scalable platform.
+              Bespoke Enterprise Resource Planning (ERP) software that breaks down data silos. Manage inventory, HR, finance, and supply chain from a single, infinitely scalable platform. Our custom solutions are tailored to your exact workflows, eliminating the bloat of off-the-shelf software and reducing long-term licensing costs while giving you full ownership of your data and IP.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -91,7 +91,7 @@ export default function ErpDevelopmentPage() {
               <Briefcase className="w-12 h-12 text-cyan-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Centralized Command Center</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Say goodbye to scattered spreadsheets. We build tailored dashboards that give executives real-time oversight of every department—finance, operations, HR, and sales—all in one place.
+                Say goodbye to scattered spreadsheets and disconnected apps. We build tailored dashboards that give executives real-time oversight of every department—finance, operations, HR, and sales—all in one place. Make data-driven decisions instantly with custom KPI tracking.
               </p>
               <ul className="space-y-2">
                 {['Real-time Analytics', 'Role-based Access Control', 'Automated Reporting'].map((item, i) => (
@@ -107,7 +107,7 @@ export default function ErpDevelopmentPage() {
               <BarChart3 className="w-12 h-12 text-cyan-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Supply Chain & Inventory</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Track assets from procurement to delivery. Automated low-stock alerts and predictive demand forecasting.
+                Track assets from procurement to delivery with precision. Implement automated low-stock alerts, predictive demand forecasting, and vendor management portals to streamline your entire supply chain.
               </p>
             </div>
             
@@ -116,7 +116,7 @@ export default function ErpDevelopmentPage() {
               <Database className="w-12 h-12 text-cyan-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Legacy Migration</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Seamless transition from outdated systems (like SAP or Oracle) to a modern, custom-built ERP without data loss.
+                Seamless transition from outdated legacy systems (like older SAP or Oracle instances) to a modern, custom-built, cloud-native ERP. We ensure absolute data integrity and zero operational downtime during the switch.
               </p>
             </div>
             

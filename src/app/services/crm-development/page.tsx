@@ -50,7 +50,7 @@ export default function CrmDevelopmentPage() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-3xl mb-12">
-              Off-the-shelf CRMs are bloated and rigid. We build hyper-customized Customer Relationship Management software designed precisely for your unique sales funnel.
+              Off-the-shelf CRMs are often bloated, rigid, and come with exponentially scaling per-seat licenses. We build hyper-customized Customer Relationship Management software designed precisely for your unique sales funnel. Own your intellectual property, streamline your workflow without unnecessary features, and integrate seamlessly with your existing marketing tools.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -91,7 +91,7 @@ export default function CrmDevelopmentPage() {
               <Target className="w-12 h-12 text-orange-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Pipeline & Lead Management</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Visualize your entire sales funnel with custom Kanban boards and lists. Automatically capture leads from your website, ads, and emails, and route them to the right sales rep instantly.
+                Visualize your entire sales funnel with custom Kanban boards and dynamic lists. Automatically capture leads from your website, ads, and emails, route them to the right sales rep instantly based on custom rules, and track every touchpoint until the deal is closed.
               </p>
               <ul className="space-y-2">
                 {['Automated Lead Scoring', 'Custom Sales Stages', 'Omnichannel Communication Log'].map((item, i) => (
@@ -107,7 +107,7 @@ export default function CrmDevelopmentPage() {
               <Users className="w-12 h-12 text-orange-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Customer 360° View</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Every email, phone call, purchase, and support ticket associated with a client, accessible in a single unified profile.
+                Every email, phone call, purchase history, and support ticket associated with a client is aggregated into a single, unified profile. Give your sales and support teams the complete context they need to close deals and resolve issues faster.
               </p>
             </div>
             
@@ -116,7 +116,7 @@ export default function CrmDevelopmentPage() {
               <PieChart className="w-12 h-12 text-orange-500 mb-6" />
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Advanced Reporting</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Real-time analytics dashboards tracking conversion rates, sales rep performance, and revenue forecasting.
+                Move beyond basic metrics. We build real-time analytics dashboards tracking deep conversion rates, individual sales rep performance, pipeline velocity, and accurate revenue forecasting.
               </p>
             </div>
             
