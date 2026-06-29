@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Menu, X, ChevronDown, Monitor, Smartphone, Server, Blocks, Bot, Database, Share2 } from "lucide-react";
+import { Code2, Menu, X, ChevronDown, Monitor, Smartphone, Server, Blocks, Bot, Database, Share2, Globe, Zap, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -10,6 +10,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 const NAV_ITEMS = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
+  { label: "Packages", path: "/packages" },
   { label: "Pricing", path: "/pricing" },
   { label: "Contact", path: "/contact" }
 ];
@@ -23,6 +24,15 @@ const SERVICES_MENU = [
   { label: "AI Automations", path: "/services/ai-automations", icon: Bot },
   { label: "CRM Development", path: "/services/crm-development", icon: Database },
   { label: "Social Media", path: "/services/social-media-management", icon: Share2 },
+];
+
+const PACKAGES_MENU = [
+  { label: "Export Business", path: "/packages/export-business", icon: Globe },
+  { label: "SaaS Startup MVP", path: "/packages/saas-startup-mvp", icon: Server },
+  { label: "E-Commerce & Retail", path: "/packages/ecommerce-retail", icon: Zap },
+  { label: "Healthcare Clinic", path: "/packages/healthcare-clinic", icon: ShieldCheck },
+  { label: "Real Estate Agency", path: "/packages/real-estate-agency", icon: Blocks },
+  { label: "Enterprise Custom", path: "/packages/enterprise-transformation", icon: Code2 },
 ];
 
 /**
@@ -96,7 +106,10 @@ export default function Navbar() {
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.label.toLowerCase().replace(" ", "-");
               
-              if (item.label === "Services") {
+              if (item.label === "Services" || item.label === "Packages") {
+                const isServices = item.label === "Services";
+                const menuItems = isServices ? SERVICES_MENU : PACKAGES_MENU;
+                
                 return (
                   <div key={item.label} className="relative group">
                     <Link
@@ -113,12 +126,12 @@ export default function Navbar() {
                     {/* Hover Mega Menu */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:translate-y-0 translate-y-2">
                       <div className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-slate-900/50 p-4 w-[500px] grid grid-cols-2 gap-2">
-                        {SERVICES_MENU.map((service, idx) => {
-                          const Icon = service.icon;
+                        {menuItems.map((menuItem, idx) => {
+                          const Icon = menuItem.icon;
                           return (
                             <Link 
                               key={idx} 
-                              href={service.path}
+                              href={menuItem.path}
                               className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group/item"
                             >
                               <div className="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
@@ -126,7 +139,7 @@ export default function Navbar() {
                               </div>
                               <div>
                                 <div className="text-sm font-semibold text-slate-900 dark:text-white mb-0.5 group-hover/item:text-rose-600 dark:group-hover/item:text-rose-400 transition-colors">
-                                  {service.label}
+                                  {menuItem.label}
                                 </div>
                               </div>
                             </Link>
