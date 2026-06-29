@@ -1,4 +1,4 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks } from "lucide-react";
+import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks, Share2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -76,6 +76,16 @@ export default function Services() {
       expert: "Data Engineering Team",
       link: "/services/crm-development",
       price: "Custom Quote"
+    },
+    {
+      id: "08 / SMM",
+      title: "Social Media Management",
+      desc: "Data-driven organic growth, viral content strategies, and precision ad campaigns to dominate your market.",
+      icon: <Share2 size={24} strokeWidth={1.5} />,
+      image: "/services/social-media.png",
+      expert: "Growth Marketing Team",
+      link: "/services/social-media-management",
+      price: "Starts $500/mo"
     }
   ];
 
