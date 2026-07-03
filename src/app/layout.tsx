@@ -49,11 +49,6 @@ export const metadata: Metadata = {
     description: "Enterprise-grade custom software, web, and mobile app development.",
     images: ["https://speion.com/images/Primary-white.png"],
   },
-  icons: {
-    icon: '/images/Primary-white.png',
-    shortcut: '/images/Primary-white.png',
-    apple: '/images/Primary-white.png',
-  },
   robots: {
     index: true,
     follow: true,
