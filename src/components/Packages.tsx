@@ -1,98 +1,64 @@
-import { Activity, ShieldCheck, ChevronRight, Code, Smartphone, Database, Server, Monitor, Bot, ArrowRight, Zap, FolderOpen, Blocks, Share2 } from "lucide-react";
+import { ShieldCheck, Code, Server, Globe, Zap, Blocks, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
 import MorphingBlobs from "./MorphingBlobs";
 
-export default function Services() {
-  const services = [
+export default function Packages() {
+  const packages = [
     {
-      id: "01 / WEB",
-      title: "Web Development",
-      desc: "Engineered for 95+ Lighthouse Scores and <2s load times. We build highly scalable React and Next.js applications.",
-      icon: <Monitor size={24} strokeWidth={1.5} />,
-      image: "/services/web.png",
-      expert: "Frontend Engineering Team",
-      link: "/services/web-development",
-      price: "Starts ₹25k+"
+      id: "01 / EXPORT",
+      title: "Export Business Package",
+      desc: "Premium Website, Product Catalogue, SEO, WhatsApp Inquiry, Admin Panel, CRM, Email Setup.",
+      icon: <Globe size={24} strokeWidth={1.5} />,
+      link: "/packages/export-business",
+      price: "Starts at $600"
     },
     {
-      id: "02 / APP",
-      title: "Mobile App Development",
-      desc: "Native iOS and Android architectures compiling to maximum FPS for buttery-smooth user experiences.",
-      icon: <Smartphone size={24} strokeWidth={1.5} />,
-      image: "/services/app.png",
-      expert: "Mobile Engineering Team",
-      link: "/services/mobile-app-development",
-      price: "Starts ₹40k+"
-    },
-    {
-      id: "03 / SFT",
-      title: "Custom Software Development",
-      desc: "Enterprise-grade logic engineered to handle heavy data loads and complex workflows with 99.9% uptime.",
-      icon: <Code size={24} strokeWidth={1.5} />,
-      image: "/services/software.png",
-      expert: "Architecture Team",
-      link: "/services/custom-software-development",
-      price: "Starts ₹75k+"
-    },
-    {
-      id: "04 / ERP",
-      title: "ERP Solutions",
-      desc: "Unify your entire supply chain, HR, and operations into one seamless dashboard with real-time analytics.",
+      id: "02 / SAAS",
+      title: "SaaS Startup MVP",
+      desc: "React/Next.js Frontend, Node.js Backend, User Auth, Stripe Setup, Admin Dashboard.",
       icon: <Server size={24} strokeWidth={1.5} />,
-      image: "/services/erp.png",
-      expert: "Enterprise Solutions Team",
-      link: "/services/erp-development",
-      price: "Custom Quote"
+      link: "/packages/saas-startup-mvp",
+      price: "Starts at $3,500"
     },
-
     {
-      id: "05 / UX",
-      title: "UI/UX Design",
-      desc: "Pixel-perfect, conversion-optimized interfaces designed in Figma and tailored for seamless user journeys.",
+      id: "03 / E-COM",
+      title: "E-Commerce & Retail",
+      desc: "Custom Next.js Storefront, ERP Lite, Payment Gateways, Abandoned Cart Automations.",
+      icon: <Zap size={24} strokeWidth={1.5} />,
+      link: "/packages/ecommerce-retail",
+      price: "Starts at $1,500"
+    },
+    {
+      id: "04 / HEALTH",
+      title: "Healthcare Clinic Portal",
+      desc: "Appointment Booking, Patient CRM, Telemedicine Setup, HIPAA Compliant Infrastructure.",
+      icon: <ShieldCheck size={24} strokeWidth={1.5} />,
+      link: "/packages/healthcare-clinic",
+      price: "Starts at $1,200"
+    },
+    {
+      id: "05 / AGENCY",
+      title: "Real Estate & Agency",
+      desc: "Property Listings, Lead Gen Funnels, Agent CRM, Map Integrations.",
       icon: <Blocks size={24} strokeWidth={1.5} />,
-      image: "/services/uiux.png",
-      expert: "Design Team",
-      link: "/services/ui-ux-design",
-      price: "Starts $10+"
+      link: "/packages/real-estate-agency",
+      price: "Starts at $1,000"
     },
     {
-      id: "06 / AI",
-      title: "AI Automations",
-      desc: "Autonomous LLM agents and workflow automations that eliminate manual tasks and reduce operational overhead.",
-      icon: <Bot size={24} strokeWidth={1.5} />,
-      image: "/services/ai.png",
-      expert: "AI & Automation Team",
-      link: "/services/ai-automations",
-      price: "Starts $25+"
-    },
-    {
-      id: "07 / CRM",
-      title: "CRM Development",
-      desc: "Custom lead tracking and pipeline management software designed precisely for your sales funnel.",
-      icon: <Database size={24} strokeWidth={1.5} />,
-      image: "/services/crm.png",
-      expert: "Data Engineering Team",
-      link: "/services/crm-development",
+      id: "06 / ENTERPRISE",
+      title: "Enterprise Transformation",
+      desc: "Full Custom ERP/CRM, Cloud Migration, Advanced AI Automations, Dedicated Engineering Team.",
+      icon: <Code size={24} strokeWidth={1.5} />,
+      link: "/packages/enterprise-transformation",
       price: "Custom Quote"
-    },
-    {
-      id: "08 / SMM",
-      title: "Social Media Management",
-      desc: "Data-driven organic growth, viral content strategies, and precision ad campaigns to dominate your market.",
-      icon: <Share2 size={24} strokeWidth={1.5} />,
-      image: "/services/social-media.png",
-      expert: "Growth Marketing Team",
-      link: "/services/social-media-management",
-      price: "Starts $500/mo"
     }
   ];
 
   return (
-    <section id="services" className="pt-24 pb-20 px-4 sm:px-6 bg-[#FAFAFA] dark:bg-[#020617] relative overflow-hidden">
+    <section id="packages" className="pt-24 pb-20 px-4 sm:px-6 bg-[#FAFAFA] dark:bg-[#020617] relative overflow-hidden">
       {/* Morphing Blob Background */}
-      <MorphingBlobs hueStart={220} hueEnd={280} opacity={0.06} />
+      <MorphingBlobs hueStart={120} hueEnd={180} opacity={0.06} />
 
       <div className="container mx-auto max-w-7xl relative z-10">
         
@@ -102,14 +68,14 @@ export default function Services() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[2px] bg-rose-600"></div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-rose-600 dark:text-rose-500">
-                Capabilities & Services
+                Ready-to-Deploy Products
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-6">
-              Engineering Excellence
+              Business Packages
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
-              A rigorous overview of our software architecture, development, and design capabilities.
+              Skip the guesswork. Choose an all-inclusive technical package designed specifically for your industry&apos;s growth.
             </p>
           </div>
           
@@ -120,7 +86,7 @@ export default function Services() {
                <Code size={16} className="text-slate-300 dark:text-slate-700" />
              </div>
              <p className="font-serif italic text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
-               &quot;Software architecture is underpinned by meticulous observation and scalable design. Every codebase tells a narrative of innovation that we are committed to perfecting.&quot;
+               &quot;We&apos;ve standardized our most successful enterprise architectures into accessible, scalable products. You get Silicon Valley tech at predictable costs.&quot;
              </p>
              <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
                <div className="text-xs font-bold text-slate-900 dark:text-white">Speion Technical Leadership</div>
@@ -130,7 +96,7 @@ export default function Services() {
 
         {/* Minimalist Icon Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
-          {services.map((item, idx) => (
+          {packages.map((item, idx) => (
             <Link 
               href={item.link}
               key={idx} 
@@ -162,7 +128,6 @@ export default function Services() {
             </Link>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -53,37 +53,39 @@ export default function Testimonials() {
         </div>
 
         {/* Text Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-8">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl rounded-[2rem] p-8 border border-white dark:border-slate-800 shadow-[0_10px_40px_rgba(15,23,42,0.04)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative flex flex-col group hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] dark:hover:shadow-[0_20px_60px_rgba(225,29,72,0.05)] transition-all duration-500 hover:-translate-y-1 hover:border-rose-100 dark:hover:border-rose-900/50"
+              className="bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-8 border border-white dark:border-slate-800 shadow-[0_10px_40px_rgba(15,23,42,0.04)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative flex flex-col group hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] dark:hover:shadow-[0_20px_60px_rgba(225,29,72,0.05)] transition-all duration-500 hover:-translate-y-1 hover:border-rose-100 dark:hover:border-rose-900/50"
             >
 
               {/* Quote mark decoration */}
-              <div className="absolute top-4 right-8 text-8xl text-slate-100 dark:text-slate-800/50 font-serif leading-none italic select-none pointer-events-none group-hover:text-rose-50 dark:group-hover:text-rose-900/20 transition-colors duration-500">
+              <div className="absolute top-2 right-4 sm:top-4 sm:right-8 text-6xl sm:text-8xl text-slate-100 dark:text-slate-800/50 font-serif leading-none italic select-none pointer-events-none group-hover:text-rose-50 dark:group-hover:text-rose-900/20 transition-colors duration-500">
                 &ldquo;
               </div>
 
-              <div className="flex gap-1 mb-6 relative z-10">
+              <div className="flex gap-0.5 sm:gap-1 mb-4 sm:mb-6 relative z-10">
                 {[1, 2, 3, 4, 5].map(star => (
-                  <Star key={star} size={16} className="fill-amber-400 text-amber-400" />
+                  <Star key={star} className="fill-amber-400 text-amber-400 w-3 h-3 sm:w-4 sm:h-4" />
                 ))}
               </div>
 
-              {rev.logo}
+              <div className="[&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-7 sm:[&>svg]:h-7 relative z-10">
+                 {rev.logo}
+              </div>
 
-              <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-10 flex-grow relative z-10 italic">
+              <p className="text-[10px] sm:text-base text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-6 sm:mb-10 flex-grow relative z-10 italic line-clamp-4 sm:line-clamp-none">
                 &ldquo;{rev.text}&rdquo;
               </p>
 
-              <div className="flex items-center gap-4 mt-auto relative z-10">
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold font-display shadow-sm transition-transform group-hover:scale-110 ${rev.color}`}>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-auto relative z-10">
+                <div className={`w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center font-bold font-display shadow-sm transition-transform group-hover:scale-110 text-xs sm:text-base ${rev.color}`}>
                   {rev.initials}
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-slate-200 leading-tight">{rev.author}</h4>
-                  <p className="text-sm text-slate-500 dark:text-slate-500 font-light">{rev.role}</p>
+                  <h4 className="font-bold text-slate-900 dark:text-slate-200 leading-tight text-[11px] sm:text-base">{rev.author}</h4>
+                  <p className="text-[9px] sm:text-sm text-slate-500 dark:text-slate-500 font-light">{rev.role}</p>
                 </div>
               </div>
 

@@ -3,6 +3,7 @@ import { getPostBySlug, getAllPosts } from '@/lib/mdx';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import LeadMagnet from '@/components/LeadMagnet';
 import Script from 'next/script';
 import { pageMetadata, siteUrl } from '@/lib/seo';
 import { jsonLdGraph, articleSchema, breadcrumbSchema } from '@/lib/schemas';
@@ -114,6 +115,9 @@ export default async function BlogPost({ params }: Props) {
           prose-li:text-slate-600 dark:prose-li:text-slate-400">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
+
+        {/* Lead Capture Magnet */}
+        <LeadMagnet />
 
       </div>
 
