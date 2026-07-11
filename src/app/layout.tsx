@@ -49,11 +49,6 @@ export const metadata: Metadata = {
     description: "Enterprise-grade custom software, web, and mobile app development.",
     images: ["https://speion.com/images/Primary-white.png"],
   },
-  icons: {
-    icon: '/images/Primary-white.png',
-    shortcut: '/images/Primary-white.png',
-    apple: '/images/Primary-white.png',
-  },
   robots: {
     index: true,
     follow: true,
@@ -70,6 +65,63 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Speion",
+  "url": "https://speion.com",
+  "logo": "https://speion.com/images/Primary-white.png",
+  "description": "Global enterprise software, web development, custom CRM, ERP, and AI automation agency.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["India", "USA", "UK", "UAE", "Australia", "Canada"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software Development Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Software Development for Enterprise"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Web Development & Design Agency"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile App Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Automations & Consulting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "CRM & ERP Custom Software Solutions"
+        }
+      }
+    ]
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -82,6 +134,16 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} font-sans scroll-smooth`}
     >
       <body className="antialiased bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Invisible SEO Keywords for Screen Readers & Crawlers */}
+        <div className="sr-only">
+          <h1>Top Web Development Company in Pune</h1>
+          <h1>Best Custom Software Agency for Startups</h1>
+          <h1>Affordable App Development Services India</h1>
+        </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

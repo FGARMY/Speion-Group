@@ -129,35 +129,35 @@ export default function Services() {
         </div>
 
         {/* Minimalist Icon Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {services.map((item, idx) => (
             <Link 
               href={item.link}
               key={idx} 
-              className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] p-8 sm:p-10 hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden z-10"
+              className="group flex flex-col bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-10 hover:shadow-2xl hover:shadow-rose-900/10 hover:border-rose-200 dark:hover:border-rose-900/50 transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 relative overflow-hidden z-10"
             >
               {/* Subtle background glow on hover */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 dark:bg-rose-500/10 rounded-full blur-2xl -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-rose-500/5 dark:bg-rose-500/10 rounded-full blur-xl sm:blur-2xl -z-10 group-hover:scale-150 transition-transform duration-700"></div>
               
-              <div className="flex items-start justify-between mb-8">
-                <div className="w-14 h-14 rounded-2xl bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center text-rose-600 dark:text-rose-500 border border-rose-100 dark:border-rose-800/50 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shrink-0">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-0 mb-4 sm:mb-8">
+                <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl [&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6 bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center text-rose-600 dark:text-rose-500 border border-rose-100 dark:border-rose-800/50 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shrink-0">
                   {item.icon}
                 </div>
-                <div className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest border border-slate-100 dark:border-slate-800 px-3 py-1 rounded-full shrink-0">
+                <div className="text-[8px] sm:text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest border border-slate-100 dark:border-slate-800 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shrink-0 w-fit">
                   {item.id}
                 </div>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 dark:text-white mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300">
+              <h3 className="text-base sm:text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white mb-2 sm:mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300 leading-tight">
                 {item.title}
               </h3>
               
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-12 flex-1">
+              <p className="text-[11px] sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium mb-6 sm:mb-12 flex-1 line-clamp-3 sm:line-clamp-none">
                 {item.desc}
               </p>
               
-              <div className="flex items-center text-rose-600 dark:text-rose-500 font-bold text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
-                Explore Service <ArrowRight size={16} className="ml-2" />
+              <div className="flex items-center text-rose-600 dark:text-rose-500 font-bold text-[9px] sm:text-xs uppercase tracking-widest group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300">
+                Explore <ArrowRight size={14} className="ml-1 sm:ml-2 sm:w-4 sm:h-4 w-3 h-3" />
               </div>
             </Link>
           ))}
