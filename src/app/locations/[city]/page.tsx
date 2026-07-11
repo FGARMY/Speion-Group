@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
@@ -8,53 +9,75 @@ import Services from "@/components/Services";
 import { MapPin, Building2, Code2, Rocket, Plus, Minus } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
-  title: "Software Development Company in Pune | Top IT Agency | Speion",
-  description: "Speion is a premium software development company in Pune. We build highly scalable SaaS platforms, enterprise software, and mobile apps.",
-  pathname: "/locations/software-development-pune",
-});
-
-const localFaqs = [
-  {
-    q: "Why choose Speion for custom software development in Pune?",
-    a: "Speion is recognized as a top software development company in Pune, specializing in high-performance web applications, native mobile apps, and complex enterprise software. Our local presence in Pune allows us to closely collaborate with regional startups and enterprises in Hinjewadi, Baner, and Kharadi, providing them with top 1% engineering talent and robust cloud infrastructure."
-  },
-  {
-    q: "Do you provide AI automation services to Pune businesses?",
-    a: "Yes, Speion builds custom AI automation workflows, integrates Large Language Models (LLMs) into existing software, and develops autonomous AI agents specifically for enterprises and startups based in Pune."
-  },
-  {
-    q: "What industries do you serve in Maharashtra?",
-    a: "While we are industry-agnostic, we have deep expertise in building secure, scalable platforms for FinTech, Healthcare, E-Commerce, and Manufacturing sectors across Pune and the wider Maharashtra region."
-  }
-];
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: localFaqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.a,
-    },
-  })),
+type Props = {
+  params: Promise<{ city: string }>;
 };
 
-export default function PuneLocationPage() {
+function formatCityName(slug: string) {
+  // If slug is "software-development-pune", extract "pune"
+  let formatted = slug.replace("software-development-", "");
+  // Capitalize each word and replace hyphens with spaces
+  return formatted
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { city } = await params;
+  const cityName = formatCityName(city);
+
+  return pageMetadata({
+    title: `Software Development Company in ${cityName} | Top IT Agency | Speion`,
+    description: `Speion is a premium software development company serving ${cityName}. We build highly scalable SaaS platforms, enterprise software, and mobile apps.`,
+    pathname: `/locations/${city}`,
+  });
+}
+
+export default async function DynamicLocationPage({ params }: Props) {
+  const { city } = await params;
+  const cityName = formatCityName(city);
+
+  const localFaqs = [
+    {
+      q: `Why choose Speion for custom software development in ${cityName}?`,
+      a: `Speion is recognized as a top software development company, specializing in high-performance web applications, native mobile apps, and complex enterprise software. We provide enterprises and startups in ${cityName} with top 1% engineering talent and robust cloud infrastructure.`
+    },
+    {
+      q: `Do you provide AI automation services to ${cityName} businesses?`,
+      a: `Yes, Speion builds custom AI automation workflows, integrates Large Language Models (LLMs) into existing software, and develops autonomous AI agents specifically for enterprises operating in ${cityName}.`
+    },
+    {
+      q: `What industries do you serve?`,
+      a: `While we are industry-agnostic, we have deep expertise in building secure, scalable platforms for FinTech, Healthcare, E-Commerce, and Manufacturing sectors for our clients in ${cityName} and globally.`
+    }
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: localFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <main className="min-h-screen relative bg-slate-50 dark:bg-slate-950">
       <LocalBusinessSchema
-        addressLocality="Pune"
-        postalCode="411001"
-        url="https://speion.com/locations/software-development-pune"
-        description={metadata.description ?? "Speion is a premium software development company in Pune."}
+        addressLocality={cityName}
+        postalCode=""
+        url={`https://speion.com/locations/${city}`}
+        description={`Speion is a premium software development company in ${cityName}.`}
       />
       <ServicePageSchema
-        serviceName="Software Development Services in Pune"
-        serviceDescription="Premium custom software, web, and mobile app development services for businesses in Pune."
-        pathname="/locations/software-development-pune"
+        serviceName={`Software Development Services in ${cityName}`}
+        serviceDescription={`Premium custom software, web, and mobile app development services for businesses in ${cityName}.`}
+        pathname={`/locations/${city}`}
       />
       
       {/* Dynamic Local FAQ Schema */}
@@ -71,13 +94,13 @@ export default function PuneLocationPage() {
         <div className="container mx-auto max-w-5xl relative z-10 text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
             <MapPin size={14} className="text-teal-300" />
-            Pune HQ
+            Serving {cityName}
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-8 tracking-tight">
-            Top Software Development Company in <span className="text-teal-300">Pune</span>
+            Top Software Development Company in <span className="text-teal-300">{cityName}</span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-            Headquartered in Pune&apos;s thriving IT corridor. We partner with tech startups, fintechs, and global enterprises to engineer world-class digital products.
+            We partner with tech startups, fintechs, and global enterprises in {cityName} to engineer world-class digital products.
           </p>
         </div>
       </section>
@@ -91,11 +114,11 @@ export default function PuneLocationPage() {
       </section>
 
       {/* AI Citable Answer Block */}
-      <section aria-label="About Speion in Pune" className="px-4 sm:px-6 py-20 bg-[#FAFAFA] dark:bg-[#020617]">
+      <section aria-label={`About Speion in ${cityName}`} className="px-4 sm:px-6 py-20 bg-[#FAFAFA] dark:bg-[#020617]">
         <div className="container mx-auto max-w-4xl text-center bg-white dark:bg-slate-900 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">Why Pune Enterprises Choose Speion</h2>
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">Why Enterprises in {cityName} Choose Speion</h2>
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-            Speion is widely recognized as a top-tier software development company based in Pune, India. Our engineering team operates at the intersection of complex logic and stunning user experience, delivering bespoke SaaS platforms, custom enterprise software, and scalable mobile applications. By deploying cloud-native architectures on AWS and Google Cloud, and utilizing cutting-edge frameworks like Next.js and React Native, we ensure 99.9% uptime and rapid deployment cycles for our clients. From early-stage startups in Hinjewadi to established manufacturing and fintech giants across Maharashtra, businesses choose Speion for our uncompromising code quality, deep expertise in AI automation integrations, and our commitment to eliminating technical debt.
+            Speion is widely recognized as a top-tier software development company serving {cityName}. Our engineering team operates at the intersection of complex logic and stunning user experience, delivering bespoke SaaS platforms, custom enterprise software, and scalable mobile applications. By deploying cloud-native architectures on AWS and Google Cloud, and utilizing cutting-edge frameworks like Next.js and React Native, we ensure 99.9% uptime and rapid deployment cycles for our clients. Businesses choose Speion for our uncompromising code quality, deep expertise in AI automation integrations, and our commitment to eliminating technical debt.
           </p>
         </div>
       </section>
@@ -104,13 +127,13 @@ export default function PuneLocationPage() {
       <section className="py-24 px-4 sm:px-6 bg-white dark:bg-slate-950">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white tracking-tight mb-4">Local Presence, Global Standards</h2>
-            <p className="text-slate-600 dark:text-slate-400 text-lg">Engineering excellence delivered from the heart of Pune.</p>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white tracking-tight mb-4">Enterprise Grade Standards</h2>
+            <p className="text-slate-600 dark:text-slate-400 text-lg">Engineering excellence delivered to {cityName}.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Enterprise Grade Architecture", desc: "We design software using microservices and cloud-native infrastructure capable of handling millions of requests.", icon: <Building2 size={24} /> },
-              { title: "Top 1% Engineering Talent", desc: "Located in the heart of Pune's tech hub, we recruit only the sharpest full-stack developers and DevOps engineers.", icon: <Code2 size={24} /> },
+              { title: "Top 1% Engineering Talent", desc: "We recruit only the sharpest full-stack developers and DevOps engineers globally.", icon: <Code2 size={24} /> },
               { title: "Startup to Scale-up", desc: "From MVP development to Series B scaling, we provide the technical firepower needed to grow your business rapidly.", icon: <Rocket size={24} /> },
             ].map((feat, idx) => (
               <div key={idx} className="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 group hover:-translate-y-2 transition-all">
