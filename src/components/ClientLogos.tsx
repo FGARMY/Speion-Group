@@ -7,7 +7,8 @@ export default function ClientLogos() {
     { name: "Neurosync", src: "/client-logos/Neruosync.png" },
     { name: "Ekvira", src: "/client-logos/ekvira.png" },
     { name: "MindMesh", src: "/client-logos/mindmesh.png" },
-    { name: "Logo Up", src: "/client-logos/adb-bg.png" }
+    { name: "Logo Up", src: "/client-logos/adb-bg.png" },
+    { name: "Skills", src: "/client-logos/skillspark.png" },
   ];
 
   return (
