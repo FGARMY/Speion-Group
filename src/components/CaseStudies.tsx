@@ -4,6 +4,43 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
+    category: "INDUSTRIAL & INFRASTRUCTURE",
+    title: "Ira Synergy Corporate Platform",
+    slug: "ira-synergy-corporate-website",
+    description: "Full-stack corporate platform & bespoke content security layer delivered in 3 days.",
+    metrics: [
+      { value: "3 Days", label: "Turnaround Time" },
+      { value: "100%", label: "Asset Protection" }
+    ],
+    visual: (
+      <div className="w-full h-full bg-slate-50 dark:bg-slate-900/50 rounded-xl p-4 flex flex-col justify-between border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center">
+              <div className="w-3 h-3 rounded-full bg-rose-600"></div>
+            </div>
+            <span className="text-xs font-mono font-bold text-slate-700 dark:text-slate-300">irasynergy.com</span>
+          </div>
+          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">LIVE</span>
+        </div>
+        <div className="my-2 p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200/60 dark:border-slate-700 space-y-2">
+          <div className="flex items-center justify-between text-xs font-semibold text-slate-800 dark:text-slate-200">
+            <span>Security Layer</span>
+            <span className="text-rose-600 text-[10px]">ACTIVE</span>
+          </div>
+          <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+            <div className="h-full bg-rose-500 w-full rounded-full"></div>
+          </div>
+          <div className="text-[10px] text-slate-500 dark:text-slate-400">Dynamic Watermarks • DevTools Guard</div>
+        </div>
+        <div className="flex gap-2 text-[10px] font-medium text-slate-500 dark:text-slate-400">
+          <span className="bg-slate-200/50 dark:bg-slate-700/50 px-2 py-0.5 rounded">Next.js</span>
+          <span className="bg-slate-200/50 dark:bg-slate-700/50 px-2 py-0.5 rounded">6 Solution Categories</span>
+        </div>
+      </div>
+    )
+  },
+  {
     category: "FINTECH",
     title: "NextGen Banking Platform",
     description: "A digital banking platform built for performance, security, and growth.",
@@ -138,7 +175,7 @@ export default function CaseStudies() {
                   ))}
                 </div>
 
-                <Link href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-bold uppercase text-xs tracking-widest hover:text-rose-700 dark:hover:text-rose-400 transition-colors group/link mt-auto">
+                <Link href={`/case-studies/${'slug' in study && study.slug ? study.slug : study.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center gap-2 text-rose-600 dark:text-rose-500 font-bold uppercase text-xs tracking-widest hover:text-rose-700 dark:hover:text-rose-400 transition-colors group/link mt-auto">
                   Explore Case Study
                   <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
                 </Link>

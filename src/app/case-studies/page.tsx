@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import CTA from "@/components/CTA";
 import { pageMetadata } from "@/lib/seo";
 
@@ -11,6 +12,15 @@ export const metadata = pageMetadata({
 
 export default function CaseStudiesPage() {
   const projects = [
+    {
+      title: "Ira Synergy Corporate Platform",
+      client: "Ira Synergy",
+      slug: "ira-synergy-corporate-website",
+      challenge: "The client needed to securely showcase proprietary manufacturing hardware designs and solutions across 6 complex verticals to government evaluators without exposing IP to competitors.",
+      solution: "Engineered a lightning-fast SSR Next.js architecture coupled with a custom inline security layer (dynamic watermarking, DevTools guard, keyboard event blocking).",
+      results: "Delivered the complete full-stack platform in 3 days, securing all proprietary IP while establishing a premium, enterprise-grade brand presence.",
+      tech: ["Next.js", "React", "Node.js", "Content Protection", "Tailwind CSS"],
+    },
     {
       title: "FinTech Mobile Banking App",
       client: "Global Financial Services",
@@ -90,6 +100,14 @@ export default function CaseStudiesPage() {
                     <p className="text-slate-900 dark:text-white font-medium leading-relaxed text-sm">{project.results}</p>
                   </div>
                 </div>
+                {'slug' in project && project.slug && (
+                  <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex justify-end">
+                    <Link href={`/case-studies/${project.slug}`} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-sm font-bold transition-colors">
+                      Read Full Case Study
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
