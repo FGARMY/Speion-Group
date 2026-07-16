@@ -8,7 +8,8 @@ export default function ClientLogos() {
     { name: "Ekvira", src: "/client-logos/ekvira.png" },
     { name: "MindMesh", src: "/client-logos/mindmesh.png" },
     { name: "Logo Up", src: "/client-logos/adb-bg.png" },
-    { name: "Skills", src: "/client-logos/skillspark.png" },
+    { name: "Skills", src: "/client-logos/skillspark1.png" },
+    { name: "Abode", src: "/client-logos/abode1.png" },
   ];
 
   return (
@@ -19,13 +20,13 @@ export default function ClientLogos() {
         {/* Animated Track */}
         <div className="flex animate-marquee items-center gap-16 md:gap-24 lg:gap-32 whitespace-nowrap px-8">
           {[...logos, ...logos, ...logos, ...logos].map((logo, idx) => (
-            <div key={idx} className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 relative shrink-0 h-8 sm:h-10 md:h-12 lg:h-14">
+            <div key={idx} className={`flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 relative shrink-0 h-8 sm:h-10 md:h-12 lg:h-14 ${logo.name === 'Abode' ? 'mx-8' : ''}`}>
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={256}
                 height={128}
-                className="w-auto h-full object-contain"
+                className={`w-auto h-full object-contain ${logo.name === 'Abode' ? 'scale-[2.5]' : ''}`}
               />
             </div>
           ))}
