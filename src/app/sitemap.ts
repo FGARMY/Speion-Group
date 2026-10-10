@@ -40,6 +40,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ai-automations',
       'crm-development',
       'erp-development',
+      'ai-development',
+      'chatbot-development',
+      'ecommerce-development',
+      'machine-learning',
+      'mvp-development',
+      'rpa-development',
+      'saas-development',
     ].map((s) => route(`/services/${s}`, 'weekly', 0.9)),
     ...['ui-ux-design', 'social-media-management'].map((s) => route(`/services/${s}`, 'monthly', 0.8)),
 
@@ -57,6 +64,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Content hubs
     route('/insights', 'weekly', 0.8),
     route('/case-studies', 'monthly', 0.8),
+    route('/comparisons', 'monthly', 0.8),
 
     // Location pages (local SEO) — keep in sync with locations/[city]/page.tsx
     route('/locations', 'monthly', 0.8),
@@ -65,6 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     route('/locations/software-development-maharashtra', 'monthly', 0.8),
 
     // Industry pages
+    route('/industries', 'monthly', 0.8),
     route('/industries/healthcare', 'monthly', 0.7),
     route('/industries/fintech', 'monthly', 0.7),
 
