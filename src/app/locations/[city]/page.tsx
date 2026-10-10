@@ -8,10 +8,29 @@ import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import { MapPin, Building2, Code2, Rocket, Plus, Minus } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ city: string }>;
 };
+
+// Only these slugs are valid. Add a city here ONLY when it has unique local content.
+const LOCATION_SLUGS = [
+  "software-development-pune",
+  "software-development-nashik",
+  "software-development-maharashtra",
+] as const;
+
+// Any slug not returned by generateStaticParams responds with a 404.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return LOCATION_SLUGS.map((city) => ({ city }));
+}
+
+function assertValidCity(city: string) {
+  if (!(LOCATION_SLUGS as readonly string[]).includes(city)) notFound();
+}
 
 function formatCityName(slug: string) {
   // If slug is "software-development-pune", extract "pune"
@@ -25,6 +44,7 @@ function formatCityName(slug: string) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city } = await params;
+  assertValidCity(city);
   const cityName = formatCityName(city);
 
   return pageMetadata({
@@ -34,9 +54,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
+const LOCATION_DETAILS: Record<
+  string,
+  {
+    streetAddress?: string;
+    postalCode: string;
+    geo: { latitude: number; longitude: number };
+    areaServed: string[];
+  }
+> = {
+  "software-development-pune": {
+    streetAddress: "Parklane Life Season Plus, Dhanori",
+    postalCode: "411015",
+    geo: { latitude: 18.5913, longitude: 73.8567 },
+    areaServed: ["Pune", "Hinjawadi", "Kharadi", "Viman Nagar", "Baner", "Kothrud", "Maharashtra"],
+  },
+  "software-development-nashik": {
+    streetAddress: "College Road & Gangapur Road Tech Corridor",
+    postalCode: "422005",
+    geo: { latitude: 19.9975, longitude: 73.7898 },
+    areaServed: ["Nashik", "Ambad MIDC", "Satpur", "Indira Nagar", "Maharashtra"],
+  },
+  "software-development-maharashtra": {
+    streetAddress: "Maharashtra Technology Hub",
+    postalCode: "411015",
+    geo: { latitude: 19.7515, longitude: 75.7139 },
+    areaServed: ["Maharashtra", "Mumbai", "Pune", "Nashik", "Nagpur", "Thane", "India"],
+  },
+};
+
 export default async function DynamicLocationPage({ params }: Props) {
   const { city } = await params;
+  assertValidCity(city);
   const cityName = formatCityName(city);
+  const locDetail = LOCATION_DETAILS[city] || {
+    postalCode: "411015",
+    geo: { latitude: 18.5913, longitude: 73.8567 },
+    areaServed: [cityName, "Maharashtra", "India"],
+  };
 
   const localFaqs = [
     {
@@ -69,10 +124,14 @@ export default async function DynamicLocationPage({ params }: Props) {
   return (
     <main className="min-h-screen relative bg-slate-50 dark:bg-slate-950">
       <LocalBusinessSchema
+        name={`Speion — Software Development Company in ${cityName}`}
         addressLocality={cityName}
-        postalCode=""
+        streetAddress={locDetail.streetAddress}
+        postalCode={locDetail.postalCode}
+        geo={locDetail.geo}
+        areaServed={locDetail.areaServed}
         url={`https://speion.com/locations/${city}`}
-        description={`Speion is a premium software development company in ${cityName}.`}
+        description={`Speion is a premium software development and web engineering company serving ${cityName}.`}
       />
       <ServicePageSchema
         serviceName={`Software Development Services in ${cityName}`}

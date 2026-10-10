@@ -9,44 +9,68 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const comparisons = getAllPosts('comparisons');
   const caseStudyPosts = getAllPosts('case-studies');
 
+  // Bump this when static page content actually changes. Don't use new Date():
+  // a date that changes on every request teaches Google to ignore lastModified.
+  const STATIC_UPDATED = new Date('2026-10-10');
+
+  const route = (
+    path: string,
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'],
+    priority: number,
+  ) => ({ url: `${baseUrl}${path}`, lastModified: STATIC_UPDATED, changeFrequency, priority });
+
   // ─── Static routes with explicit priorities ────────────────────────────────
   const staticRoutes: MetadataRoute.Sitemap = [
     // Home
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    
+    route('', 'weekly', 1.0),
+
     // Core pages
-    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/careers`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
-    
+    route('/about', 'monthly', 0.8),
+    route('/contact', 'monthly', 0.6),
+    route('/pricing', 'monthly', 0.9),
+    route('/faq', 'monthly', 0.7),
+    route('/careers', 'weekly', 0.6),
+
     // Services (high priority — pillar pages)
-    { url: `${baseUrl}/services`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/web-development`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/custom-software-development`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/mobile-app-development`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/ai-automations`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/crm-development`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/services/erp-development`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    
+    route('/services', 'weekly', 0.9),
+    ...[
+      'web-development',
+      'custom-software-development',
+      'mobile-app-development',
+      'ai-automations',
+      'crm-development',
+      'erp-development',
+    ].map((s) => route(`/services/${s}`, 'weekly', 0.9)),
+    ...['ui-ux-design', 'social-media-management'].map((s) => route(`/services/${s}`, 'monthly', 0.8)),
+
+    // Industry packages (commercial-intent landing pages)
+    route('/packages', 'weekly', 0.8),
+    ...[
+      'saas-startup-mvp',
+      'healthcare-clinic',
+      'real-estate-agency',
+      'ecommerce-retail',
+      'export-business',
+      'enterprise-transformation',
+    ].map((p) => route(`/packages/${p}`, 'monthly', 0.8)),
+
     // Content hubs
-    { url: `${baseUrl}/insights`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/case-studies`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Location pages (local SEO)
-    { url: `${baseUrl}/locations`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/locations/software-development-pune`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/locations/software-development-nashik`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/locations/software-development-maharashtra`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    
+    route('/insights', 'weekly', 0.8),
+    route('/case-studies', 'monthly', 0.8),
+
+    // Location pages (local SEO) — keep in sync with locations/[city]/page.tsx
+    route('/locations', 'monthly', 0.8),
+    route('/locations/software-development-pune', 'monthly', 0.8),
+    route('/locations/software-development-nashik', 'monthly', 0.8),
+    route('/locations/software-development-maharashtra', 'monthly', 0.8),
+
     // Industry pages
-    { url: `${baseUrl}/industries/healthcare`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/industries/fintech`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-    
+    route('/industries/healthcare', 'monthly', 0.7),
+    route('/industries/fintech', 'monthly', 0.7),
+
     // Legal pages (low priority)
-    { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    route('/privacy-policy', 'yearly', 0.3),
+    route('/terms', 'yearly', 0.3),
   ];
 
   // ─── Dynamic content routes ────────────────────────────────────────────────

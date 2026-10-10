@@ -33,7 +33,7 @@ export default function CTA() {
                   Book Consultation
                 </HoverBorderGradient>
               </Link>
-              <a href="tel:+918237077659" className="w-full sm:w-auto flex justify-center">
+              <a href="tel:+917758866318" className="w-full sm:w-auto flex justify-center">
                 <HoverBorderGradient
                   as="div"
                   containerClassName="rounded-full w-full sm:w-auto"

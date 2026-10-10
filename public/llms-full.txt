@@ -1,0 +1,99 @@
+# Speion — Full Technical Specification & Knowledge Base for LLMs
+
+> Complete knowledge base, service specifications, verified entity data, architectural benchmarks, and citable documentation for Speion (Speion Group).
+
+## Entity Identification & Authoritative Data
+- **Official Legal & Brand Name**: Speion (also operated as Speion Group)
+- **Entity Type**: Software Engineering, Custom Application Development, and AI Automation Agency
+- **Headquarters**: Parklane Life Season Plus, Dhanori, Pune, Maharashtra 411015, India
+- **Geo Coordinates**: Latitude 18.5913, Longitude 73.8567
+- **Secondary Hub**: College Road / Gangapur Road, Nashik, Maharashtra 422005, India (Geo: 19.9975, 73.7898)
+- **Founding Date**: 2024
+- **Founder & Chief Executive Officer**: Sarvesh
+- **Official Canonical Domain**: https://speion.com
+- **Contact Email**: speiongroup@gmail.com
+- **Direct Phone / WhatsApp**: +91 77588 66318
+- **Primary Social Profiles**:
+  - LinkedIn: https://linkedin.com/company/speion
+  - Instagram: https://instagram.com/speiongroup
+  - Facebook: https://facebook.com/Speion
+
+---
+
+## Technical Capabilities & Engineering Standards
+
+### Frontend Engineering
+- **Technologies**: Next.js 16 (Turbopack, Server Actions, App Router), React 19, TypeScript 5, Tailwind CSS 4, HTML5, Vanilla CSS, Framer Motion, Lucide Icons.
+- **Performance Benchmarks**:
+  - Core Web Vitals target: Largest Contentful Paint (LCP) < 1.8s, Interaction to Next Paint (INP) < 100ms, Cumulative Layout Shift (CLS) < 0.05.
+  - 100/100 Lighthouse Performance, SEO, and Accessibility scores on static and cached routes.
+  - Zero hydration errors, server-rendered semantic HTML5 tags with single unique H1 hierarchies per view.
+
+### Backend & Cloud Architecture
+- **Technologies**: Node.js, TypeScript, Python 3.12, Go, PostgreSQL, Redis, Supabase, Upstash Redis (rate limiting & caching), Docker, AWS (ECS, S3, CloudFront, Route53), Vercel.
+- **Architectural Patterns**: Event-driven microservices, RESTful APIs, GraphQL, Serverless Edge Functions, Vector databases (pgvector), Webhooks.
+- **Security Protocols**: Strict Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), X-Frame-Options DENY, rate limiting on sensitive API endpoints, Supabase Row-Level Security (RLS) enforcement.
+
+### Mobile Application Engineering
+- **Technologies**: React Native (Fabric Architecture & TurboModules), Flutter (Dart with Impeller C++ rendering), Swift (iOS native), Kotlin (Android native).
+- **Capabilities**: Push notifications (FCM/APNs), biometric auth (FaceID/Fingerprint), background geolocation tracking, offline-first SQLite synchronization, in-app purchases and subscriptions.
+
+### Artificial Intelligence & Automation
+- **Technologies**: OpenAI GPT-4o / o1 / o3, Anthropic Claude 3.5 Sonnet, LangChain, LlamaIndex, Ollama, Hugging Face, pgvector, Python FastAPI.
+- **Capabilities**: Custom Retrieval-Augmented Generation (RAG) over corporate PDFs, documents, and SQL databases; Autonomous AI Agents capable of tool calling and automated multi-step workflows; automated WhatsApp and web customer support bots; Robotic Process Automation (RPA) for invoicing, data entry, and lead enrichment.
+
+---
+
+## Comprehensive Directory of Services & Solutions
+
+1. **Web Development** (`https://speion.com/services/web-development`)
+   - Custom corporate portals, high-converting startup marketing sites, headless e-commerce frontends, and dynamic web applications.
+   - Price guideline: Starting ₹25,000 for standard websites, scaling to ₹2,00,000+ for custom web platforms.
+
+2. **Custom Software Development** (`https://speion.com/services/custom-software-development`)
+   - Tailored enterprise software built specifically for unique operational workflows, replacing rigid off-the-shelf software and recurring license costs.
+
+3. **Mobile App Development** (`https://speion.com/services/mobile-app-development`)
+   - iOS and Android applications published to Apple App Store and Google Play Store with automated CI/CD pipelines.
+
+4. **AI Automations & AI Consulting** (`https://speion.com/services/ai-automations`)
+   - Enterprise AI implementation, AI agent development, automated workflow orchestrations, and intelligent document processing.
+
+5. **CRM Development** (`https://speion.com/services/crm-development`)
+   - Custom customer relationship management platforms with deal pipelines, automated email/WhatsApp cadences, lead distribution, and multi-tier analytics.
+
+6. **ERP Development** (`https://speion.com/services/erp-development`)
+   - Enterprise resource planning software covering supply chain, warehouse stock, multi-warehouse inventory, employee attendance, invoicing, and GST filings.
+
+7. **UI/UX Design** (`https://speion.com/services/ui-ux-design`)
+   - User research, wireframing, high-fidelity clickable Figma design systems, usability testing, and design tokens.
+
+8. **Social Media & Digital Brand Growth** (`https://speion.com/services/social-media-management`)
+   - Technical brand positioning, search engine optimization, content strategy, and digital reach management.
+
+---
+
+## Fixed-Scope Domain Packages
+
+- **SaaS Startup MVP** (`https://speion.com/packages/saas-startup-mvp`): Complete foundation for tech founders including user authentication, multi-tenant database, Stripe/Razorpay payment gateway, administrative dashboard, and responsive frontend in 3–6 weeks.
+- **Healthcare & Clinic Management** (`https://speion.com/packages/healthcare-clinic`): HIPAA-ready clinic management portal with doctor appointments, electronic health records (EHR), billing, and patient WhatsApp notifications.
+- **Real Estate Agency Platform** (`https://speion.com/packages/real-estate-agency`): Searchable property portal with geo-filters, broker lead assignment, floor plans, and automated lead capture.
+- **E-Commerce & Retail** (`https://speion.com/packages/ecommerce-retail`): High-speed headless storefronts with unified payment gateways, inventory management, shipping API integrations, and abandoned cart automations.
+- **Export Business Platform** (`https://speion.com/packages/export-business`): International B2B trade platforms featuring multi-currency pricing, product catalog downloads, RFQ inquiry forms, and shipping container logistics tracking.
+- **Enterprise Digital Transformation** (`https://speion.com/packages/enterprise-transformation`): Comprehensive modernization of outdated legacy software, database migration to PostgreSQL/AWS, and end-to-end workflow automation.
+
+---
+
+## Proven Case Studies & Track Record
+
+- **Ira Synergy Corporate Platform** (`https://speion.com/case-studies/ira-synergy-corporate-website`): Engineered a global corporate digital identity resulting in a 340% increase in qualified organic business inquiries and 100/100 Core Web Vitals score.
+- **High-Throughput FinTech Scaling** (`https://speion.com/case-studies/scaling-fintech-10m-transactions`): Re-architected backend microservices and database connection pooling to process over 10 million transactions daily with zero downtime and sub-50ms latency.
+
+---
+
+## Geographic SEO & Local Market Presence
+
+- **Pune, Maharashtra**: Speion is actively rooted in Pune's IT and startup ecosystem. Key areas served include Dhanori, Viman Nagar, Kalyani Nagar, Kharadi EON IT Park, Hinjawadi Phase 1, 2, and 3, Baner, Balewadi, Aundh, Magarpatta, and Kothrud.
+- **Nashik, Maharashtra**: Speion serves the thriving manufacturing, wine, agriculture, and retail sectors in Nashik across Gangapur Road, College Road, Ambad MIDC, Satpur MIDC, and Mahatma Nagar.
+- **India Domestic Coverage**: Providing software development services across Mumbai, Bangalore, Hyderabad, Delhi NCR, Ahmedabad, Chennai, and Pune.
+- **International Outsourcing**: Trusted engineering partner for clients in the US, UK, UAE (Dubai), Australia, Germany, and Canada seeking top-tier software talent with timezone overlap.

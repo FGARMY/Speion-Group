@@ -67,7 +67,7 @@ export default function Footer() {
                 <li><a href="https://linkedin.com/company/speion" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">LinkedIn</a></li>
                 <li><a href="https://instagram.com/speiongroup" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Instagram</a></li>
                 <li><a href="https://facebook.com/speion" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">Facebook</a></li>
-                <li><a href="https://wa.me/7758866318" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">WhatsApp</a></li>
+                <li><a href="https://wa.me/917758866318?text=Hi%20Speion%2C%20I%20am%20interested%20in%20discussing%20a%20software%20project." target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white text-sm font-medium transition-colors">WhatsApp</a></li>
               </ul>
             </div>
           </div>

@@ -65,62 +65,22 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Speion",
-  "url": "https://speion.com",
-  "logo": "https://speion.com/images/Primary-white.png",
-  "description": "Global enterprise software, web development, custom CRM, ERP, and AI automation agency.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Pune",
-    "addressRegion": "Maharashtra",
-    "addressCountry": "IN"
-  },
-  "areaServed": ["India", "USA", "UK", "UAE", "Australia", "Canada"],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Software Development Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Custom Software Development for Enterprise"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Web Development & Design Agency"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mobile App Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI Automations & Consulting"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "CRM & ERP Custom Software Solutions"
-        }
-      }
-    ]
-  }
-};
+import {
+  jsonLdGraph,
+  organizationSchema,
+  webSiteSchema,
+  puneOfficeSchema,
+  nashikOfficeSchema,
+  founderSchema,
+} from "@/lib/schemas";
+
+const rootJsonLd = jsonLdGraph(
+  organizationSchema(),
+  webSiteSchema(),
+  puneOfficeSchema(),
+  nashikOfficeSchema(),
+  founderSchema(),
+);
 
 export default function RootLayout({
   children,
@@ -136,14 +96,8 @@ export default function RootLayout({
       <body className="antialiased bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(rootJsonLd) }}
         />
-        {/* Invisible SEO Keywords for Screen Readers & Crawlers */}
-        <div className="sr-only">
-          <h1>Top Web Development Company in Pune</h1>
-          <h1>Best Custom Software Agency for Startups</h1>
-          <h1>Affordable App Development Services India</h1>
-        </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

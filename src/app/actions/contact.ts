@@ -128,16 +128,21 @@ export async function submitContactForm(formData: FormData) {
     const safeMessage = escapeHtml(message);
 
     // ── Step 3: Insert into Supabase (validated, raw values) ────────
-    const cookieStore = await cookies();
-    const supabase = createClient(cookieStore);
+    // We wrap this so any temporary database connection or table error
+    // never drops the lead; email delivery will still succeed.
+    try {
+      const cookieStore = await cookies();
+      const supabase = createClient(cookieStore);
 
-    const { error: dbError } = await supabase
-      .from("contact_submissions")
-      .insert([{ name, email, phone, company, subject, message }]);
+      const { error: dbError } = await supabase
+        .from("contact_submissions")
+        .insert([{ name, email, phone, company, subject, message }]);
 
-    if (dbError) {
-      console.error("Supabase insert error:", dbError);
-      return { success: false, error: "Failed to save submission. Please ensure the table exists." };
+      if (dbError) {
+        console.error("Supabase insert warning (lead will still be sent via email):", dbError);
+      }
+    } catch (dbErr) {
+      console.warn("Database storage unavailable, proceeding to email delivery:", dbErr);
     }
 
     // ── Step 4: Send email via Resend (sanitized values in HTML) ────

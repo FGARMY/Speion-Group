@@ -55,7 +55,7 @@ export default function Services() {
       image: "/services/uiux.png",
       expert: "Design Team",
       link: "/services/ui-ux-design",
-      price: "Starts $10+"
+      price: "Starts ₹15k+"
     },
     {
       id: "06 / AI",
@@ -65,7 +65,7 @@ export default function Services() {
       image: "/services/ai.png",
       expert: "AI & Automation Team",
       link: "/services/ai-automations",
-      price: "Starts $25+"
+      price: "Starts ₹35k+"
     },
     {
       id: "07 / CRM",
@@ -85,7 +85,7 @@ export default function Services() {
       image: "/services/social-media.png",
       expert: "Growth Marketing Team",
       link: "/services/social-media-management",
-      price: "Starts $500/mo"
+      price: "Starts ₹25k/mo"
     }
   ];
 

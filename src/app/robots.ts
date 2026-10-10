@@ -12,6 +12,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      {
         userAgent: 'Claude-Web',
         allow: '/',
       },
@@ -28,7 +32,31 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        userAgent: 'OAI-SearchBot',
+        userAgent: 'Applebot-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
+      },
+      {
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Amazonbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
+      {
+        userAgent: 'Diffbot',
         allow: '/',
       },
     ],

@@ -43,18 +43,29 @@ export default function Contact() {
           </div>
 
           {/* Contact Details */}
-          <div className="mt-12 lg:mt-32 pl-0 lg:pl-4 flex flex-col sm:flex-row gap-8 lg:gap-16 w-full max-w-3xl justify-center lg:justify-start">
+          <div className="mt-12 lg:mt-32 pl-0 lg:pl-4 flex flex-col sm:flex-row gap-8 lg:gap-12 w-full max-w-3xl justify-center lg:justify-start">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">Phone</h4>
-              <p className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              <a href="tel:+917758866318" className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed hover:text-blue-600 transition-colors">
                 (+91) 77588 66318
-              </p>
+              </a>
+            </div>
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">WhatsApp</h4>
+              <a 
+                href="https://wa.me/917758866318?text=Hi%20Speion%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-base lg:text-lg text-emerald-600 dark:text-emerald-400 font-semibold leading-relaxed hover:underline flex items-center gap-1.5"
+              >
+                Chat on WhatsApp
+              </a>
             </div>
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-3">Email</h4>
-              <p className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
-                speiongorup@gmail.com
-              </p>
+              <a href="mailto:speiongroup@gmail.com" className="text-base lg:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed hover:text-rose-600 transition-colors">
+                speiongroup@gmail.com
+              </a>
             </div>
           </div>
           
